@@ -1,0 +1,573 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mali:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+nav {
+  padding: 14px 0;
+}
+nav .logo img {
+  width: 100%;
+  height: 64px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  cursor: pointer;
+}
+nav .nav_link {
+  height: 50px;
+}
+nav .nav_link ul {
+  height: 70px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+}
+nav .nav_link ul li {
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 21px;
+  color: #000000;
+  cursor: pointer;
+}
+nav .nav_link ul li a {
+  color: #000000;
+}
+nav .nav_link .nav_icon ul {
+  gap: 14px;
+}
+
+main #main_img {
+  width: 100%;
+}
+main #main_img p {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  flex-direction: row;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 48px;
+  color: #FFFFFF;
+}
+main #main_img .relative_img {
+  position: relative;
+}
+main #main_img .relative_img img {
+  width: 100%;
+  height: 691px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main #main_img .relative_img .absaulte_img img {
+  position: absolute;
+  left: 0;
+  z-index: 5;
+  top: 350px;
+}
+
+#modal .modal-content {
+  width: 1000px;
+  height: 700px;
+  margin-left: -200px;
+}
+#modal .modal-body h2 {
+  display: flex;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 30px;
+}
+#modal .modal-body .modal_form form {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#modal .modal-body .modal_form form input {
+  width: 345px;
+  height: 50px;
+  display: block;
+  margin-top: 14px;
+  padding: 4px 14px;
+  border: 1.25px solid rgba(217, 217, 217, 0.6980392157);
+}
+#modal .modal-body .modal_form form h3 {
+  font-weight: 700;
+}
+#modal .modal-body .left_item img {
+  width: 368px;
+  height: 311px;
+}
+#modal .modal-body .left_item button {
+  width: 345px;
+  height: 50px;
+  background-color: #F3EA00;
+  margin-top: 50px;
+  border: none;
+  border-radius: 4px;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  color: #000000;
+}
+
+nav {
+  padding: 14px 0;
+}
+nav .logo img {
+  width: 100%;
+  height: 64px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  cursor: pointer;
+}
+nav .nav_link {
+  height: 50px;
+}
+nav .nav_link ul {
+  height: 70px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+}
+nav .nav_link ul li {
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 21px;
+  color: #000000;
+  cursor: pointer;
+}
+nav .nav_link ul li a {
+  color: #000000;
+}
+nav .nav_link .nav_icon ul {
+  gap: 14px;
+}
+
+main h1 {
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 37px;
+  color: #000000;
+}
+main p {
+  margin-top: 24px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+  color: #000000;
+}
+main img {
+  float: right;
+  width: 100%;
+  height: 676px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+footer #bagca_footer {
+  height: 56px;
+  width: 179px;
+  cursor: pointer;
+  padding: 0 8px;
+}
+footer .footer_link ul li {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 18px;
+  color: #000000;
+  padding: 8px 12px;
+}
+footer .mobil a {
+  display: block;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 18px;
+  color: #000000;
+  padding: 8px 0;
+}
+footer .mobil p {
+  padding: 8px 0;
+}
+footer .registration {
+  cursor: pointer;
+}
+footer .registration p {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 18px;
+  color: #000000;
+  padding: 8px 0;
+}
+footer .vakansiya {
+  cursor: pointer;
+}
+footer .vakansiya p {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 18px;
+  color: #000000;
+  padding: 8px 0;
+}
+footer .position form {
+  position: relative;
+}
+footer .position form input {
+  background-color: gray;
+  box-shadow: none;
+  border-radius: 4px;
+}
+footer .position form input::-moz-placeholder {
+  color: #000000 !important;
+  opacity: 1;
+}
+footer .position form input:-ms-input-placeholder {
+  color: #000000 !important;
+  opacity: 1;
+}
+footer .position form input::placeholder {
+  color: #000000 !important;
+  opacity: 1;
+}
+footer .position form div {
+  position: absolute;
+  top: 3px;
+  right: 5px;
+  z-index: 5;
+}
+footer .social_icon {
+  width: 100%;
+}
+footer .social_icon p {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 18px;
+  color: #000000;
+}
+footer .social_icon img {
+  float: right;
+  padding: 0 14px;
+}
+
+nav {
+  padding: 14px 0;
+}
+nav .logo img {
+  width: 100%;
+  height: 64px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  cursor: pointer;
+}
+nav .nav_link {
+  height: 50px;
+}
+nav .nav_link ul {
+  height: 70px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+}
+nav .nav_link ul li {
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 21px;
+  color: #000000;
+  cursor: pointer;
+}
+nav .nav_link ul li a {
+  color: #000000;
+}
+nav .nav_link .nav_icon ul {
+  gap: 14px;
+}
+@media screen and (max-width: 560px) {
+  nav .nav_link {
+    display: none;
+  }
+}
+
+main .container_div h2 {
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 37px;
+  color: #000000;
+  margin-left: 8%;
+}
+main .container_div .contact {
+  width: 100%;
+  height: 400px;
+  background-color: white;
+  border-radius: 4px;
+}
+main .container_div .contact form {
+  width: 100%;
+  height: 300px;
+  padding: 20px 0;
+}
+main .container_div .contact form input {
+  display: block;
+  width: 480px;
+  margin-top: 30px;
+  padding: 10px 8px;
+  margin-left: 10%;
+  border: 1.25px solid rgba(101, 101, 101, 0.5019607843);
+  border-radius: 4px;
+  font-size: 17px;
+  font-weight: 500;
+}
+main .container_div .contact form input:nth-child(3) {
+  height: 150px;
+}
+main .container_div button {
+  float: right;
+  margin-top: 20px;
+  width: 180px;
+  height: 56px;
+  background-color: #F3EA00;
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 17px;
+  border: none;
+}
+
+footer #bagca_footer {
+  height: 56px;
+  width: 179px;
+  cursor: pointer;
+  padding: 0 8px;
+}
+footer .footer_link ul li {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 18px;
+  color: #000000;
+  padding: 8px 12px;
+}
+footer .mobil a {
+  display: block;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 18px;
+  color: #000000;
+  padding: 8px 0;
+}
+footer .mobil p {
+  padding: 8px 0;
+}
+footer .registration {
+  cursor: pointer;
+}
+footer .registration p {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 18px;
+  color: #000000;
+  padding: 8px 0;
+}
+footer .vakansiya {
+  cursor: pointer;
+}
+footer .vakansiya p {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 18px;
+  color: #000000;
+  padding: 8px 0;
+}
+footer .position form {
+  position: relative;
+}
+footer .position form input {
+  background-color: gray;
+  box-shadow: none;
+  border-radius: 4px;
+}
+footer .position form input::-moz-placeholder {
+  color: #000000 !important;
+  opacity: 1;
+}
+footer .position form input:-ms-input-placeholder {
+  color: #000000 !important;
+  opacity: 1;
+}
+footer .position form input::placeholder {
+  color: #000000 !important;
+  opacity: 1;
+}
+footer .position form div {
+  position: absolute;
+  top: 3px;
+  right: 5px;
+  z-index: 5;
+}
+footer .social_icon {
+  width: 100%;
+}
+footer .social_icon p {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 18px;
+  color: #000000;
+}
+footer .social_icon img {
+  float: right;
+  padding: 0 14px;
+}
+
+nav {
+  padding: 14px 0;
+}
+nav .logo img {
+  width: 100%;
+  height: 64px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  cursor: pointer;
+}
+nav .nav_link {
+  height: 50px;
+}
+nav .nav_link ul {
+  height: 70px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+}
+nav .nav_link ul li {
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 21px;
+  color: #000000;
+  cursor: pointer;
+}
+nav .nav_link ul li a {
+  color: #000000;
+}
+nav .nav_link .nav_icon ul {
+  gap: 14px;
+}
+
+main #vakansiyalar .text {
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  flex-direction: column;
+  gap: 20px;
+}
+main #vakansiyalar .text h2 {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+  color: #000000;
+}
+main #vakansiyalar .text button {
+  width: 130px;
+  height: 36px;
+  margin-right: 140px;
+  background-color: #F3EA00;
+  border-radius: 50px;
+  border: 1px solid transparent;
+}
+
+#teacher_content {
+  display: flex;
+}
+#teacher_content img {
+  height: 314px;
+  width: 263px;
+  border-radius: 4px;
+}
+#teacher_content h2 {
+  padding: 12px 20px;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 37px;
+  color: #000000;
+}
+#teacher_content .btn_info {
+  background-color: #F3EA00;
+  width: 130px;
+  height: 36px;
+  border: none;
+  border-radius: 50px;
+  padding: 0 20px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+}
+#teacher_content button {
+  width: 130px;
+  height: 36px;
+  border: 1px solid #f3ea00;
+  border-radius: 50px;
+  background-color: transparent;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  margin-left: 20px;
+}
+
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background-image: linear-gradient(to top, #9795f0 0%, #fbc8d4 100%);
+  width: 100%;
+  height: auto;
+  background-repeat: no-repeat;
+}/*# sourceMappingURL=style.css.map */

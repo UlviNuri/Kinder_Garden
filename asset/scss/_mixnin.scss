@@ -1,0 +1,19 @@
+@mixin Flex ($j-content,$items,$flex-d) {
+    display: flex;
+    justify-content: $j-content;
+    align-items: $items;
+    flex-direction: $flex-d;
+}
+
+@mixin Parag ($f-size,$f-weight,$l-height,$color) {
+    font-size: $f-size;
+    font-weight: $f-weight;
+    line-height: $l-height;
+    color: $color;
+}
+
+@mixin Img ($width,$height,$o_fit) {
+    width: $width;
+    height: $height;
+    object-fit: $o_fit;
+}
