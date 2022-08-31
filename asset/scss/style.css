@@ -100,18 +100,48 @@ main #main_img p {
 }
 main #main_img .relative_img {
   position: relative;
-}
-main #main_img .relative_img img {
   width: 100%;
-  height: 691px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  height: 600px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 main #main_img .relative_img .absaulte_img img {
   position: absolute;
   left: 0;
   z-index: 5;
   top: 350px;
+}
+main #work_page {
+  width: 100%;
+  padding-top: 500px;
+  border: 1px solid beige;
+}
+main #work_page .img_position {
+  position: relative;
+}
+main #work_page .img_position img {
+  width: 100%;
+}
+main #work_page .img_position .img {
+  width: 100%;
+  position: absolute;
+  top: 150px;
+  left: 0;
+  z-index: 5;
+}
+main #work_page .img_position .img span {
+  display: block;
+  font-family: "Mali";
+}
+main #img_content {
+  position: relative;
+  margin-top: 400px;
+}
+main #img_content .img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
 #modal .modal-content {
@@ -359,6 +389,7 @@ main .container_div .contact form {
 }
 main .container_div .contact form input {
   display: block;
+  outline: none;
   width: 480px;
   margin-top: 30px;
   padding: 10px 8px;
@@ -367,6 +398,7 @@ main .container_div .contact form input {
   border-radius: 4px;
   font-size: 17px;
   font-weight: 500;
+  box-shadow: none;
 }
 main .container_div .contact form input:nth-child(3) {
   height: 150px;
@@ -559,6 +591,35 @@ main #vakansiyalar .text button {
   font-weight: 600;
   line-height: 20px;
   margin-left: 20px;
+}
+
+h1 {
+  margin-left: 60px;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 36px;
+  color: #000000;
+}
+
+.input {
+  position: relative;
+}
+.input input {
+  border: 0.25px solid #656565;
+  width: 100%;
+  height: 30px;
+  background-color: transparent;
+  color: rgba(48, 48, 48, 0.6980392157);
+  border-radius: 4px;
+  padding: 0 30px;
+  outline: none;
+}
+.input img {
+  height: 16px;
+  width: 16px;
+  position: absolute;
+  top: 7px;
+  left: 5px;
 }
 
 * {
