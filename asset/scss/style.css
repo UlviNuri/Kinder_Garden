@@ -51,6 +51,11 @@ a {
   color: #000000;
 }
 
+p {
+  margin: 0;
+  padding: 0;
+}
+
 nav {
   padding: 14px 0;
 }
@@ -99,18 +104,11 @@ main #main_img p {
   color: #FFFFFF;
 }
 main #main_img .relative_img {
-  position: relative;
-  width: 100%;
-  height: 600px;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-main #main_img .relative_img .absaulte_img img {
-  position: absolute;
-  left: 0;
-  z-index: 5;
-  top: 350px;
+  width: 120%;
+  height: 1035.31px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-right: 100px;
 }
 main #work_page {
   width: 100%;
@@ -142,6 +140,11 @@ main #img_content .img {
   position: absolute;
   bottom: 0;
   left: 0;
+}
+
+.relative_img {
+  width: 100%;
+  height: 1000px;
 }
 
 #modal .modal-content {
@@ -622,6 +625,36 @@ h1 {
   left: 5px;
 }
 
+main .col-lg-3 {
+  margin-left: 50px;
+}
+main .box {
+  height: 322px;
+  width: 282px;
+  border-radius: 4px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+main .box p {
+  padding: 0;
+  margin: 0;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 37px;
+  color: #000000;
+}
+main .id {
+  width: 100%;
+  height: 950px;
+  background-color: white;
+  border: 1px solid black;
+}
+main .id form .form_name input {
+  display: block;
+}
 * {
   font-family: "Montserrat", sans-serif;
 }
