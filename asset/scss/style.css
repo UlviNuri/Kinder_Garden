@@ -388,7 +388,7 @@ main .container_div .contact {
 main .container_div .contact form {
   width: 100%;
   height: 300px;
-  padding: 20px 0;
+  padding: 10px 0;
 }
 main .container_div .contact form input {
   display: block;
@@ -396,7 +396,7 @@ main .container_div .contact form input {
   width: 480px;
   margin-top: 30px;
   padding: 10px 8px;
-  margin-left: 10%;
+  margin-left: 5%;
   border: 1.25px solid rgba(101, 101, 101, 0.5019607843);
   border-radius: 4px;
   font-size: 17px;
@@ -405,6 +405,14 @@ main .container_div .contact form input {
 }
 main .container_div .contact form input:nth-child(3) {
   height: 150px;
+}
+main .container_div .contact form textarea {
+  margin-left: 5%;
+  margin-top: 24px;
+  padding: 5px;
+  border-radius: 4px;
+  font-size: 17px;
+  font-weight: 500;
 }
 main .container_div button {
   float: right;
@@ -648,13 +656,237 @@ main .box p {
 }
 main .id {
   width: 100%;
-  height: 950px;
+  height: auto;
   background-color: white;
-  border: 1px solid black;
+}
+main .id form {
+  padding: 0 20px;
+}
+main .id form .form_name {
+  display: flex;
+  gap: 25px;
 }
 main .id form .form_name input {
   display: block;
+  border: 1.25px solid rgba(217, 217, 217, 0.6980392157);
+  border-radius: 4px;
 }
+main .id form .mobile {
+  padding: 20px 0;
+}
+main .id form .mobile input {
+  display: block;
+  margin-top: 12px;
+  border: 1.25px solid rgba(217, 217, 217, 0.6980392157);
+  border-radius: 4px;
+}
+main .id form .mobile input::-moz-placeholder {
+  font-weight: 500;
+  color: black;
+}
+main .id form .mobile input:-ms-input-placeholder {
+  font-weight: 500;
+  color: black;
+}
+main .id form .mobile input::placeholder {
+  font-weight: 500;
+  color: black;
+}
+main .id form .email input {
+  width: 30%;
+  display: block;
+  border: 1.25px solid rgba(217, 217, 217, 0.6980392157);
+  border-radius: 4px;
+}
+main .id form .gender {
+  padding: 16px 0;
+  display: flex;
+  gap: 20px;
+}
+main .id form .gender input {
+  display: block;
+  width: 150px;
+  border: 1.25px solid rgba(217, 217, 217, 0.6980392157);
+  border-radius: 4px;
+}
+main .id form .school {
+  display: flex;
+  flex-direction: column;
+}
+main .id form .school input {
+  width: 400px;
+  border: 1.25px solid rgba(217, 217, 217, 0.6980392157);
+  border-radius: 4px;
+}
+main .id form .work {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+}
+main .id form .work textarea {
+  width: 40%;
+  border-radius: 4px;
+}
+main button {
+  float: right;
+  margin-right: 15%;
+  margin-top: 20px;
+  background-color: #F3EA00;
+  height: 56px;
+  width: 180px;
+  border: transparent;
+  border-radius: 17px;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+footer {
+  margin-top: 300px;
+}
+footer #bagca_footer {
+  height: 56px;
+  width: 179px;
+  cursor: pointer;
+  padding: 0 8px;
+}
+footer .footer_link ul li {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 18px;
+  color: #000000;
+  padding: 8px 12px;
+}
+footer .mobil a {
+  display: block;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 18px;
+  color: #000000;
+  padding: 8px 0;
+}
+footer .mobil p {
+  padding: 8px 0;
+}
+footer .registration {
+  cursor: pointer;
+}
+footer .registration p {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 18px;
+  color: #000000;
+  padding: 8px 0;
+}
+footer .vakansiya {
+  cursor: pointer;
+}
+footer .vakansiya p {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 18px;
+  color: #000000;
+  padding: 8px 0;
+}
+footer .position form {
+  position: relative;
+}
+footer .position form input {
+  background-color: gray;
+  box-shadow: none;
+  border-radius: 4px;
+}
+footer .position form input::-moz-placeholder {
+  color: #000000 !important;
+  opacity: 1;
+}
+footer .position form input:-ms-input-placeholder {
+  color: #000000 !important;
+  opacity: 1;
+}
+footer .position form input::placeholder {
+  color: #000000 !important;
+  opacity: 1;
+}
+footer .position form div {
+  position: absolute;
+  top: 3px;
+  right: 5px;
+  z-index: 5;
+}
+footer .social_icon {
+  width: 100%;
+}
+footer .social_icon p {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 18px;
+  color: #000000;
+}
+footer .social_icon img {
+  float: right;
+  padding: 0 14px;
+}
+
+main .col-lg-12 {
+  border-radius: 4px;
+  width: 100%;
+  height: auto;
+  background-color: white;
+}
+main .cart_name {
+  padding: 20px 0;
+}
+main .cart_name input {
+  display: block;
+  width: 100%;
+  padding: 10px 8px;
+  margin-top: 20px;
+  border: 1.25px solid rgba(156, 153, 153, 0.2117647059);
+  border-radius: 4px;
+}
+main .cart_name .cvv {
+  gap: 20px;
+}
+main .cart_name .cvv input {
+  display: inline-block;
+  width: 40%;
+}
+main .cart_name .cvv input:nth-child(2) {
+  margin-left: 20px;
+}
+main .cart_name .cvv input:nth-child(2)::-moz-placeholder {
+  padding: 0 20px;
+}
+main .cart_name .cvv input:nth-child(2):-ms-input-placeholder {
+  padding: 0 20px;
+}
+main .cart_name .cvv input:nth-child(2)::placeholder {
+  padding: 0 20px;
+}
+main .right_img img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  height: 400px;
+  float: none;
+}
+main .card {
+  border: none;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+main .card img {
+  gap: 20px;
+  width: 60px;
+  height: 50px;
+  border: none;
+}
+main button {
+  float: left;
+}
+
 * {
   font-family: "Montserrat", sans-serif;
 }
