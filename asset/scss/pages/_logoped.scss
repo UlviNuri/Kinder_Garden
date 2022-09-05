@@ -1,0 +1,55 @@
+#employee {
+    .search {
+       
+        display: flex;
+        justify-content: space-between;
+        h2 {
+            @include Parag(30px, 600, 37px, $black_color);
+        }
+
+        input{
+            width: 387px;
+            height: 30px;
+            border: 1px solid transparent;
+            border-radius: 8px;
+
+            &::placeholder{
+                padding: 0 30px;
+                font-size: 17px;
+                font-weight: 500;
+            }
+        }
+
+        .text{
+            h2{
+            font-size: 20px;
+            }
+
+            button{
+                background-color: $btn_color;
+                height: 36px;
+                width: 130px;
+                border: transparent;
+                border-radius: 17px;
+                font-size: 20px;
+                font-weight: 500;
+                line-height: 24px;
+            }
+        }
+
+        .position{
+            position: relative;
+
+            img{
+                position: absolute;
+                top: 7px;
+                left: 5px;
+                width: 16px;
+                height: 16px;
+            }
+        }
+    }
+    .col-lg-4 {
+        margin-top: 100px;
+    }
+}
