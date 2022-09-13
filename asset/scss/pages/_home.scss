@@ -36,6 +36,67 @@ nav {
     width: 100%;
 }
 
+section {
+    .relative_item {
+        position: relative;
+        .absaulte_text {
+            display: flex;
+            flex-direction: row;
+            position: absolute;
+            top: 50px;
+            left: 20px;
+
+            .text {
+                .text2 {
+                    font-family: "Mali";
+                    @include Parag(33px, 400, 43px, $black-color);
+                }
+                h1 {
+                    font-family: "Mali";
+                    @include Parag(38px, 600, 55px, $black-color);
+                }
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+
+            .pos {
+                margin-top: 70px;
+
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+#kinder_garden {
+    .bagca_info {
+        img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        p {
+            @include Parag(21px, 500, 26px, $black-color);
+        }
+        .bagca {
+            @include Parag(13px, 500, 16px, $black-color);
+            padding: 8px 0;
+        }
+    }
+
+    button {
+        height: 56px;
+        width: 180px;
+        background-color: $btn_color;
+        border-radius: 17px;
+        float: right;
+        border: none;
+        
+    }
+}
+
 #employee {
     .isciler {
         img {

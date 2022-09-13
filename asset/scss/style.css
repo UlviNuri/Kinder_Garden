@@ -94,6 +94,64 @@ nav .nav_link .nav_icon ul {
   width: 100%;
 }
 
+section .relative_item {
+  position: relative;
+}
+section .relative_item .absaulte_text {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  top: 50px;
+  left: 20px;
+}
+section .relative_item .absaulte_text .text .text2 {
+  font-family: "Mali";
+  font-size: 33px;
+  font-weight: 400;
+  line-height: 43px;
+  color: #000000;
+}
+section .relative_item .absaulte_text .text h1 {
+  font-family: "Mali";
+  font-size: 38px;
+  font-weight: 600;
+  line-height: 55px;
+  color: #000000;
+}
+section .relative_item .absaulte_text .text:hover {
+  cursor: pointer;
+}
+section .relative_item .absaulte_text .pos {
+  margin-top: 70px;
+  cursor: pointer;
+}
+
+#kinder_garden .bagca_info img {
+  width: 100%;
+  border-radius: 8px;
+}
+#kinder_garden .bagca_info p {
+  font-size: 21px;
+  font-weight: 500;
+  line-height: 26px;
+  color: #000000;
+}
+#kinder_garden .bagca_info .bagca {
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 16px;
+  color: #000000;
+  padding: 8px 0;
+}
+#kinder_garden button {
+  height: 56px;
+  width: 180px;
+  background-color: #F3EA00;
+  border-radius: 17px;
+  float: right;
+  border: none;
+}
+
 #employee .isciler img {
   width: 100%;
   height: 326px;
@@ -202,14 +260,7 @@ main h1 {
   line-height: 37px;
   color: #000000;
 }
-main p {
-  margin-top: 24px;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 27px;
-  color: #000000;
-}
-main img {
+main .img_35 img {
   float: right;
   width: 100%;
   height: 676px;
@@ -572,18 +623,22 @@ main #vakansiyalar .text button {
   margin-left: 20px;
 }
 
-h1 {
-  margin-left: 60px;
+main #kinder_garden_info h1 {
   font-size: 30px;
   font-weight: 600;
   line-height: 36px;
   color: #000000;
 }
-
-.input {
+main #kinder_garden_info h2 {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 15px;
+  color: #000000;
+}
+main #kinder_garden_info .input {
   position: relative;
 }
-.input input {
+main #kinder_garden_info .input input {
   border: 0.25px solid #656565;
   width: 100%;
   height: 30px;
@@ -593,15 +648,60 @@ h1 {
   padding: 0 30px;
   outline: none;
 }
-.input img {
+main #kinder_garden_info .input img {
   height: 16px;
   width: 16px;
   position: absolute;
   top: 7px;
   left: 5px;
 }
+main #kinder_garden_info .check_garden {
+  padding: 5px;
+  gap: 4px;
+  display: flex;
+}
+main #kinder_garden_info .check_garden p {
+  font-size: 15px;
+  font-weight: 600;
+}
+main #kinder_garden_info #price {
+  margin-top: 70px;
+}
+main #bagca_img {
+  margin-top: 100px;
+}
+main #bagca_img .bagca_item img {
+  width: 100%;
+  height: 400px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border: 8px;
+  cursor: pointer;
+}
+main #bagca_img .bagca_item .text_title {
+  margin: 14px 0;
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 20px;
+  color: #000000;
+}
+main #bagca_img .bagca_item p {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #000000;
+}
+main section #img_div img {
+  cursor: pointer;
+  width: 100%;
+  height: 300px;
+  border-radius: 8px;
+}
+main section #img_div #btn {
+  margin-top: 120px;
+}
 
-main .col-lg-3 {
+main #lg_3 {
   margin-left: 50px;
 }
 main .box {
@@ -709,23 +809,23 @@ main button {
   line-height: 24px;
 }
 
-footer {
+#cv_footer {
   margin-top: 300px;
 }
-footer #bagca_footer {
+#cv_footer #bagca_footer {
   height: 56px;
   width: 179px;
   cursor: pointer;
   padding: 0 8px;
 }
-footer .footer_link ul li {
+#cv_footer .footer_link ul li {
   font-size: 15px;
   font-weight: 400;
   line-height: 18px;
   color: #000000;
   padding: 8px 12px;
 }
-footer .mobil a {
+#cv_footer .mobil a {
   display: block;
   font-size: 15px;
   font-weight: 400;
@@ -733,65 +833,65 @@ footer .mobil a {
   color: #000000;
   padding: 8px 0;
 }
-footer .mobil p {
+#cv_footer .mobil p {
   padding: 8px 0;
 }
-footer .registration {
+#cv_footer .registration {
   cursor: pointer;
 }
-footer .registration p {
+#cv_footer .registration p {
   font-size: 15px;
   font-weight: 400;
   line-height: 18px;
   color: #000000;
   padding: 8px 0;
 }
-footer .vakansiya {
+#cv_footer .vakansiya {
   cursor: pointer;
 }
-footer .vakansiya p {
+#cv_footer .vakansiya p {
   font-size: 15px;
   font-weight: 400;
   line-height: 18px;
   color: #000000;
   padding: 8px 0;
 }
-footer .position form {
+#cv_footer .position form {
   position: relative;
 }
-footer .position form input {
+#cv_footer .position form input {
   background-color: gray;
   box-shadow: none;
   border-radius: 4px;
 }
-footer .position form input::-moz-placeholder {
+#cv_footer .position form input::-moz-placeholder {
   color: #000000 !important;
   opacity: 1;
 }
-footer .position form input:-ms-input-placeholder {
+#cv_footer .position form input:-ms-input-placeholder {
   color: #000000 !important;
   opacity: 1;
 }
-footer .position form input::placeholder {
+#cv_footer .position form input::placeholder {
   color: #000000 !important;
   opacity: 1;
 }
-footer .position form div {
+#cv_footer .position form div {
   position: absolute;
   top: 3px;
   right: 5px;
   z-index: 5;
 }
-footer .social_icon {
+#cv_footer .social_icon {
   width: 100%;
 }
-footer .social_icon p {
+#cv_footer .social_icon p {
   font-size: 15px;
   font-weight: 400;
   line-height: 18px;
   color: #000000;
 }
-footer .social_icon img {
+#cv_footer .social_icon img {
   float: right;
   padding: 0 14px;
 }
@@ -950,6 +1050,75 @@ section #logoped_info li::marker {
   line-height: 24px;
   color: #000000;
   padding: 8px 0;
+}
+
+section .text1 {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 25px;
+  color: #000000;
+  padding: 14px 0;
+}
+section .center_img {
+  width: 900px;
+  height: 630px;
+  float: right;
+}
+
+main section #left_item img {
+  width: 100%;
+  height: 500px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 8px;
+}
+main section #left_item #left_text {
+  margin-top: 20px;
+}
+main section #left_item #left_text h1 {
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 30px;
+  color: #000000;
+}
+main section #left_item #left_text p {
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #000000;
+  padding: 8px 0;
+}
+main section .img_item {
+  gap: 20px;
+  display: flex;
+}
+main section .img_item .img_1 {
+  width: 270px;
+  height: 257px;
+}
+main section .img_item .img_2 {
+  width: 100%;
+  height: 233px;
+}
+main section .img_item .img_3 {
+  width: 100%;
+  height: 200px;
+}
+main section .bagca_content {
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 20.72px;
+  color: #000000;
+  padding: 14px 0;
+}
+main section .center_img {
+  width: 100%;
+  height: 300px;
+  background-color: white;
+}
+main section .center_img .left_img {
+  width: 105%;
+  height: 300px;
 }
 
 * {

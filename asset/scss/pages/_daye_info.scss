@@ -1,0 +1,12 @@
+section{
+    .text1{
+        @include Parag (17px,400, 25px,$black_color);
+        padding: 14px 0;
+    }
+
+ .center_img{
+    width: 900px;
+    height: 630px;
+    float: right;
+ }   
+}
