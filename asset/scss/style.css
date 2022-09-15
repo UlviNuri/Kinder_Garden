@@ -1111,14 +1111,16 @@ main section .bagca_content {
   color: #000000;
   padding: 14px 0;
 }
-main section .center_img {
-  width: 100%;
-  height: 300px;
-  background-color: white;
+main #skew {
+  position: relative;
 }
-main section .center_img .left_img {
-  width: 105%;
-  height: 300px;
+main #skew .skew_image {
+  position: absolute;
+  width: 50%;
+  right: 0;
+  top: 5%;
+  bottom: 5%;
+  background-size: cover;
 }
 
 * {
