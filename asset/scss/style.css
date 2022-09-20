@@ -1140,12 +1140,48 @@ main #skewbox .imgbox {
   background-color: #ff0;
   border-left: 100px solid white;
   border-bottom: 400px solid transparent;
-  background-image: url("../../images/image 52.png");
   background-position: 50px 0;
 }
 
 footer {
   margin-top: 600px;
+}
+
+main #img_item_1 img {
+  width: 100%;
+}
+main #img_item_1 .wrapper {
+  position: relative;
+}
+main #img_item_1 .wrapper .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+  background: rgb(105, 105, 105);
+}
+main #img_item_1 .wrapper .overlay .content {
+  position: absolute;
+  bottom: 10px;
+  left: 45%;
+  z-index: 5;
+  transform: translate(-50%, -50%);
+}
+main #img_item_1 .wrapper .overlay .content p {
+  color: white !important;
+  z-index: 5;
+}
+main #img_item_1 .wrapper:hover .overlay {
+  opacity: 0.3;
+}
+main #img_item_1 .wrapper:hover .overlay p {
+  opacity: 1;
+  color: white !important;
+  z-index: 5;
 }
 
 * {

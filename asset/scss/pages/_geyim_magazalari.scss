@@ -1,0 +1,46 @@
+main {
+    #img_item_1 {
+        img {
+            width: 100%;
+        }
+        .wrapper {
+            position: relative;
+
+            .overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                opacity: 0;
+                height: 100%;
+                width: 100%;
+                background: rgb(105, 105, 105);
+                
+                .content {
+                    position: absolute;
+                    bottom: 10px;
+                    left: 45%;
+                    z-index: 5;
+                    transform: translate(-50%, -50%);
+
+                    p {
+                        color: white !important ;
+                        z-index: 5;
+                    }
+                }
+            }
+            &:hover {
+                .overlay {
+                    opacity: .3;
+
+                    p{
+                        opacity: 1;
+                        color: white !important;
+                        z-index: 5;
+                    }
+                }
+            }
+        }
+    }
+}
