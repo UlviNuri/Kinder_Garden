@@ -1,0 +1,85 @@
+main {
+    position: relative;
+    margin-top: 50px;
+    height: 800px;
+    margin-left: 11%;
+    width: 80%;
+    height: 2500px;
+    background-color: white;
+    #work_info {
+        .work_melumat {
+            margin-top: 50px;
+            h2 {
+                @include Parag(24px, 700, 20px, $black-color);
+                margin: 20px;
+            }
+
+            .work_content {
+                width: 320px;
+                height: 450px;
+                border: 4.25px solid #656565;
+                margin: 20px;
+                border-radius: 4px;
+
+                h3 {
+                    @include Parag(17px, 600, 20px, $black-color);
+                    padding: 10px;
+                }
+                p {
+                    @include Parag(14px, 600, 15px, $black-color);
+                    padding: 6px 10px;
+                }
+            }
+            .work_requirements {
+                padding: 10px 0;
+
+                p {
+                    @include Parag(13px, 600, 18px, $black-color);
+                }
+            }
+
+            button {
+                margin: 10px 20px;
+                background-color: $btn_color;
+                height: 56px;
+                width: 180px;
+                border: transparent;
+                border-radius: 4px;
+                font-size: 20px;
+                font-weight: 500;
+                line-height: 24px;
+            }
+        }
+    }
+
+    .number{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding: 20px 0;
+        align-items: center;
+        gap: 20px;
+        .num_one{
+            border: 1px solid black;
+            font-size: 15px;
+            font-weight: 600;
+            padding: 10px;
+        }
+
+        span{
+            padding: 0 14px;
+        }
+    }
+
+    #saly{
+        // margin-top: 300px;
+        width: 100%;
+        display: flex;
+        justify-content: end;
+        position: absolute;
+        bottom: -75px;
+        right: -100px;
+
+       
+    }
+}

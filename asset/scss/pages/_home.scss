@@ -96,6 +96,35 @@ section {
         
     }
 }
+#work_list{
+    padding-top: 100px;
+    .work_img{
+        position: relative;
+
+        .work_text{
+            position: absolute;
+            top: 5%;
+            left: 10%;
+            z-index: 5;
+
+            h2{
+                @include Parag(45px,700,56px,$white_color);
+            }
+            p{
+                @include Parag(45px,500,56px,$white_color);
+            }
+
+            button {
+                height: 56px;
+                width: 180px;
+                background-color: $btn_color;
+                border-radius: 17px;
+                border: none;
+                margin: 20px 0;
+            }
+        }
+    }
+}
 
 #employee {
     .isciler {

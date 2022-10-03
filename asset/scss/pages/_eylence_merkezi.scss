@@ -1,8 +1,5 @@
-main {
-    img {
-        cursor: pointer;
-    }
-    #img_item_1 {
+#img_page_2 {
+    #img_item {
         img {
             width: 100%;
             height: 328px;
@@ -29,11 +26,10 @@ main {
                     transform: translate(-50%, -50%);
 
                     p {
-                       a{
-                        
-                        z-index: 5;
-                        @include Parag(30px, 600, 21px, $white-color);
-                       }
+                        a {
+                            z-index: 5;
+                            @include Parag(30px, 600, 21px, $white-color);
+                        }
                     }
                 }
             }
@@ -51,44 +47,53 @@ main {
         }
     }
 
-    #img_item_2 {
-        img {
+    #img_2 {
+        .img_size_1 {
+            height: 466px;
             width: 100%;
-            height: 350px;
-            object-fit: contain;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+        .img_size_2 {
+            height: 466px;
+            width: 100%;
+            border-radius: 4px;
         }
     }
-    #img_item_3 {
-        img {
-            width: 100%;
-            height: 350px;
-            object-fit: contain;
+    #img_3 {
+        .img_box {
+            .img_size_3 {
+                
+                    width: 100%;
+                    height: 514px;
+                    object-fit: cover;
+                
+            }
+            .img_size_4 {
+                width: 100%;
+                height: 514px;
+                object-fit: cover;
+            }
+            .img_size_5 {
+                width: 100%;
+                height: 514px;
+                object-fit: cover;
+            }
         }
     }
-    #img_item_4 {
-        img {
+    #img_4{
+        img{
             width: 100%;
-            height: 461px;
-            object-fit: contain;
-        }
-    }
-    #img_item_5 {
-        .img_item_12 {
-            width: 100%;
-            height: 661px;
+            height: 260px;
             object-fit: cover;
         }
-        .img_item_13 {
-            width: 100%;
-            height: 661px;
-            object-fit: cover;
-        }
     }
-    #img_item_6 {
-        img {
+
+    #img_5{
+        img{
             width: 100%;
-            height: 461px;
-            object-fit: contain;
         }
     }
 }
+
+
