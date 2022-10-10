@@ -91,4 +91,67 @@ main {
             object-fit: contain;
         }
     }
+
+    #skewbox {
+        position: relative;
+        margin-top: 250px;
+        .skew {
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height: 400px;
+            width: 1200px;
+            background-color: white;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            display: flex;
+
+            @media screen and (max-width: 768px){
+                width: 767px;
+            }
+        }
+
+        .content {
+            width: 50%;
+            background-color: white;
+            padding: 2% 5%;
+
+            .yay_geyim{
+                @include Parag(52px,500,50px,$text_gold);
+                
+            }
+            .yay_geyim{
+                @include Parag(47px,500,55px,$text_gold);
+                span{
+                    @include Parag(48px,500,55px,$text_gold);
+                }
+            }
+
+            #endirim_al{
+                background-color: $btn_color;
+                height: 56px;
+                width: 180px;
+                border: transparent;
+                border-radius: 17px;
+                font-size: 20px;
+                font-weight: 500;
+                line-height: 24px;
+                margin-top: 20px;
+            }
+        }
+        .imgbox1 {
+            width: 50%;
+            clip-path: polygon(0 0, 100% 0%, 100% 100%, 28% 100%);
+            object-fit: fill;
+        }
+    }
+
+    .imgbox {
+        width: 50%;
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 42% 100%);
+    }
+}
+
+#geyim_magaza{
+    margin-top: 500px;
 }

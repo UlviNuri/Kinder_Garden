@@ -30,47 +30,371 @@ nav {
             }
         }
     }
-}
 
+    .mobil_link {
+        display: none;
+        i {
+            font-size: 24px;
+        }
+    }
+    // @media screen and (max-width: 768px) {
+    //     .mobil_link {
+    //         display: block;
+    //     }
+    //     .nav_link {
+    //         display: none;
+    //     }
+    // }
+}
+h3 {
+    @include Parag(40px, 600, 48px, $white_color);
+    display: flex;
+    justify-content: center;
+    padding-left: 33%;
+
+    @media screen and (max-width: 768px) {
+        display: none;
+    }
+}
 #center_img {
     width: 100%;
+    @media screen and (max-width: 768px) {
+        display: none;
+    }
 }
 
-section {
-    .relative_item {
+
+main {
+    #kids_img_text {
+        width: 100%;
+        height: 1700px;
         position: relative;
-        .absaulte_text {
-            display: flex;
-            flex-direction: row;
+
+        .baby_info {
+            @include Parag(30px, 600, 30px, $black-color);
+            padding: 0 50px;
             position: absolute;
-            top: 50px;
-            left: 20px;
+            top: 290px;
+        }
+        .relative_item {
+            position: relative;
+            .absaulte_text {
+                display: flex;
+                flex-direction: row;
+                position: absolute;
+                top: 50px;
+                left: 20px;
 
-            .text {
-                .text2 {
-                    font-family: "Mali";
-                    @include Parag(33px, 400, 43px, $black-color);
-                }
-                h1 {
-                    font-family: "Mali";
-                    @include Parag(38px, 600, 55px, $black-color);
+                .text {
+                    .text2 {
+                        font-family: "Mali";
+                        @include Parag(33px, 400, 43px, $black-color);
+                    }
+                    h2 {
+                        font-family: "Mali";
+                        @include Parag(38px, 600, 35px, $black-color);
+                    }
+
+                    &:hover {
+                        cursor: pointer;
+                    }
                 }
 
-                &:hover {
+                .pos {
+                    margin-top: 70px;
+
                     cursor: pointer;
                 }
             }
+            
+        }
 
-            .pos {
-                margin-top: 70px;
+        #kids_img {
+            position: absolute;
+            top: 300px;
+            left: 0;
+            width: 100%;
+            gap: 20px;
+            display: flex;
 
-                cursor: pointer;
+            .img_item {
+                img {
+                    display: block;
+                    position: absolute;
+                    top: 550px;
+                    left: 50px;
+                }
+            }
+            .img_item_1 {
+                position: absolute;
+                top: 415px;
+                left: 290px;
+                img {
+                    display: block;
+                    margin-top: 20px;
+                }
+                @media screen and (max-width: 768px) {
+                    .img_none{
+                        display: none;
+                    }
+                }
+            }
+            .img_item_2 {
+                position: absolute;
+                left: 520px;
+                top: 192px;
+                img {
+                    display: block;
+                }
+            }
+            .img_item_3 {
+                position: absolute;
+                right: 516px;
+                top: 113px;
+                img {
+                    display: block;
+                    margin-top: 20px;
+                }
+                @media screen and (max-width: 768px) {
+                    display: none;
+                }
+            }
+            .img_item_4 {
+                position: absolute;
+                right: 270px;
+                top: -90px;
+                img {
+                    display: block;
+                    margin-top: 20px;
+                }
+                @media screen and (max-width: 768px) {
+                    display: none;
+                }
+            }
+            .img_item_5 {
+                position: absolute;
+                right: 15px;
+                top: 63px;
+                img {
+                    display: block;
+                    margin-top: 20px;
+                }
+                @media screen and (max-width: 768px) {
+                    display: none;
+                }
+            }
+        }
+        @media screen and (max-width: 768px) {
+            #kids_img_text {
+                position: relative;
+                .baby_info {
+                    position: absolute;
+                    top: -434px;
+                }
             }
         }
     }
 }
 
+#rotate_text {
+    display: flex;
+    .relative {
+        position: relative;
+
+        .position_text {
+            position: absolute;
+            top: -10px;
+            right: -100px;
+            .class {
+                display: flex;
+                div {
+                    margin: 7px 4px;
+                    width: 15px;
+                    height: 15px;
+                    background-color: rgba(255, 166, 0, 0.82);
+                    border-radius: 10px;
+                }
+                p {
+                    @include Parag(24px, 500, 24px, $white_color);
+                }
+            }
+        }
+
+        .position_text1 {
+            position: absolute;
+            top: 25px;
+            right: 10px;
+            .class {
+                display: flex;
+                div {
+                    margin: 7px 4px;
+                    width: 15px;
+                    height: 15px;
+                    background-color: green;
+                    border-radius: 10px;
+                }
+                p {
+                    @include Parag(24px, 500, 24px, $white_color);
+                }
+            }
+        }
+        .position_text2 {
+            position: absolute;
+            top: 70px;
+            right: 200px;
+            .class {
+                display: flex;
+                div {
+                    margin: 7px 4px;
+                    width: 15px;
+                    height: 15px;
+                    background-color: red;
+                    border-radius: 10px;
+                }
+                p {
+                    @include Parag(24px, 500, 24px, $white_color);
+                }
+            }
+        }
+        .position_text3 {
+            position: absolute;
+            top: 115px;
+            right: 220px;
+            .class {
+                display: flex;
+                div {
+                    margin: 7px 4px;
+                    width: 15px;
+                    height: 15px;
+                    background-color: yellow;
+                    border-radius: 10px;
+                }
+                p {
+                    @include Parag(24px, 500, 24px, $white_color);
+                }
+            }
+        }
+        .position_text4 {
+            position: absolute;
+            top: 155px;
+            right: 120px;
+            .class {
+                display: flex;
+                div {
+                    margin: 7px 4px;
+                    width: 15px;
+                    height: 15px;
+                    background-color: pink;
+                    border-radius: 10px;
+                }
+                p {
+                    @include Parag(24px, 500, 24px, $white_color);
+                }
+            }
+        }
+        .position_text5 {
+            position: absolute;
+            top: 195px;
+            right: 120px;
+            .class {
+                display: flex;
+                div {
+                    margin: 7px 4px;
+                    width: 15px;
+                    height: 15px;
+                    background-color: rgb(198, 21, 175);
+                    border-radius: 10px;
+                }
+                p {
+                    @include Parag(24px, 500, 24px, $white_color);
+                }
+            }
+        }
+        .position_text7 {
+            position: absolute;
+            top: 240px;
+            right: -75px;
+            .class {
+                display: flex;
+                div {
+                    margin: 7px 4px;
+                    width: 15px;
+                    height: 15px;
+                    background-color: orange;
+                    border-radius: 10px;
+                }
+                p {
+                    @include Parag(24px, 500, 24px, $white_color);
+                }
+            }
+        }
+        .position_text8 {
+            position: absolute;
+            top: 290px;
+            right: -240px;
+            .class {
+                display: flex;
+                div {
+                    margin: 7px 4px;
+                    width: 15px;
+                    height: 15px;
+                    background-color: #fa0163;
+                    border-radius: 10px;
+                }
+                p {
+                    @include Parag(24px, 500, 24px, $white_color);
+                }
+            }
+        }
+        .position_text9 {
+            position: absolute;
+            top: 330px;
+            right: -220px;
+            .class {
+                display: flex;
+                div {
+                    margin: 7px 4px;
+                    width: 15px;
+                    height: 15px;
+                    background-color: #0acfbe;
+                    border-radius: 10px;
+                }
+                p {
+                    @include Parag(24px, 500, 24px, $white_color);
+                }
+            }
+        }
+        .position_text10 {
+            position: absolute;
+            top: 375px;
+            right: -270px;
+            .class {
+                display: flex;
+                div {
+                    margin: 7px 4px;
+                    width: 15px;
+                    height: 15px;
+                    background-color: #e4c1a5;
+                    border-radius: 10px;
+                }
+                p {
+                    @include Parag(24px, 500, 24px, $white_color);
+                }
+            }
+        }
+        .absoulte {
+            position: absolute;
+            bottom: -20px;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        display: none;
+    }
+}
+
 #kinder_garden {
+    margin-top: 100px;
     .bagca_info {
         img {
             width: 100%;
@@ -78,7 +402,7 @@ section {
         }
 
         p {
-            @include Parag(21px, 500, 26px, $black-color);
+            @include Parag(23px, 500, 26px, $black-color);
         }
         .bagca {
             @include Parag(13px, 500, 16px, $black-color);
@@ -93,25 +417,28 @@ section {
         border-radius: 17px;
         float: right;
         border: none;
-        
     }
 }
-#work_list{
+#work_list {
     padding-top: 100px;
-    .work_img{
+    .work_img {
         position: relative;
 
-        .work_text{
+        #work_sekil {
+            width: 100%;
+        }
+
+        .work_text {
             position: absolute;
             top: 5%;
             left: 10%;
             z-index: 5;
 
-            h2{
-                @include Parag(45px,700,56px,$white_color);
+            h2 {
+                @include Parag(45px, 700, 56px, $white_color);
             }
-            p{
-                @include Parag(45px,500,56px,$white_color);
+            p {
+                @include Parag(45px, 500, 56px, $white_color);
             }
 
             button {
@@ -123,6 +450,32 @@ section {
                 margin: 20px 0;
             }
         }
+
+        @media screen and (max-width: 768px) {
+        }
+    }
+}
+section {
+    #img_div {
+        margin-top: 100px;
+        img {
+            cursor: pointer;
+            width: 100%;
+            height: 300px;
+            border-radius: 8px;
+        }
+
+   #btn{
+    button {
+        margin-top: 120px;
+        height: 56px;
+        width: 180px;
+        background-color: $btn_color;
+        border-radius: 17px;
+        float: right;
+        border: none;
+    }
+   }
     }
 }
 
@@ -147,6 +500,8 @@ section {
         }
     }
 }
+
+
 
 #modal {
     .modal-content {
@@ -197,4 +552,7 @@ section {
             }
         }
     }
+}
+
+@media screen and (max-width: 768px) {
 }

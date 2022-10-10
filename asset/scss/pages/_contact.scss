@@ -94,6 +94,7 @@ main {
 }
 footer {
     #bagca_footer {
+        margin: 0;
         height: 56px;
         width: 179px;
         cursor: pointer;
@@ -153,19 +154,25 @@ footer {
                 top: 3px;
                 right: 5px;
                 z-index: 5;
+                // @media screen and (max-width: 768px) {
+                //     div {
+                //         right: 0;
+                //         left: 160px;
+                //     }
+                // }
             }
         }
-    }
 
-    .social_icon {
-        width: 100%;
+        .social_icon {
+            width: 100%;
 
-        p {
-            @include Parag(15px, 400, 18px, $black-color);
-        }
-        img {
-            float: right;
-            padding: 0 14px;
+            p {
+                @include Parag(15px, 400, 18px, $black-color);
+            }
+            img {
+                float: right;
+                padding: 0 14px;
+            }
         }
     }
 }

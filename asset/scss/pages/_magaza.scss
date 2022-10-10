@@ -72,6 +72,12 @@ main {
                     justify-content: center;
                     button {
                         margin-top: 30%;
+                        height: 56px;
+                        width: 180px;
+                        background-color: $btn_color;
+                        border-radius: 17px;
+                        float: right;
+                        border: none;
                     }
                 }
             }

@@ -1,0 +1,61 @@
+// home
+
+@media screen and (max-width: 768px) {
+    .mobil_link {
+        display: block;
+    }
+    .nav_link {
+        display: none;
+    }
+
+    main {
+        #kids_img_text {
+            height: 1300px;
+        }
+        .baby_info {
+            margin-bottom: 150px;
+        }
+    }
+
+    #kinder_garden {
+        .bagca_info {
+            p {
+                @include Parag(17px, 500, 26px, $black-color);
+                text-align: center;
+            }
+        }
+
+        button {
+            display: none;
+        }
+    }
+    .position {
+        display: none;
+    }
+
+
+}
+
+
+// bagcalar 
+
+@media screen and (max-width: 768px){
+    #skewbox{
+        .skew{
+            width: 770px;
+        }
+    }
+}
+@media screen and (max-width: 768px){
+  #img_div{
+    margin-top: 0;
+    img{
+       display: none;
+    }
+  }
+  #btn{
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
+  }
+}

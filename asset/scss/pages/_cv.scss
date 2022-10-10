@@ -21,7 +21,7 @@ main {
         background-color: white;
 
         form {
-            padding: 0 20px;
+            padding: 30px  20px;
             .form_name {
                 display: flex;
                 gap: 25px;
@@ -89,9 +89,9 @@ main {
         }
     }
 
-    button {
+    #cv_btn {
         float: right;
-        margin-right: 15%;
+        margin-right: 12%;
         margin-top: 20px;
         background-color: $btn_color;
         height: 56px;
@@ -106,7 +106,7 @@ main {
 
 
 #cv_footer {
-    margin-top: 300px;
+    margin-top: 200px;
     #bagca_footer {
         height: 56px;
         width: 179px;

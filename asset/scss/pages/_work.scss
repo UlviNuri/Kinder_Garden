@@ -1,4 +1,4 @@
-main {
+#work_main {
     position: relative;
     margin-top: 50px;
     height: 800px;
@@ -16,7 +16,7 @@ main {
 
             .work_content {
                 width: 320px;
-                height: 450px;
+                height: 470px;
                 border: 4.25px solid #656565;
                 margin: 20px;
                 border-radius: 4px;
@@ -27,7 +27,7 @@ main {
                 }
                 p {
                     @include Parag(14px, 600, 15px, $black-color);
-                    padding: 6px 10px;
+                    // padding: 6px 10px;
                 }
             }
             .work_requirements {
@@ -72,7 +72,6 @@ main {
     }
 
     #saly{
-        // margin-top: 300px;
         width: 100%;
         display: flex;
         justify-content: end;

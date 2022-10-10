@@ -19,6 +19,7 @@ main {
                 border-radius: 4px;
                 padding: 0 30px;
                 outline: none;
+                
             }
             img {
                 height: 16px;
@@ -37,6 +38,9 @@ main {
                 font-size: 15px;
                 font-weight: 600;
             }
+            input{
+                margin-top: 24px
+            }
         }
         #price {
             margin-top: 70px;
@@ -52,15 +56,20 @@ main {
                 object-fit: contain;
                 border: 8px;
                 cursor: pointer;
+                @media screen and (max-width: 768px){
+                    object-fit: cover;
+                }
             }
 
             .text_title {
                 margin: 14px 0;
                 @include Parag(21px, 600, 20px, $black-color);
+                text-align: center;
             }
 
             p {
                 @include Parag(15px, 400, 20px, $black-color);
+                text-align: center;
             }
         }
     }
@@ -74,15 +83,10 @@ main {
                 border-radius: 8px;
             }
 
-
-            // .right_btn{
-            //     display: flex;
-            //     align-items: center;
-            // }
-
-            #btn{
-                margin-top: 120px;
-            }
         }
     }
+}
+
+#bagca_footer{
+    margin: 0;
 }
