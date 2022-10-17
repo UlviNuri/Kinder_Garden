@@ -685,6 +685,11 @@ main .img_35 {
   -o-object-fit: contain;
      object-fit: contain;
 }
+@media screen and (max-width: 768px) {
+  main .img_35 {
+    height: 300px;
+  }
+}
 
 footer #bagca_footer {
   height: 56px;
@@ -815,6 +820,11 @@ main .container_div h2 {
   line-height: 37px;
   color: #000000;
   margin-left: 8%;
+}
+@media screen and (max-width: 768px) {
+  main .container_div h2 {
+    margin-left: 0;
+  }
 }
 main .container_div .contact {
   width: 100%;
@@ -1330,7 +1340,7 @@ main #cv_btn {
 main .col-lg-12 {
   border-radius: 4px;
   width: 100%;
-  height: auto;
+  height: 450px;
   background-color: white;
 }
 main .cart_name {
@@ -1384,6 +1394,14 @@ main .card img {
 }
 main button {
   float: left;
+  background-color: #F3EA00;
+  margin-top: 20px;
+  width: 180px;
+  height: 56px;
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 17px;
+  border: none;
 }
 
 #employee .search {
@@ -1506,6 +1524,13 @@ section #logoped_info li::marker {
   width: 900px;
   height: 630px;
   float: right;
+}
+@media screen and (max-width: 768px) {
+  #daye_info .center_img {
+    width: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
 }
 
 main section #left_item img {
@@ -2053,12 +2078,17 @@ main .img_box .relative .overlay img {
 #work_main .number span {
   padding: 0 14px;
 }
+@media screen and (max-width: 768px) {
+  #work_main .number {
+    display: none;
+  }
+}
 #work_main #saly {
   width: 100%;
   display: flex;
   justify-content: end;
   position: absolute;
-  bottom: -75px;
+  bottom: -40px;
   right: -100px;
 }
 
@@ -2095,6 +2125,7 @@ main .img_box .relative .overlay img {
 #work_info section .right_text div {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 #work_info section .right_text div p {
   font-size: 17px;
@@ -2107,6 +2138,7 @@ main .img_box .relative .overlay img {
   font-weight: 700;
   line-height: 35px;
   color: #000000;
+  margin-top: 30px;
 }
 #work_info .work_footer h3 {
   font-size: 20px;
@@ -2114,6 +2146,8 @@ main .img_box .relative .overlay img {
   line-height: 20px;
   color: #000000;
   padding: 0 20px;
+  display: flex;
+  justify-content: start;
 }
 #work_info .work_footer ul {
   margin: 30px;
@@ -2165,6 +2199,9 @@ main .img_box .relative .overlay img {
   .position {
     display: none;
   }
+  .registration {
+    padding: 0 12px;
+  }
 }
 @media screen and (max-width: 768px) {
   #skewbox .skew {
@@ -2182,6 +2219,76 @@ main .img_box .relative .overlay img {
     display: flex;
     justify-content: center;
     margin-top: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .img_1 {
+    display: none;
+  }
+  .img_2 {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  main #lg_3 {
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .info {
+    margin-top: 150px;
+  }
+}
+@media screen and (max-width: 768px) {
+  main #img_item_2 img {
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  main #img_item_3 img {
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  main #img_item_4 img {
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  main #img_item_6 img {
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+@media screen and (max-width: 768px) {
+  #img_box .img_box {
+    display: none;
+  }
+  .btn button {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .right_img img {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .work_delete {
+    display: none;
+  }
+  .number {
+    display: none;
+  }
+  #work_main {
+    position: relative;
+  }
+  #work_main #saly {
+    position: absolute;
+    right: 0;
+    bottom: -30px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .work_footer img {
+    width: 100%;
   }
 }
 * {

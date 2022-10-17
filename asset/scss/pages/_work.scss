@@ -69,6 +69,10 @@
         span{
             padding: 0 14px;
         }
+
+        @media screen and (max-width:768px) {
+            display: none;
+        }
     }
 
     #saly{
@@ -76,7 +80,7 @@
         display: flex;
         justify-content: end;
         position: absolute;
-        bottom: -75px;
+        bottom: -40px;
         right: -100px;
 
        

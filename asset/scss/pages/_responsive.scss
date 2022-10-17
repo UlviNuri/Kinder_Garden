@@ -32,30 +32,150 @@
     .position {
         display: none;
     }
-
-
+    .registration {
+        padding: 0 12px;
+    }
 }
 
+// bagcalar
 
-// bagcalar 
-
-@media screen and (max-width: 768px){
-    #skewbox{
-        .skew{
+@media screen and (max-width: 768px) {
+    #skewbox {
+        .skew {
             width: 770px;
         }
     }
 }
+@media screen and (max-width: 768px) {
+    #img_div {
+        margin-top: 0;
+        img {
+            display: none;
+        }
+    }
+    #btn {
+        display: flex;
+        justify-content: center;
+        margin-top: 0;
+    }
+}
+
+// bagca_info
+
+@media screen and (max-width: 768px) {
+    .img_1 {
+        display: none;
+    }
+    .img_2 {
+        display: none;
+    }
+}
+
+// conntact
+
+@media screen and (max-width: 768px) {
+}
+
+// cv
+@media screen and (max-width: 768px) {
+    main {
+        #lg_3 {
+            margin-left: 0;
+        }
+    }
+}
+
+// daye_info
+
+@media screen and (max-width: 768px) {
+    .info {
+        margin-top: 150px;
+    }
+}
+
+// geyim magazalari 
+
 @media screen and (max-width: 768px){
-  #img_div{
-    margin-top: 0;
-    img{
-       display: none;
+    main {
+        #img_item_2{
+            img{
+                object-fit: cover;
+            }
+        }
+        #img_item_3{
+            img{
+                object-fit: cover;
+            }
+        }
+        #img_item_4{
+            img{
+                object-fit: cover;
+            }
+        }
+        #img_item_6{
+            img{
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+
+// magaza
+
+@media screen and (max-width: 768px) {
+  #img_box{
+    .img_box{
+        display: none;
     }
   }
-  #btn{
-    display: flex;
-    justify-content: center;
-    margin-top: 0;
+  .btn{
+   button{
+    display: none;
+   }
   }
 }
+
+
+
+// payment
+
+@media screen and (max-width: 768px) {
+    .right_img {
+        img {
+            display: none;
+        }
+    }
+}
+
+// work
+
+@media screen and (max-width: 768px) {
+    .work_delete {
+        display: none;
+    }
+
+    .number {
+        display: none;
+    }
+
+    #work_main {
+        position: relative;
+        #saly {
+            position: absolute;
+            right: 0;
+            bottom: -30px;
+        }
+    }
+}
+
+// work_info
+
+@media screen and (max-width: 768px) {
+    .work_footer {
+        img {
+            width: 100%;
+        }
+    }
+}
+

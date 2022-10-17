@@ -17,3 +17,13 @@
     height: $height;
     object-fit: $o_fit;
 }
+
+@mixin  btn ($m_top,$width,$height,$f-size,$f-weight,$b-radius,$border) {
+ margin-top: $m_top;
+ width: $width;   
+ height: $height;
+ font-size: $f-size;
+ font-weight: $f-weight;
+ border-radius: $b-radius;
+ border: $border;
+}

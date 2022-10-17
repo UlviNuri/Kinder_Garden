@@ -2,7 +2,7 @@ main {
     .col-lg-12 {
         border-radius: 4px;
         width: 100%;
-        height: auto;
+        height: 450px;
         background-color: white;
     }
 
@@ -58,5 +58,7 @@ main {
 
     button{
         float: left;
+        background-color: $btn_color;
+        @include btn (20px,180px,56px,20px,500,17px,none);
     }
 }
