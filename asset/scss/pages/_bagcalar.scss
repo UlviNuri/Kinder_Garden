@@ -1,9 +1,28 @@
+// body.night {
+//     background: rgb(41, 37, 50);
+//     p,
+//     h1,
+//     h1,
+//     h2,
+//     h3,
+//     h4,
+//     h5,
+//     h6 {
+//         color: white !important;
+//     }
+//     ul,
+//     li,
+//     a,
+//     span {
+//         color: white;
+//     }
+// }
+
 main {
     #kinder_garden_info {
         h1 {
             @include Parag(30px, 600, 36px, $black-color);
         }
-
         h2 {
             @include Parag(15px, 600, 15px, $black-color);
         }
@@ -11,22 +30,13 @@ main {
             position: relative;
 
             input {
-                border: 0.25px solid #656565;
-                width: 100%;
-                height: 30px;
-                background-color: transparent;
-                color: #303030b2;
-                border-radius: 4px;
-                padding: 0 30px;
-                outline: none;
-                
+                @include Input(0.25px solid #656565, 100%, 30px, transparent, #303030b2, 4px, 0 30px, none);
             }
             img {
-                height: 16px;
-                width: 16px;
                 position: absolute;
                 top: 7px;
                 left: 5px;
+                @include Img(16px,16px,null)
             }
         }
 
@@ -38,8 +48,8 @@ main {
                 font-size: 15px;
                 font-weight: 600;
             }
-            input{
-                margin-top: 24px
+            input {
+                margin-top: 24px;
             }
         }
         #price {
@@ -47,16 +57,28 @@ main {
         }
     }
 
+    #kinder_garden_mobil {
+        display: none;
+
+        @media screen and (max-width: 768px) {
+            @include Flex(center, center, row);
+            margin-top: 50px;
+            select {
+                @include select(8px 0, 23%, 20px 0, transparent, black, 18px, 500);
+                option {
+                    @include test(pink, black);
+                }
+            }
+        }
+    }
     #bagca_img {
         margin-top: 100px;
         .bagca_item {
             img {
-                width: 100%;
-                height: 400px;
-                object-fit: contain;
+                @include Img(100%, 400px, contain);
                 border: 8px;
                 cursor: pointer;
-                @media screen and (max-width: 768px){
+                @media screen and (max-width: 768px) {
                     object-fit: cover;
                 }
             }
@@ -82,11 +104,12 @@ main {
                 height: 300px;
                 border-radius: 8px;
             }
-
         }
     }
 }
 
-#bagca_footer{
+#bagca_footer {
     margin: 0;
 }
+
+// 135

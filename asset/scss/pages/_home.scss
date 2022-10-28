@@ -1,558 +1,679 @@
 nav {
-    padding: 14px 0;
-    .logo {
-        img {
-            width: 100%;
-            height: 64px;
-            object-fit: contain;
-            cursor: pointer;
+  .nav-menu {
+    padding: 30px 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    .nav-item {
+      position: relative;
+      .nav-link {
+        @include Parag(17px, 500, 20px, $black-color);
+        text-transform: uppercase;
+        transition: .3s ease-in-out;
+
+        &:hover {
+          color: yellow;
         }
+      }
     }
-
-    .nav_link {
-        height: 50px;
-        ul {
-            height: 70px;
-            @include Flex(space-around, center, row);
-            li {
-                @include Parag(17px, 500, 21px, $black-color);
-                cursor: pointer;
-
-                a {
-                    color: $black-color;
-                }
-            }
-        }
-
-        .nav_icon {
-            ul {
-                gap: 14px;
-            }
-        }
+  }
+  .hamburger {
+    display: none;
+    cursor: pointer;
+    z-index: 2;
+    .bar {
+      display: block;
+      width: 25px;
+      height: 3px;
+      margin: 5px auto;
+      transition: all .3s ease-in-out;
+      background-color: yellow;
     }
-
-    .mobil_link {
-        display: none;
-        i {
-            font-size: 24px;
-        }
+  }
+}
+@media only screen and (max-width: 768px) {
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .navigation {
+      margin: 35px 0;
     }
-    // @media screen and (max-width: 768px) {
-    //     .mobil_link {
-    //         display: block;
-    //     }
-    //     .nav_link {
-    //         display: none;
-    //     }
-    // }
+    .hamburger {
+      display: block;
+    }
+    .active .bar:nth-child(2) {
+      opacity: 0;
+    }
+    .active .bar:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+    }
+    .active .bar:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+    }
+    .nav-menu {
+      position: fixed;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 50%;
+      height: 100%;
+      background-color: gray;
+      top: 0px;
+      left: -100%;
+      transition: 0.3s ease-in-out; 
+      z-index: 55;
+    }
+    .active {
+      left: 0;
+    }
+  }
+}
+// body.night {
+//   background: rgb(41, 37, 50);
+//   p,
+//   h1,
+//   h1,
+//   h2,
+//   h3,
+//   h4,
+//   h5,
+//   h6 {
+//     color: white !important;
+//   }
+//   a {
+//     color: white;
+//   }
+// }
+
+// header {
+//   label {
+//     position: absolute;
+//     width: 45px;
+//     height: 30px;
+//     right: 20px;
+//     top: 20px;
+//     border: 1px solid black;
+//     border-radius: 20px;
+//   }
+//   label:before {
+//     position: absolute;
+//     content: "";
+//     width: 20px;
+//     height: 20px;
+//     top: 14%;
+//     left: 1%;
+//     border-radius: 50%;
+//     background: #000;
+//     transition: 0.3s ease-in-out;
+//   }
+//   label:active::before {
+//     left: 24px;
+//     background: #fff;
+//   }
+// }
+#sviper {
+  overflow: hidden;
+  margin-top: 100px;
+  display: none;
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+.swiper-pagination-bullet:active{
+  background-color:white;
+}
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  #swiper_pages {
+    margin-top: 20px;
+  }
 }
 h3 {
-    @include Parag(40px, 600, 48px, $white_color);
-    display: flex;
-    justify-content: center;
-    padding-left: 33%;
+  @include Parag(40px, 600, 48px, $white_color);
+  display: flex;
+  justify-content: center;
+  padding-left: 33%;
 
-    @media screen and (max-width: 768px) {
-        display: none;
-    }
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 }
 #center_img {
-    width: 100%;
-    @media screen and (max-width: 768px) {
-        display: none;
-    }
+  width: 100%;
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 }
 
-
 main {
-    #kids_img_text {
-        width: 100%;
-        height: 1700px;
-        position: relative;
+  #kids_img_text {
+    width: 100%;
+    height: 1700px;
+    position: relative;
 
-        .baby_info {
-            @include Parag(30px, 600, 30px, $black-color);
-            padding: 0 50px;
-            position: absolute;
-            top: 290px;
+    .baby_info {
+      @include Parag(30px, 600, 30px, $black-color);
+      padding: 0 50px;
+      position: absolute;
+      top: 290px;
+    }
+    .relative_item {
+      position: relative;
+      .absaulte_text {
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        top: 50px;
+        left: 20px;
+
+        .text {
+          .text2 {
+            font-family: "Mali";
+            @include Parag(33px, 400, 43px, $black-color);
+          }
+          h2 {
+            font-family: "Mali";
+            @include Parag(38px, 600, 35px, $black-color);
+          }
+
+          &:hover {
+            cursor: pointer;
+          }
+          @media screen and (max-width: 768px) {
+            .text {
+              padding: 20px 0;
+            }
+            .text2 {
+              @include Parag(18px, 500, 23px, $black-color);
+              text-align: center;
+            }
+            h2 {
+              @include Parag(24px, 600, 40px, $black-color);
+              text-align: center;
+            }
+          }
         }
-        .relative_item {
-            position: relative;
-            .absaulte_text {
-                display: flex;
-                flex-direction: row;
-                position: absolute;
-                top: 50px;
-                left: 20px;
 
-                .text {
-                    .text2 {
-                        font-family: "Mali";
-                        @include Parag(33px, 400, 43px, $black-color);
-                    }
-                    h2 {
-                        font-family: "Mali";
-                        @include Parag(38px, 600, 35px, $black-color);
-                    }
-
-                    &:hover {
-                        cursor: pointer;
-                    }
-                }
-
-                .pos {
-                    margin-top: 70px;
-
-                    cursor: pointer;
-                }
-            }
-            
+        .pos {
+          margin-top: 70px;
+          cursor: pointer;
         }
+      }
+    }
 
-        #kids_img {
-            position: absolute;
-            top: 300px;
-            left: 0;
-            width: 100%;
-            gap: 20px;
-            display: flex;
+    #kids_img {
+      position: absolute;
+      top: 300px;
+      left: 0;
+      width: 100%;
+      gap: 20px;
+      display: flex;
 
-            .img_item {
-                img {
-                    display: block;
-                    position: absolute;
-                    top: 550px;
-                    left: 50px;
-                }
-            }
-            .img_item_1 {
-                position: absolute;
-                top: 415px;
-                left: 290px;
-                img {
-                    display: block;
-                    margin-top: 20px;
-                }
-                @media screen and (max-width: 768px) {
-                    .img_none{
-                        display: none;
-                    }
-                }
-            }
-            .img_item_2 {
-                position: absolute;
-                left: 520px;
-                top: 192px;
-                img {
-                    display: block;
-                }
-            }
-            .img_item_3 {
-                position: absolute;
-                right: 516px;
-                top: 113px;
-                img {
-                    display: block;
-                    margin-top: 20px;
-                }
-                @media screen and (max-width: 768px) {
-                    display: none;
-                }
-            }
-            .img_item_4 {
-                position: absolute;
-                right: 270px;
-                top: -90px;
-                img {
-                    display: block;
-                    margin-top: 20px;
-                }
-                @media screen and (max-width: 768px) {
-                    display: none;
-                }
-            }
-            .img_item_5 {
-                position: absolute;
-                right: 15px;
-                top: 63px;
-                img {
-                    display: block;
-                    margin-top: 20px;
-                }
-                @media screen and (max-width: 768px) {
-                    display: none;
-                }
-            }
+      .img_item {
+        img {
+          display: block;
+          position: absolute;
+          top: 550px;
+          left: 50px;
+        }
+      }
+      .img_item_1 {
+        position: absolute;
+        top: 415px;
+        left: 290px;
+        img {
+          display: block;
+          margin-top: 20px;
         }
         @media screen and (max-width: 768px) {
-            #kids_img_text {
-                position: relative;
-                .baby_info {
-                    position: absolute;
-                    top: -434px;
-                }
-            }
+          .img_none {
+            display: none;
+          }
         }
+      }
+      .img_item_2 {
+        position: absolute;
+        left: 520px;
+        top: 192px;
+        img {
+          display: block;
+        }
+      }
+      .img_item_3 {
+        position: absolute;
+        right: 516px;
+        top: 113px;
+        img {
+          display: block;
+          margin-top: 20px;
+        }
+        @media screen and (max-width: 768px) {
+          display: none;
+        }
+      }
+      .img_item_4 {
+        position: absolute;
+        right: 270px;
+        top: -90px;
+        img {
+          display: block;
+          margin-top: 20px;
+        }
+        @media screen and (max-width: 768px) {
+          display: none;
+        }
+      }
+      .img_item_5 {
+        position: absolute;
+        right: 15px;
+        top: 63px;
+        img {
+          display: block;
+          margin-top: 20px;
+        }
+        @media screen and (max-width: 768px) {
+          display: none;
+        }
+      }
     }
+    @media screen and (max-width: 768px) {
+      #kids_img_text {
+        position: relative;
+        .baby_info {
+          position: absolute;
+          top: -434px;
+        }
+      }
+    }
+  }
 }
 
 #rotate_text {
-    display: flex;
-    .relative {
-        position: relative;
+  display: flex;
+  .relative {
+    position: relative;
 
-        .position_text {
-            position: absolute;
-            top: -10px;
-            right: -100px;
-            .class {
-                display: flex;
-                div {
-                    margin: 7px 4px;
-                    width: 15px;
-                    height: 15px;
-                    background-color: rgba(255, 166, 0, 0.82);
-                    border-radius: 10px;
-                }
-                p {
-                    @include Parag(24px, 500, 24px, $white_color);
-                }
-            }
+    .position_text {
+      position: absolute;
+      top: -10px;
+      right: -100px;
+      .class {
+        display: flex;
+        div {
+          margin: 7px 4px;
+          width: 15px;
+          height: 15px;
+          background-color: rgba(255, 166, 0, 0.82);
+          border-radius: 10px;
         }
-
-        .position_text1 {
-            position: absolute;
-            top: 25px;
-            right: 10px;
-            .class {
-                display: flex;
-                div {
-                    margin: 7px 4px;
-                    width: 15px;
-                    height: 15px;
-                    background-color: green;
-                    border-radius: 10px;
-                }
-                p {
-                    @include Parag(24px, 500, 24px, $white_color);
-                }
-            }
+        p {
+          @include Parag(24px, 500, 24px, $white_color);
         }
-        .position_text2 {
-            position: absolute;
-            top: 70px;
-            right: 200px;
-            .class {
-                display: flex;
-                div {
-                    margin: 7px 4px;
-                    width: 15px;
-                    height: 15px;
-                    background-color: red;
-                    border-radius: 10px;
-                }
-                p {
-                    @include Parag(24px, 500, 24px, $white_color);
-                }
-            }
-        }
-        .position_text3 {
-            position: absolute;
-            top: 115px;
-            right: 220px;
-            .class {
-                display: flex;
-                div {
-                    margin: 7px 4px;
-                    width: 15px;
-                    height: 15px;
-                    background-color: yellow;
-                    border-radius: 10px;
-                }
-                p {
-                    @include Parag(24px, 500, 24px, $white_color);
-                }
-            }
-        }
-        .position_text4 {
-            position: absolute;
-            top: 155px;
-            right: 120px;
-            .class {
-                display: flex;
-                div {
-                    margin: 7px 4px;
-                    width: 15px;
-                    height: 15px;
-                    background-color: pink;
-                    border-radius: 10px;
-                }
-                p {
-                    @include Parag(24px, 500, 24px, $white_color);
-                }
-            }
-        }
-        .position_text5 {
-            position: absolute;
-            top: 195px;
-            right: 120px;
-            .class {
-                display: flex;
-                div {
-                    margin: 7px 4px;
-                    width: 15px;
-                    height: 15px;
-                    background-color: rgb(198, 21, 175);
-                    border-radius: 10px;
-                }
-                p {
-                    @include Parag(24px, 500, 24px, $white_color);
-                }
-            }
-        }
-        .position_text7 {
-            position: absolute;
-            top: 240px;
-            right: -75px;
-            .class {
-                display: flex;
-                div {
-                    margin: 7px 4px;
-                    width: 15px;
-                    height: 15px;
-                    background-color: orange;
-                    border-radius: 10px;
-                }
-                p {
-                    @include Parag(24px, 500, 24px, $white_color);
-                }
-            }
-        }
-        .position_text8 {
-            position: absolute;
-            top: 290px;
-            right: -240px;
-            .class {
-                display: flex;
-                div {
-                    margin: 7px 4px;
-                    width: 15px;
-                    height: 15px;
-                    background-color: #fa0163;
-                    border-radius: 10px;
-                }
-                p {
-                    @include Parag(24px, 500, 24px, $white_color);
-                }
-            }
-        }
-        .position_text9 {
-            position: absolute;
-            top: 330px;
-            right: -220px;
-            .class {
-                display: flex;
-                div {
-                    margin: 7px 4px;
-                    width: 15px;
-                    height: 15px;
-                    background-color: #0acfbe;
-                    border-radius: 10px;
-                }
-                p {
-                    @include Parag(24px, 500, 24px, $white_color);
-                }
-            }
-        }
-        .position_text10 {
-            position: absolute;
-            top: 375px;
-            right: -270px;
-            .class {
-                display: flex;
-                div {
-                    margin: 7px 4px;
-                    width: 15px;
-                    height: 15px;
-                    background-color: #e4c1a5;
-                    border-radius: 10px;
-                }
-                p {
-                    @include Parag(24px, 500, 24px, $white_color);
-                }
-            }
-        }
-        .absoulte {
-            position: absolute;
-            bottom: -20px;
-        }
+      }
     }
 
-    @media screen and (max-width: 768px) {
-        display: none;
+    .position_text1 {
+      position: absolute;
+      top: 25px;
+      right: 10px;
+      .class {
+        display: flex;
+        div {
+          margin: 7px 4px;
+          width: 15px;
+          height: 15px;
+          background-color: green;
+          border-radius: 10px;
+        }
+        p {
+          @include Parag(24px, 500, 24px, $white_color);
+        }
+      }
     }
+    .position_text2 {
+      position: absolute;
+      top: 70px;
+      right: 200px;
+      .class {
+        display: flex;
+        div {
+          margin: 7px 4px;
+          width: 15px;
+          height: 15px;
+          background-color: red;
+          border-radius: 10px;
+        }
+        p {
+          @include Parag(24px, 500, 24px, $white_color);
+        }
+      }
+    }
+    .position_text3 {
+      position: absolute;
+      top: 115px;
+      right: 220px;
+      .class {
+        display: flex;
+        div {
+          margin: 7px 4px;
+          width: 15px;
+          height: 15px;
+          background-color: yellow;
+          border-radius: 10px;
+        }
+        p {
+          @include Parag(24px, 500, 24px, $white_color);
+        }
+      }
+    }
+    .position_text4 {
+      position: absolute;
+      top: 155px;
+      right: 120px;
+      .class {
+        display: flex;
+        div {
+          margin: 7px 4px;
+          width: 15px;
+          height: 15px;
+          background-color: pink;
+          border-radius: 10px;
+        }
+        p {
+          @include Parag(24px, 500, 24px, $white_color);
+        }
+      }
+    }
+    .position_text5 {
+      position: absolute;
+      top: 195px;
+      right: 120px;
+      .class {
+        display: flex;
+        div {
+          margin: 7px 4px;
+          width: 15px;
+          height: 15px;
+          background-color: rgb(198, 21, 175);
+          border-radius: 10px;
+        }
+        p {
+          @include Parag(24px, 500, 24px, $white_color);
+        }
+      }
+    }
+    .position_text7 {
+      position: absolute;
+      top: 240px;
+      right: -75px;
+      .class {
+        display: flex;
+        div {
+          margin: 7px 4px;
+          width: 15px;
+          height: 15px;
+          background-color: orange;
+          border-radius: 10px;
+        }
+        p {
+          @include Parag(24px, 500, 24px, $white_color);
+        }
+      }
+    }
+    .position_text8 {
+      position: absolute;
+      top: 290px;
+      right: -240px;
+      .class {
+        display: flex;
+        div {
+          margin: 7px 4px;
+          width: 15px;
+          height: 15px;
+          background-color: #fa0163;
+          border-radius: 10px;
+        }
+        p {
+          @include Parag(24px, 500, 24px, $white_color);
+        }
+      }
+    }
+    .position_text9 {
+      position: absolute;
+      top: 330px;
+      right: -220px;
+      .class {
+        display: flex;
+        div {
+          margin: 7px 4px;
+          width: 15px;
+          height: 15px;
+          background-color: #0acfbe;
+          border-radius: 10px;
+        }
+        p {
+          @include Parag(24px, 500, 24px, $white_color);
+        }
+      }
+    }
+    .position_text10 {
+      position: absolute;
+      top: 375px;
+      right: -270px;
+      .class {
+        display: flex;
+        div {
+          margin: 7px 4px;
+          width: 15px;
+          height: 15px;
+          background-color: #e4c1a5;
+          border-radius: 10px;
+        }
+        p {
+          @include Parag(24px, 500, 24px, $white_color);
+        }
+      }
+    }
+    .absoulte {
+      position: absolute;
+      bottom: -20px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 }
 
 #kinder_garden {
-    margin-top: 100px;
-    .bagca_info {
-        img {
-            width: 100%;
-            border-radius: 8px;
-        }
-
-        p {
-            @include Parag(23px, 500, 26px, $black-color);
-        }
-        .bagca {
-            @include Parag(13px, 500, 16px, $black-color);
-            padding: 8px 0;
-        }
+  margin-top: 100px;
+  .bagca_info {
+    img {
+      width: 100%;
+      border-radius: 8px;
     }
 
-    button {
-        height: 56px;
-        width: 180px;
-        background-color: $btn_color;
-        border-radius: 17px;
-        float: right;
-        border: none;
+    p {
+      @include Parag(23px, 500, 26px, $black-color);
     }
+    .bagca {
+      @include Parag(13px, 500, 16px, $black-color);
+      padding: 8px 0;
+    }
+  }
+
+  button {
+    height: 56px;
+    width: 180px;
+    background-color: $btn_color;
+    border-radius: 17px;
+    float: right;
+    border: none;
+  }
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 }
 #work_list {
-    padding-top: 100px;
-    .work_img {
-        position: relative;
+  padding-top: 100px;
+  .work_img {
+    position: relative;
 
-        #work_sekil {
-            width: 100%;
-        }
-
-        .work_text {
-            position: absolute;
-            top: 5%;
-            left: 10%;
-            z-index: 5;
-
-            h2 {
-                @include Parag(45px, 700, 56px, $white_color);
-            }
-            p {
-                @include Parag(45px, 500, 56px, $white_color);
-            }
-
-            button {
-                height: 56px;
-                width: 180px;
-                background-color: $btn_color;
-                border-radius: 17px;
-                border: none;
-                margin: 20px 0;
-            }
-        }
-
-        @media screen and (max-width: 768px) {
-        }
+    #work_sekil {
+      width: 100%;
     }
-}
-section {
-    #img_div {
-        margin-top: 100px;
-        img {
-            cursor: pointer;
-            width: 100%;
-            height: 300px;
-            border-radius: 8px;
-        }
 
-   #btn{
-    button {
-        margin-top: 120px;
+    .work_text {
+      position: absolute;
+      top: 5%;
+      left: 10%;
+      z-index: 5;
+
+      h2 {
+        @include Parag(45px, 700, 56px, $white_color);
+      }
+      p {
+        @include Parag(45px, 500, 56px, $white_color);
+      }
+
+      button {
         height: 56px;
         width: 180px;
         background-color: $btn_color;
         border-radius: 17px;
-        float: right;
         border: none;
+        margin: 20px 0;
+      }
     }
-   }
-    }
-}
-
-#employee {
+  }
+  #employee {
     .isciler {
-        img {
-            width: 100%;
-            height: 326px;
-            object-fit: contain;
+      img {
+        width: 100%;
+        height: 326px;
+        object-fit: contain;
+      }
+      .isci_info {
+        width: 100%;
+        height: 50px;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 15.87%, rgba(105, 112, 115, 0.02) 230.16%);
+        border-radius: 0px 0px 3.33333px 3.33333px;
+        p {
+          text-align: center;
+          @include Parag(17px, 500, 20px, $black-color);
+          padding: 4px 0;
         }
-        .isci_info {
-            width: 100%;
-            height: 50px;
-            background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 15.87%, rgba(105, 112, 115, 0.02) 230.16%);
-            border-radius: 0px 0px 3.33333px 3.33333px;
-            p {
-                text-align: center;
-                @include Parag(17px, 500, 20px, $black-color);
-
-                padding: 4px 0;
-            }
-        }
+      }
     }
+    .logoped_title {
+      @include Parag(40px, 600, 48px, $black_color);
+    }
+  }
+
 }
+section {
 
+  #img_div {
+    margin-top: 100px;
+    img {
+      cursor: pointer;
+      width: 100%;
+      height: 300px;
+      border-radius: 8px;
+    }
+    .img1{
+      width: 100%;
+      height: 350px;
+      
 
+    }
 
+    #btn{
+      .right_btn{
+          width: 180px;
+          height: 50px;
+          background-color: $btn_color;
+          margin: 58% 40px;
+          border: none;
+          border-radius: 17px;
+          @include Parag(20px, 500, 24px, #000000);
+          @media screen and (max-width:768px) {
+            margin: 20px 0;
+          }
+      }
+    }
+
+  }
+}
 #modal {
-    .modal-content {
-        width: 1000px;
-        height: 700px;
-        margin-left: -200px;
+  .modal-content {
+    width: 840px;
+    height: 700px;
+    margin-left: -200px;
+  }
+  .modal-body {
+    h2 {
+      display: flex;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 30px;
     }
-    .modal-body {
-        h2 {
-            display: flex;
-            justify-content: center;
-            font-weight: 700;
-            font-size: 30px;
+    .modal_form {
+      form {
+        width: 100%;
+        height: 500px;
+        @include Flex(center, start, column);
+        input {
+          width: 345px;
+          height: 50px;
+          display: block;
+          margin-top: 14px;
+          padding: 4px 14px;
+          border: 1.25px solid #d9d9d9b2;
         }
-        .modal_form {
-            form {
-                width: 100%;
-                height: 500px;
-                @include Flex(center, center, column);
-
-                input {
-                    width: 345px;
-                    height: 50px;
-                    display: block;
-                    margin-top: 14px;
-                    padding: 4px 14px;
-                    border: 1.25px solid #d9d9d9b2;
-                }
-                h3 {
-                    font-weight: 700;
-                }
-            }
+        h3 {
+          font-weight: 700;
         }
-        .left_item {
-            img {
-                width: 368px;
-                height: 311px;
-            }
-
-            button {
-                width: 345px;
-                height: 50px;
-                background-color: $btn_color;
-                margin-top: 50px;
-                border: none;
-                border-radius: 4px;
-                @include Parag(20px, 500, 24px, #000000);
-            }
-        }
+      }
     }
-}
+    .left_item {
+      img {
+        width: 258px;
+        height: 211px;
+      }
 
-@media screen and (max-width: 768px) {
+      button {
+        height: 50px;
+        background-color: $btn_color;
+        margin: 50px;
+        border: none;
+        border-radius: 4px;
+        @include Parag(20px, 500, 24px, #000000);
+      }
+    }
+  }
 }

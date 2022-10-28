@@ -36,9 +36,7 @@ main {
 
     .right_img {
         img {
-            width: 100%;
-            object-fit: contain;
-            height: 400px;
+            @include Img(100%,400px,contain);
             float: none;
 
         }

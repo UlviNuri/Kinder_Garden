@@ -57,44 +57,107 @@ p {
   padding: 0;
 }
 
-nav {
-  padding: 14px 0;
-}
-nav .logo img {
-  width: 100%;
-  height: 64px;
-  -o-object-fit: contain;
-     object-fit: contain;
-  cursor: pointer;
-}
-nav .nav_link {
-  height: 50px;
-}
-nav .nav_link ul {
-  height: 70px;
+nav .nav-menu {
+  padding: 30px 0;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
-  flex-direction: row;
 }
-nav .nav_link ul li {
+nav .nav-menu .nav-item {
+  position: relative;
+}
+nav .nav-menu .nav-item .nav-link {
   font-size: 17px;
   font-weight: 500;
-  line-height: 21px;
+  line-height: 20px;
   color: #000000;
+  text-transform: uppercase;
+  transition: 0.3s ease-in-out;
+}
+nav .nav-menu .nav-item .nav-link:hover {
+  color: yellow;
+}
+nav .hamburger {
+  display: none;
   cursor: pointer;
+  z-index: 2;
 }
-nav .nav_link ul li a {
-  color: #000000;
+nav .hamburger .bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  transition: all 0.3s ease-in-out;
+  background-color: yellow;
 }
-nav .nav_link .nav_icon ul {
-  gap: 14px;
+
+@media only screen and (max-width: 768px) {
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  nav .navigation {
+    margin: 35px 0;
+  }
+  nav .hamburger {
+    display: block;
+  }
+  nav .active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  nav .active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  nav .active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  nav .nav-menu {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+    height: 100%;
+    background-color: gray;
+    top: 0px;
+    left: -100%;
+    transition: 0.3s ease-in-out;
+    z-index: 55;
+  }
+  nav .active {
+    left: 0;
+  }
 }
-nav .mobil_link {
+#sviper {
+  overflow: hidden;
+  margin-top: 100px;
   display: none;
 }
-nav .mobil_link i {
-  font-size: 24px;
+#sviper .swiper {
+  width: 100%;
+  height: 100%;
+}
+#sviper .swiper-pagination-bullet:active {
+  background-color: white;
+}
+#sviper .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#sviper .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#sviper #swiper_pages {
+  margin-top: 20px;
 }
 
 h3 {
@@ -161,6 +224,25 @@ main #kids_img_text .relative_item .absaulte_text .text h2 {
 }
 main #kids_img_text .relative_item .absaulte_text .text:hover {
   cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+  main #kids_img_text .relative_item .absaulte_text .text .text {
+    padding: 20px 0;
+  }
+  main #kids_img_text .relative_item .absaulte_text .text .text2 {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 23px;
+    color: #000000;
+    text-align: center;
+  }
+  main #kids_img_text .relative_item .absaulte_text .text h2 {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 40px;
+    color: #000000;
+    text-align: center;
+  }
 }
 main #kids_img_text .relative_item .absaulte_text .pos {
   margin-top: 70px;
@@ -508,6 +590,11 @@ main #kids_img_text #kids_img .img_item_5 img {
   float: right;
   border: none;
 }
+@media screen and (max-width: 768px) {
+  #kinder_garden {
+    display: none;
+  }
+}
 
 #work_list {
   padding-top: 100px;
@@ -544,6 +631,33 @@ main #kids_img_text #kids_img .img_item_5 img {
   border: none;
   margin: 20px 0;
 }
+#work_list #employee .isciler img {
+  width: 100%;
+  height: 326px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+#work_list #employee .isciler .isci_info {
+  width: 100%;
+  height: 50px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 15.87%, rgba(105, 112, 115, 0.02) 230.16%);
+  border-radius: 0px 0px 3.33333px 3.33333px;
+}
+#work_list #employee .isciler .isci_info p {
+  text-align: center;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #000000;
+  padding: 4px 0;
+}
+#work_list #employee .logoped_title {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 48px;
+  color: #000000;
+}
+
 section #img_div {
   margin-top: 100px;
 }
@@ -553,39 +667,30 @@ section #img_div img {
   height: 300px;
   border-radius: 8px;
 }
-section #img_div #btn button {
-  margin-top: 120px;
-  height: 56px;
+section #img_div .img1 {
+  width: 100%;
+  height: 350px;
+}
+section #img_div #btn .right_btn {
   width: 180px;
-  background-color: #F3EA00;
-  border-radius: 17px;
-  float: right;
-  border: none;
-}
-
-#employee .isciler img {
-  width: 100%;
-  height: 326px;
-  -o-object-fit: contain;
-     object-fit: contain;
-}
-#employee .isciler .isci_info {
-  width: 100%;
   height: 50px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 15.87%, rgba(105, 112, 115, 0.02) 230.16%);
-  border-radius: 0px 0px 3.33333px 3.33333px;
-}
-#employee .isciler .isci_info p {
-  text-align: center;
-  font-size: 17px;
+  background-color: #F3EA00;
+  margin: 58% 40px;
+  border: none;
+  border-radius: 17px;
+  font-size: 20px;
   font-weight: 500;
-  line-height: 20px;
+  line-height: 24px;
   color: #000000;
-  padding: 4px 0;
+}
+@media screen and (max-width: 768px) {
+  section #img_div #btn .right_btn {
+    margin: 20px 0;
+  }
 }
 
 #modal .modal-content {
-  width: 1000px;
+  width: 840px;
   height: 700px;
   margin-left: -200px;
 }
@@ -600,7 +705,7 @@ section #img_div #btn button {
   height: 500px;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: start;
   flex-direction: column;
 }
 #modal .modal-body .modal_form form input {
@@ -615,54 +720,19 @@ section #img_div #btn button {
   font-weight: 700;
 }
 #modal .modal-body .left_item img {
-  width: 368px;
-  height: 311px;
+  width: 258px;
+  height: 211px;
 }
 #modal .modal-body .left_item button {
-  width: 345px;
   height: 50px;
   background-color: #F3EA00;
-  margin-top: 50px;
+  margin: 50px;
   border: none;
   border-radius: 4px;
   font-size: 20px;
   font-weight: 500;
   line-height: 24px;
   color: #000000;
-}
-
-nav {
-  padding: 14px 0;
-}
-nav .logo img {
-  width: 100%;
-  height: 64px;
-  -o-object-fit: contain;
-     object-fit: contain;
-  cursor: pointer;
-}
-nav .nav_link {
-  height: 50px;
-}
-nav .nav_link ul {
-  height: 70px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: row;
-}
-nav .nav_link ul li {
-  font-size: 17px;
-  font-weight: 500;
-  line-height: 21px;
-  color: #000000;
-  cursor: pointer;
-}
-nav .nav_link ul li a {
-  color: #000000;
-}
-nav .nav_link .nav_icon ul {
-  gap: 14px;
 }
 
 main h1 {
@@ -677,6 +747,11 @@ main p {
   font-weight: 400;
   line-height: 27px;
   color: #000000;
+}
+@media screen and (max-width: 768px) {
+  main p {
+    line-height: 33px;
+  }
 }
 main .img_35 {
   float: right;
@@ -775,45 +850,6 @@ footer .social_icon img {
   padding: 0 14px;
 }
 
-nav {
-  padding: 14px 0;
-}
-nav .logo img {
-  width: 100%;
-  height: 64px;
-  -o-object-fit: contain;
-     object-fit: contain;
-  cursor: pointer;
-}
-nav .nav_link {
-  height: 50px;
-}
-nav .nav_link ul {
-  height: 70px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: row;
-}
-nav .nav_link ul li {
-  font-size: 17px;
-  font-weight: 500;
-  line-height: 21px;
-  color: #000000;
-  cursor: pointer;
-}
-nav .nav_link ul li a {
-  color: #000000;
-}
-nav .nav_link .nav_icon ul {
-  gap: 14px;
-}
-@media screen and (max-width: 560px) {
-  nav .nav_link {
-    display: none;
-  }
-}
-
 main .container_div h2 {
   font-size: 30px;
   font-weight: 600;
@@ -839,16 +875,16 @@ main .container_div .contact form {
 }
 main .container_div .contact form input {
   display: block;
-  outline: none;
-  width: 480px;
   margin-top: 30px;
-  padding: 10px 8px;
   margin-left: 5%;
-  border: 1.25px solid rgba(101, 101, 101, 0.5019607843);
-  border-radius: 4px;
   font-size: 17px;
   font-weight: 500;
   box-shadow: none;
+  border: 1.25px solid rgba(101, 101, 101, 0.5019607843);
+  width: 480px;
+  border-radius: 10px 8px;
+  padding: 4px;
+  outline: none;
 }
 main .container_div .contact form input:nth-child(3) {
   height: 150px;
@@ -863,14 +899,14 @@ main .container_div .contact form textarea {
 }
 main .container_div button {
   float: right;
+  background-color: #F3EA00;
   margin-top: 20px;
   width: 180px;
   height: 56px;
-  background-color: #F3EA00;
   font-size: 20px;
   font-weight: 500;
   border-radius: 17px;
-  border: none;
+  border: transparent;
 }
 
 footer #bagca_footer {
@@ -922,7 +958,7 @@ footer .position form {
   position: relative;
 }
 footer .position form input {
-  background-color: gray;
+  background: #969292;
   box-shadow: none;
   border-radius: 4px;
 }
@@ -958,40 +994,6 @@ footer .position .social_icon img {
   padding: 0 14px;
 }
 
-nav {
-  padding: 14px 0;
-}
-nav .logo img {
-  width: 100%;
-  height: 64px;
-  -o-object-fit: contain;
-     object-fit: contain;
-  cursor: pointer;
-}
-nav .nav_link {
-  height: 50px;
-}
-nav .nav_link ul {
-  height: 70px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: row;
-}
-nav .nav_link ul li {
-  font-size: 17px;
-  font-weight: 500;
-  line-height: 21px;
-  color: #000000;
-  cursor: pointer;
-}
-nav .nav_link ul li a {
-  color: #000000;
-}
-nav .nav_link .nav_icon ul {
-  gap: 14px;
-}
-
 main #vakansiyalar .text {
   display: flex;
   justify-content: end;
@@ -1006,10 +1008,10 @@ main #vakansiyalar .text h2 {
   color: #000000;
 }
 main #vakansiyalar .text button {
-  width: 130px;
-  height: 36px;
   margin-right: 140px;
   background-color: #F3EA00;
+  width: 130px;
+  height: 36px;
   border-radius: 50px;
   border: 1px solid transparent;
 }
@@ -1031,25 +1033,25 @@ main #vakansiyalar .text button {
 }
 #teacher_content .btn_info {
   background-color: #F3EA00;
+  padding: 0 20px;
+  line-height: 20px;
   width: 130px;
   height: 36px;
-  border: none;
-  border-radius: 50px;
-  padding: 0 20px;
   font-size: 16px;
   font-weight: 600;
-  line-height: 20px;
+  border-radius: 50px;
+  border: none;
 }
 #teacher_content button {
-  width: 130px;
-  height: 36px;
-  border: 1px solid #f3ea00;
-  border-radius: 50px;
   background-color: transparent;
-  font-size: 16px;
-  font-weight: 600;
   line-height: 20px;
   margin-left: 20px;
+  width: 130px;
+  height: 36px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 50px;
+  border: 1px solid #f3ea00;
 }
 
 main #kinder_garden_info h1 {
@@ -1078,11 +1080,11 @@ main #kinder_garden_info .input input {
   outline: none;
 }
 main #kinder_garden_info .input img {
-  height: 16px;
-  width: 16px;
   position: absolute;
   top: 7px;
   left: 5px;
+  width: 16px;
+  height: 16px;
 }
 main #kinder_garden_info .check_garden {
   padding: 5px;
@@ -1098,6 +1100,31 @@ main #kinder_garden_info .check_garden input {
 }
 main #kinder_garden_info #price {
   margin-top: 70px;
+}
+main #kinder_garden_mobil {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  main #kinder_garden_mobil {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 50px;
+  }
+  main #kinder_garden_mobil select {
+    margin: 8px 0;
+    width: 23%;
+    padding: 20px 0;
+    background-color: transparent;
+    color: black;
+    font-size: 18px;
+    font-weight: 500;
+  }
+  main #kinder_garden_mobil select option {
+    background: pink;
+    color: black;
+  }
 }
 main #bagca_img {
   margin-top: 100px;
@@ -1239,15 +1266,15 @@ main .id form .work textarea {
 main #cv_btn {
   float: right;
   margin-right: 12%;
-  margin-top: 20px;
   background-color: #F3EA00;
-  height: 56px;
+  line-height: 24px;
+  margin-top: 20px;
   width: 180px;
-  border: transparent;
-  border-radius: 17px;
+  height: 56px;
   font-size: 20px;
   font-weight: 500;
-  line-height: 24px;
+  border-radius: 17px;
+  border: transparent;
 }
 
 #cv_footer {
@@ -1375,9 +1402,9 @@ main .cart_name .cvv input:nth-child(2)::placeholder {
 }
 main .right_img img {
   width: 100%;
+  height: 400px;
   -o-object-fit: contain;
      object-fit: contain;
-  height: 400px;
   float: none;
 }
 main .card {
@@ -1440,13 +1467,13 @@ main button {
 }
 #employee .search .text button {
   background-color: #F3EA00;
-  height: 36px;
+  line-height: 24px;
   width: 130px;
-  border: transparent;
-  border-radius: 17px;
+  height: 36px;
   font-size: 20px;
   font-weight: 500;
-  line-height: 24px;
+  border-radius: 17px;
+  border: transparent;
 }
 #employee .search .position {
   position: relative;
@@ -1499,6 +1526,11 @@ section #logoped_info li::marker {
   line-height: 24px;
   color: #000000;
   padding: 8px 0;
+}
+@media screen and (max-width: 768px) {
+  .text .logoped_img {
+    float: right;
+  }
 }
 
 #daye {
@@ -1579,6 +1611,11 @@ main section .bagca_content {
   color: #000000;
   padding: 14px 0;
 }
+@media screen and (max-width: 768px) {
+  main section .bagca_content {
+    line-height: 34px;
+  }
+}
 main #skewbox {
   position: relative;
   margin-top: 250px;
@@ -1591,7 +1628,7 @@ main #skewbox .skew {
   height: 400px;
   width: 1200px;
   background-color: white;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 10px 30px rgba 0, 0, 0, 0.5;
   display: flex;
 }
 main #skewbox .content {
@@ -1605,6 +1642,11 @@ main #skewbox .content h2 {
   line-height: 50px;
   color: #DB3F30;
   padding: 30px 0;
+}
+@media screen and (max-width: 768px) {
+  main #skewbox .content h2 {
+    font-size: 33px;
+  }
 }
 main #skewbox .content p {
   font-size: 81px;
@@ -1620,14 +1662,14 @@ main #skewbox .content p span {
 }
 main #skewbox .content #endirim_al {
   background-color: #F3EA00;
-  height: 56px;
-  width: 180px;
-  border: transparent;
-  border-radius: 17px;
-  font-size: 20px;
-  font-weight: 500;
   line-height: 24px;
   margin-top: 20px;
+  width: 180px;
+  height: 56px;
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 17px;
+  border: transparent;
 }
 main #skewbox .imgbox {
   width: 50%;
@@ -1658,7 +1700,7 @@ main #img_item_1 .wrapper .overlay {
   opacity: 0;
   height: 100%;
   width: 100%;
-  background: rgb(105, 105, 105);
+  background-color: rgb(105, 105, 105);
 }
 main #img_item_1 .wrapper .overlay .content {
   position: absolute;
@@ -1703,14 +1745,14 @@ main #img_item_4 img {
 main #img_item_5 .img_item_12 {
   width: 100%;
   height: 661px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 main #img_item_5 .img_item_13 {
   width: 100%;
   height: 661px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 main #img_item_6 img {
   width: 100%;
@@ -1723,6 +1765,7 @@ main #skewbox {
   margin-top: 250px;
 }
 main #skewbox .skew {
+  display: flex;
   position: absolute;
   top: 20%;
   left: 50%;
@@ -1730,8 +1773,7 @@ main #skewbox .skew {
   height: 400px;
   width: 1200px;
   background-color: white;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-  display: flex;
+  box-shadow: 0 10px 30px rgba 0, 0, 0, 0.5;
 }
 @media screen and (max-width: 768px) {
   main #skewbox .skew {
@@ -1763,14 +1805,14 @@ main #skewbox .content .yay_geyim span {
 }
 main #skewbox .content #endirim_al {
   background-color: #F3EA00;
-  height: 56px;
-  width: 180px;
-  border: transparent;
-  border-radius: 17px;
-  font-size: 20px;
-  font-weight: 500;
   line-height: 24px;
   margin-top: 20px;
+  width: 180px;
+  height: 56px;
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 17px;
+  border: transparent;
 }
 main #skewbox .imgbox1 {
   width: 50%;
@@ -1800,7 +1842,7 @@ main #magaza_box img {
   border-radius: 4px;
 }
 main #magaza_box #text_item h2 {
-  font-size: 27px;
+  font-size: 24px;
   font-weight: 500;
   line-height: 20px;
   color: #000000;
@@ -1862,17 +1904,32 @@ main #img_box .img_item .flex img {
 }
 main #img_box .img_item .flex .btn {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  flex-direction: row;
 }
 main #img_box .img_item .flex .btn button {
-  margin-top: 30%;
-  height: 56px;
-  width: 180px;
   background-color: #F3EA00;
-  border-radius: 17px;
   float: right;
+  margin-top: 30%;
+  width: 180px;
+  height: 56px;
+  border-radius: 17px;
   border: none;
+}
+@media screen and (max-width: 768px) {
+  main #img_box .img_item .img_box1,
+main #img_box .img_item .img_box3,
+main #img_box .img_item .img_box4 {
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    margin-top: 20px;
+    height: 300px;
+  }
+  main #img_box .img_item .img_box2 {
+    display: none;
+  }
 }
 
 #img_page_2 #img_item img {
@@ -1891,7 +1948,7 @@ main #img_box .img_item .flex .btn button {
   opacity: 0;
   height: 100%;
   width: 100%;
-  background: rgb(105, 105, 105);
+  background-color: rgb(105, 105, 105);
 }
 #img_page_2 #img_item .wrapper .overlay .content {
   position: absolute;
@@ -1916,8 +1973,8 @@ main #img_box .img_item .flex .btn button {
   z-index: 5;
 }
 #img_page_2 #img_2 .img_size_1 {
-  height: 466px;
   width: 100%;
+  height: 466px;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 4px;
@@ -1947,7 +2004,7 @@ main #img_box .img_item .flex .btn button {
 }
 #img_page_2 #img_4 img {
   width: 100%;
-  height: 260px;
+  height: 216px;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -1981,6 +2038,12 @@ main .text_item p {
   padding: 14px 35px;
   cursor: pointer;
 }
+@media screen and (max-width: 768px) {
+  main .text_item p {
+    line-height: 15px;
+    padding: 12px 35px;
+  }
+}
 main .img_box {
   display: flex;
   justify-content: end;
@@ -1992,6 +2055,12 @@ main .img_box .relative img {
   width: 850px;
   height: 810px;
 }
+@media screen and (max-width: 768px) {
+  main .img_box .relative img {
+    width: 750px;
+    height: 700px;
+  }
+}
 main .img_box .relative .overlay {
   position: absolute;
   top: 27%;
@@ -2000,6 +2069,13 @@ main .img_box .relative .overlay {
 main .img_box .relative .overlay img {
   width: 250px;
   height: 300px;
+}
+@media screen and (max-width: 768px) {
+  main .img_box .relative .overlay {
+    position: absolute;
+    top: 29%;
+    left: 34%;
+  }
 }
 
 #work_main {
@@ -2053,20 +2129,20 @@ main .img_box .relative .overlay img {
 #work_main #work_info .work_melumat button {
   margin: 10px 20px;
   background-color: #F3EA00;
-  height: 56px;
+  line-height: 24px;
   width: 180px;
-  border: transparent;
-  border-radius: 4px;
+  height: 56px;
   font-size: 20px;
   font-weight: 500;
-  line-height: 24px;
+  border-radius: 4px;
+  border: transparent;
 }
 #work_main .number {
   display: flex;
-  flex-direction: row;
   justify-content: center;
-  padding: 20px 0;
   align-items: center;
+  flex-direction: row;
+  padding: 20px 0;
   gap: 20px;
 }
 #work_main .number .num_one {
@@ -2126,6 +2202,7 @@ main .img_box .relative .overlay img {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-direction: row;
 }
 #work_info section .right_text div p {
   font-size: 17px;
@@ -2174,17 +2251,18 @@ main .img_box .relative .overlay img {
 }
 
 @media screen and (max-width: 768px) {
-  .mobil_link {
-    display: block;
-  }
-  .nav_link {
-    display: none;
-  }
   main #kids_img_text {
     height: 1300px;
   }
   main .baby_info {
     margin-bottom: 150px;
+  }
+  main #kinder_garden {
+    display: none;
+  }
+  #response_class {
+    display: flex;
+    justify-content: flex-end;
   }
   #kinder_garden .bagca_info p {
     font-size: 17px;
@@ -2202,18 +2280,27 @@ main .img_box .relative .overlay img {
   .registration {
     padding: 0 12px;
   }
+  #sviper {
+    display: block;
+  }
+  #img_div img {
+    width: 100%;
+  }
 }
 @media screen and (max-width: 768px) {
   #skewbox .skew {
     width: 770px;
   }
+  #kinder_garden_info {
+    display: none;
+  }
+  #kinder_garden_mobil {
+    display: block;
+  }
 }
 @media screen and (max-width: 768px) {
   #img_div {
     margin-top: 0;
-  }
-  #img_div img {
-    display: none;
   }
   #btn {
     display: flex;
@@ -2232,6 +2319,9 @@ main .img_box .relative .overlay img {
 @media screen and (max-width: 768px) {
   main #lg_3 {
     margin-left: 0;
+  }
+  select {
+    margin-left: 0 !important;
   }
 }
 @media screen and (max-width: 768px) {
@@ -2291,6 +2381,76 @@ main .img_box .relative .overlay img {
     width: 100%;
   }
 }
+@media screen and (max-width: 768px) {
+  #employee .text {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+  }
+}
+#employee_xadime .text {
+  display: flex;
+  justify-content: start;
+  align-items: end;
+  flex-direction: column;
+}
+#employee_xadime #xadime_cv {
+  margin-right: 22%;
+  margin-top: 15px;
+  width: 130px;
+  height: 36px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 50px;
+  border: none;
+  background-color: #F3EA00;
+}
+#employee_xadime .isciler {
+  display: flex;
+}
+#employee_xadime .isciler .xadime_info {
+  width: 100%;
+}
+#employee_xadime .isciler .xadime_info p {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 30px;
+  color: #000000;
+}
+#employee_xadime .isciler .xadime_info span {
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 30px;
+  color: #000000;
+  padding-top: 20px;
+}
+#employee_xadime .isciler .xadime_btn {
+  display: flex;
+}
+#employee_xadime .isciler .xadime_btn button {
+  width: 50%;
+  margin-top: 15px;
+  width: 130px;
+  height: 36px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 50px;
+  border: none;
+  background-color: #F3EA00;
+}
+#employee_xadime .isciler .xadime_btn button:nth-child(2) {
+  margin-left: 20px;
+  background-color: inherit;
+  border: 1px solid #f3ea00;
+}
+@media screen and (max-width: 768px) {
+  #employee_xadime .text {
+    display: flex;
+    align-items: start;
+  }
+}
+
 * {
   font-family: "Montserrat", sans-serif;
 }

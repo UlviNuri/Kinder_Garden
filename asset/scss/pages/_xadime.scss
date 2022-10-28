@@ -1,0 +1,45 @@
+#employee_xadime {
+    .text {
+        @include Flex(start, end, column);
+    }
+    #xadime_cv {
+        margin-right: 22%;
+        @include btn(15px, 130px, 36px, 15px, 600, 50px, none);
+        background-color: $btn_color;
+    }
+    .isciler {
+        display: flex;
+
+        .xadime_info {
+            width: 100%;
+
+            p {
+                @include Parag(28px, 600, 30px, $black_color);
+            }
+            span {
+                @include Parag(30px, 500, 30px, $black_color);
+                padding-top: 20px;
+            }
+        }
+        .xadime_btn {
+            display: flex;
+
+            button {
+                width: 50%;
+                @include btn(15px, 130px, 36px, 15px, 600, 50px, none);
+                background-color: $btn_color;
+            }
+            button:nth-child(2) {
+                margin-left: 20px;
+                background-color: inherit;
+                border: 1px solid #f3ea00;
+            }
+        }
+    }
+    @media screen and (max-width: 768px) {
+        .text {
+            display: flex;
+            align-items: start;
+        }
+    }
+}

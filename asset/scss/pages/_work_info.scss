@@ -1,6 +1,5 @@
 #work_info {
     width: 80%;
-    // height: 1670px;
     background-color: white;
     margin-left: 10%;
    section{
@@ -23,10 +22,7 @@
 
     .right_text {
         div {
-            display: flex;
-            justify-content: space-between;
-            align-items:center;
-
+            @include Flex(space-between,center,row);
             p {
                 @include Parag(17px, 500, 35px, $black-color);
             }

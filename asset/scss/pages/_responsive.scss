@@ -1,13 +1,5 @@
-// home
-
+    // home
 @media screen and (max-width: 768px) {
-    .mobil_link {
-        display: block;
-    }
-    .nav_link {
-        display: none;
-    }
-
     main {
         #kids_img_text {
             height: 1300px;
@@ -15,8 +7,17 @@
         .baby_info {
             margin-bottom: 150px;
         }
-    }
 
+        #kinder_garden{
+            display: none;
+        }
+
+    }
+    #response_class{
+        display: flex;
+        justify-content: flex-end;
+        
+      }
     #kinder_garden {
         .bagca_info {
             p {
@@ -34,9 +35,16 @@
     }
     .registration {
         padding: 0 12px;
+    }   
+    #sviper{
+        display: block;
+    }
+    #img_div{
+        img{
+            width: 100%;
+        }
     }
 }
-
 // bagcalar
 
 @media screen and (max-width: 768px) {
@@ -45,13 +53,19 @@
             width: 770px;
         }
     }
+
+    #kinder_garden_info{
+        display: none;
+    }
+
+    #kinder_garden_mobil{
+        display: block;
+    }
+
 }
 @media screen and (max-width: 768px) {
     #img_div {
         margin-top: 0;
-        img {
-            display: none;
-        }
     }
     #btn {
         display: flex;
@@ -83,7 +97,12 @@
             margin-left: 0;
         }
     }
+    select{
+        margin-left: 0 !important;
+    }
 }
+
+// eylence content 
 
 // daye_info
 
@@ -146,6 +165,7 @@
             display: none;
         }
     }
+  
 }
 
 // work
@@ -179,3 +199,29 @@
     }
 }
 
+
+
+ // xadime 
+
+ @media screen and (max-width: 768px){
+    #employee{
+        .text {
+            @include Flex(start,start,column);
+        }
+ }}
+
+ // modal 
+
+//  @media screen and (max-width: 768px){
+//   #modal{
+
+//     .left_item{
+//         img{
+//             width: 200px;
+//             height: 200px;
+//             object-fit: contain;
+
+//         }
+//     }
+//   }  
+//  }

@@ -27,3 +27,62 @@
  border-radius: $b-radius;
  border: $border;
 }
+
+@mixin Input ($border,$width,$height,$bg-color,$color,$b-radius,$padd,$outline) {
+    border: $border;
+    width: $width;
+    height: $height;
+    background-color:$bg-color;
+    color: $color;
+    border-radius: $b-radius;
+    padding: $padd;
+    outline: $outline;
+}
+
+@mixin  test ($bg,$color) {
+    background: $bg;
+    color: $color;
+}
+
+@mixin  select ($margin,$width,$padd,$bg-clr,$clr,$f-size,$f-weight) {
+    margin: $margin;
+    width: $width;
+    padding: $padd;
+    background-color: $bg-clr;
+    color: $clr;
+    font-size: $f-size;
+    font-weight: $f-weight;
+}
+@mixin skew ($posi,$top,$left,$trans,$height,$width,$bg-clr,$box-sha,) {
+    position: $posi;
+    top: $top;
+    left: $left;
+    transform: $trans;
+    height: $height;
+    width: $width;
+    background-color: $bg-clr;
+    box-shadow: $box-sha;
+}
+
+@mixin textarea ($m-left,$m-top,$padd,$b-radius,$f-size,$f-weight) {
+    margin-left: $m-left;
+    margin-top: $m-top;
+    padding: $padd;
+    border-radius: $b-radius;
+    font-size: $f-size;
+    font-weight: $f-weight;
+}
+
+@mixin overlay ($pos,$top,$left,$right,$bottom,$opacity,$height,$width,$bg_color) {
+    position: $pos;
+    top: $top;
+    left: $left;
+    right: $right;
+    bottom: $bottom;
+    opacity: $opacity;
+    height: $height;
+    width: $width;
+    background-color: $bg_color;
+    
+
+}

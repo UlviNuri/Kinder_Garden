@@ -6,25 +6,14 @@
         }
         .wrapper {
             position: relative;
-
             .overlay {
-                position: absolute;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                opacity: 0;
-                height: 100%;
-                width: 100%;
-                background: rgb(105, 105, 105);
-
+                @include overlay(absolute, 0, 0, 0, 0, 0, 100%, 100%, rgb(105, 105, 105));
                 .content {
                     position: absolute;
                     bottom: 10px;
                     left: 45%;
                     z-index: 5;
                     transform: translate(-50%, -50%);
-
                     p {
                         a {
                             z-index: 5;
@@ -36,7 +25,6 @@
             &:hover {
                 .overlay {
                     opacity: 0.5;
-
                     p {
                         opacity: 1;
                         color: white !important;
@@ -46,12 +34,9 @@
             }
         }
     }
-
     #img_2 {
         .img_size_1 {
-            height: 466px;
-            width: 100%;
-            object-fit: cover;
+            @include Img(100%, 466px, cover);
             border-radius: 4px;
         }
         .img_size_2 {
@@ -63,40 +48,31 @@
     #img_3 {
         .img_box {
             .img_size_3 {
-                
-                    width: 100%;
-                    height: 514px;
-                    object-fit: cover;
-                
+                @include Img(100%, 514px, cover);
             }
             .img_size_4 {
-                width: 100%;
-                height: 514px;
-                object-fit: cover;
+                @include Img(100%, 514px, cover);
             }
             .img_size_5 {
-                width: 100%;
-                height: 514px;
-                object-fit: cover;
+                @include Img(100%, 514px, cover);
             }
         }
     }
-    #img_4{
-        img{
-            width: 100%;
-            height: 260px;
-            object-fit: cover;
+    #img_4 {
+        img {
+            @include Img(100%, 216px, cover);
         }
     }
 
-    #img_5{
-        img{
+    #img_5 {
+        img {
             width: 100%;
         }
     }
 }
 
-
-#eylence_footer{
+#eylence_footer {
     margin-top: 510px;
 }
+
+// 104

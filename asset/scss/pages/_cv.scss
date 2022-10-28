@@ -92,15 +92,9 @@ main {
     #cv_btn {
         float: right;
         margin-right: 12%;
-        margin-top: 20px;
         background-color: $btn_color;
-        height: 56px;
-        width: 180px;
-        border: transparent;
-        border-radius: 17px;
-        font-size: 20px;
-        font-weight: 500;
         line-height: 24px;
+        @include btn(20px, 180px, 56px, 20px, 500, 17px, transparent);
     }
 }
 
@@ -183,3 +177,5 @@ main {
         }
     }
 }
+
+// 187
