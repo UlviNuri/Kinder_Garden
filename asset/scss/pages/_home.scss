@@ -1,16 +1,18 @@
 nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 55;
   .nav-menu {
     padding: 30px 0;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    @include Flex(space-evenly, center, row);
     .nav-item {
       position: relative;
       .nav-link {
         @include Parag(17px, 500, 20px, $black-color);
         text-transform: uppercase;
-        transition: .3s ease-in-out;
-
+        transition: 0.3s ease-in-out;
         &:hover {
           color: yellow;
         }
@@ -22,20 +24,21 @@ nav {
     cursor: pointer;
     z-index: 2;
     .bar {
-      display: block;
-      width: 25px;
-      height: 3px;
-      margin: 5px auto;
-      transition: all .3s ease-in-out;
-      background-color: yellow;
+      @include bar(block, 25px, 3px, 5px auto, all 0.3s ease-in-out, yellow);
     }
   }
+  .vector{
+    cursor: pointer;
+  }
+}
+.stiky {
+  background-color: teal;
+  color: black;
+  transition: 500ms ease-in-out;
 }
 @media only screen and (max-width: 768px) {
   nav {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include Flex(center, center, row);
     .navigation {
       margin: 35px 0;
     }
@@ -53,65 +56,58 @@ nav {
     }
     .nav-menu {
       position: fixed;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      width: 50%;
-      height: 100%;
-      background-color: gray;
-      top: 0px;
-      left: -100%;
-      transition: 0.3s ease-in-out; 
-      z-index: 55;
+      @include Flex(space-between, null, column);
+      @include nav_menu(50%, 100%, gray, 0px, -100%, 0.3s ease-in-out, 55);
     }
     .active {
       left: 0;
     }
   }
 }
-// body.night {
-//   background: rgb(41, 37, 50);
-//   p,
-//   h1,
-//   h1,
-//   h2,
-//   h3,
-//   h4,
-//   h5,
-//   h6 {
-//     color: white !important;
-//   }
-//   a {
-//     color: white;
-//   }
-// }
 
-// header {
-//   label {
-//     position: absolute;
-//     width: 45px;
-//     height: 30px;
-//     right: 20px;
-//     top: 20px;
-//     border: 1px solid black;
-//     border-radius: 20px;
-//   }
-//   label:before {
-//     position: absolute;
-//     content: "";
-//     width: 20px;
-//     height: 20px;
-//     top: 14%;
-//     left: 1%;
-//     border-radius: 50%;
-//     background: #000;
-//     transition: 0.3s ease-in-out;
-//   }
-//   label:active::before {
-//     left: 24px;
-//     background: #fff;
-//   }
-// }
+body.night {
+  background: rgb(41, 37, 50);
+  p,
+  h1,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: white !important;
+  }
+  a {
+    color: white;
+  }
+}
+
+header {
+  label {
+    position: absolute;
+    width: 45px;
+    height: 30px;
+    right: 20px;
+    top: 20px;
+    border: 1px solid black;
+    border-radius: 20px;
+  }
+  label:before {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 20px;
+    top: 14%;
+    left: 1%;
+    border-radius: 50%;
+    background: #000;
+    transition: 0.3s ease-in-out;
+  }
+  label:active::before {
+    left: 24px;
+    background: #fff;
+  }
+}
 #sviper {
   overflow: hidden;
   margin-top: 100px;
@@ -120,9 +116,9 @@ nav {
     width: 100%;
     height: 100%;
   }
-.swiper-pagination-bullet:active{
-  background-color:white;
-}
+  .swiper-pagination-bullet:active {
+    background-color: white;
+  }
 
   .swiper-slide {
     text-align: center;
@@ -157,7 +153,7 @@ h3 {
   display: flex;
   justify-content: center;
   padding-left: 33%;
-
+  margin-top: 100px;
   @media screen and (max-width: 768px) {
     display: none;
   }
@@ -170,11 +166,11 @@ h3 {
 }
 
 main {
+  margin-top: 100px;
   #kids_img_text {
     width: 100%;
     height: 1700px;
     position: relative;
-
     .baby_info {
       @include Parag(30px, 600, 30px, $black-color);
       padding: 0 50px;
@@ -183,22 +179,31 @@ main {
     }
     .relative_item {
       position: relative;
+      .relative_img {
+        max-width: 100%;
+      }
       .absaulte_text {
-        display: flex;
-        flex-direction: row;
+        @include Flex(null, null, row);
         position: absolute;
-        top: 50px;
+        top: 66px;
         left: 20px;
 
         .text {
+          margin-left: 20px;
           .text2 {
             font-family: "Mali";
             @include Parag(33px, 400, 43px, $black-color);
+      
+            }
           }
           h2 {
             font-family: "Mali";
             @include Parag(38px, 600, 35px, $black-color);
-          }
+            @media screen and (max-width: 393px) {
+              font-size: 15px;
+              line-height: 20px;
+            }
+          }}
 
           &:hover {
             cursor: pointer;
@@ -221,33 +226,51 @@ main {
         .pos {
           margin-top: 70px;
           cursor: pointer;
+          @media screen and (max-width: 393px) {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+          }
+        }
+        @media only screen and (min-width: 393px) {
+          .pos {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+          }
+          h2 {
+            line-height: 20px;
+          }
+          .text2 {
+            line-height: 5px;
+          }
         }
       }
     }
 
     #kids_img {
-      position: absolute;
-      top: 300px;
-      left: 0;
+      @include position(absolute, 300px, 0);
       width: 100%;
       gap: 20px;
       display: flex;
-
       .img_item {
         img {
           display: block;
-          position: absolute;
-          top: 550px;
-          left: 50px;
+          @include position(absolute, 550px, 50px);
+          @media (max-width: 393px) {
+            width: 120px;
+            height: 350px;
+            object-fit: contain;
+            border-radius: 50px;
+          }
         }
       }
       .img_item_1 {
-        position: absolute;
-        top: 415px;
-        left: 290px;
+        @include position(absolute, 415px, 290px);
         img {
           display: block;
           margin-top: 20px;
+          
         }
         @media screen and (max-width: 768px) {
           .img_none {
@@ -256,11 +279,15 @@ main {
         }
       }
       .img_item_2 {
-        position: absolute;
-        left: 520px;
-        top: 192px;
+        @include position(absolute, 190px, 520px);
         img {
           display: block;
+          @media screen and (max-width: 393px) {
+            width: 100px;
+            height: 250px;
+            object-fit: contain;
+            border-radius: 50px;
+          }
         }
       }
       .img_item_3 {
@@ -309,8 +336,7 @@ main {
         }
       }
     }
-  }
-}
+  
 
 #rotate_text {
   display: flex;
@@ -318,17 +344,11 @@ main {
     position: relative;
 
     .position_text {
-      position: absolute;
-      top: -10px;
-      right: -100px;
+      @include rotate_text(absolute, -10px, -100px);
       .class {
         display: flex;
         div {
-          margin: 7px 4px;
-          width: 15px;
-          height: 15px;
-          background-color: rgba(255, 166, 0, 0.82);
-          border-radius: 10px;
+          @include div(7px 4px, 15px, 15px, rgba(255, 166, 0, 0.82), 10px);
         }
         p {
           @include Parag(24px, 500, 24px, $white_color);
@@ -337,17 +357,11 @@ main {
     }
 
     .position_text1 {
-      position: absolute;
-      top: 25px;
-      right: 10px;
+      @include rotate_text(absolute, 25px, 10px);
       .class {
         display: flex;
         div {
-          margin: 7px 4px;
-          width: 15px;
-          height: 15px;
-          background-color: green;
-          border-radius: 10px;
+          @include div(7px 4px, 15px, 15px, green, 10px);
         }
         p {
           @include Parag(24px, 500, 24px, $white_color);
@@ -355,17 +369,11 @@ main {
       }
     }
     .position_text2 {
-      position: absolute;
-      top: 70px;
-      right: 200px;
+      @include rotate_text(absolute, 70px, 200px);
       .class {
         display: flex;
         div {
-          margin: 7px 4px;
-          width: 15px;
-          height: 15px;
-          background-color: red;
-          border-radius: 10px;
+          @include div(7px 4px, 15px, 15px, red, 10px);
         }
         p {
           @include Parag(24px, 500, 24px, $white_color);
@@ -373,17 +381,11 @@ main {
       }
     }
     .position_text3 {
-      position: absolute;
-      top: 115px;
-      right: 220px;
+      @include rotate_text(absolute, 115px, 220px);
       .class {
         display: flex;
         div {
-          margin: 7px 4px;
-          width: 15px;
-          height: 15px;
-          background-color: yellow;
-          border-radius: 10px;
+          @include div(7px 4px, 15px, 15px, blue, 10px);
         }
         p {
           @include Parag(24px, 500, 24px, $white_color);
@@ -391,17 +393,11 @@ main {
       }
     }
     .position_text4 {
-      position: absolute;
-      top: 155px;
-      right: 120px;
+      @include rotate_text(absolute, 155px, 120px);
       .class {
         display: flex;
         div {
-          margin: 7px 4px;
-          width: 15px;
-          height: 15px;
-          background-color: pink;
-          border-radius: 10px;
+          @include div(7px 4px, 15px, 15px, pink, 10px);
         }
         p {
           @include Parag(24px, 500, 24px, $white_color);
@@ -409,17 +405,11 @@ main {
       }
     }
     .position_text5 {
-      position: absolute;
-      top: 195px;
-      right: 120px;
+      @include rotate_text(absolute, 195px, 120px);
       .class {
         display: flex;
         div {
-          margin: 7px 4px;
-          width: 15px;
-          height: 15px;
-          background-color: rgb(198, 21, 175);
-          border-radius: 10px;
+          @include div(7px 4px, 15px, 15px, rgb(100, 209, 100), 10px);
         }
         p {
           @include Parag(24px, 500, 24px, $white_color);
@@ -427,17 +417,11 @@ main {
       }
     }
     .position_text7 {
-      position: absolute;
-      top: 240px;
-      right: -75px;
+      @include rotate_text(absolute, 240px, -75px);
       .class {
         display: flex;
         div {
-          margin: 7px 4px;
-          width: 15px;
-          height: 15px;
-          background-color: orange;
-          border-radius: 10px;
+          @include div(7px 4px, 15px, 15px, rgb(0, 53, 128), 10px);
         }
         p {
           @include Parag(24px, 500, 24px, $white_color);
@@ -445,17 +429,11 @@ main {
       }
     }
     .position_text8 {
-      position: absolute;
-      top: 290px;
-      right: -240px;
+      @include rotate_text(absolute, 290px, -240px);
       .class {
         display: flex;
         div {
-          margin: 7px 4px;
-          width: 15px;
-          height: 15px;
-          background-color: #fa0163;
-          border-radius: 10px;
+          @include div(7px 4px, 15px, 15px, rgb(58, 0, 128), 10px);
         }
         p {
           @include Parag(24px, 500, 24px, $white_color);
@@ -463,17 +441,11 @@ main {
       }
     }
     .position_text9 {
-      position: absolute;
-      top: 330px;
-      right: -220px;
+      @include rotate_text(absolute, 330px, -220px);
       .class {
         display: flex;
         div {
-          margin: 7px 4px;
-          width: 15px;
-          height: 15px;
-          background-color: #0acfbe;
-          border-radius: 10px;
+          @include div(7px 4px, 15px, 15px, rgb(125, 148, 125), 10px);
         }
         p {
           @include Parag(24px, 500, 24px, $white_color);
@@ -481,17 +453,11 @@ main {
       }
     }
     .position_text10 {
-      position: absolute;
-      top: 375px;
-      right: -270px;
+      @include rotate_text(absolute, 375px, -270px);
       .class {
         display: flex;
         div {
-          margin: 7px 4px;
-          width: 15px;
-          height: 15px;
-          background-color: #e4c1a5;
-          border-radius: 10px;
+          @include div(7px 4px, 15px, 15px, rgb(128, 128, 0), 10px);
         }
         p {
           @include Parag(24px, 500, 24px, $white_color);
@@ -527,12 +493,9 @@ main {
   }
 
   button {
-    height: 56px;
-    width: 180px;
     background-color: $btn_color;
-    border-radius: 17px;
     float: right;
-    border: none;
+    @include btn(null, 180px, 56px, null, null, 17px, none);
   }
   @media screen and (max-width: 768px) {
     display: none;
@@ -561,12 +524,9 @@ main {
       }
 
       button {
-        height: 56px;
-        width: 180px;
         background-color: $btn_color;
-        border-radius: 17px;
-        border: none;
         margin: 20px 0;
+        @include btn(null, 180px, 56px, null, null, 17px, none);
       }
     }
   }
@@ -593,10 +553,8 @@ main {
       @include Parag(40px, 600, 48px, $black_color);
     }
   }
-
 }
 section {
-
   #img_div {
     margin-top: 100px;
     img {
@@ -605,28 +563,25 @@ section {
       height: 300px;
       border-radius: 8px;
     }
-    .img1{
+    .img1 {
       width: 100%;
       height: 350px;
-      
-
     }
 
-    #btn{
-      .right_btn{
-          width: 180px;
-          height: 50px;
-          background-color: $btn_color;
-          margin: 58% 40px;
-          border: none;
-          border-radius: 17px;
-          @include Parag(20px, 500, 24px, #000000);
-          @media screen and (max-width:768px) {
-            margin: 20px 0;
-          }
+    #btn {
+      .right_btn {
+        width: 180px;
+        height: 50px;
+        background-color: $btn_color;
+        margin: 58% 40px;
+        border: none;
+        border-radius: 17px;
+        @include Parag(20px, 500, 24px, #000000);
+        @media screen and (max-width: 768px) {
+          margin: 20px 0;
+        }
       }
     }
-
   }
 }
 #modal {
@@ -677,3 +632,5 @@ section {
     }
   }
 }
+
+// 680

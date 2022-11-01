@@ -83,6 +83,43 @@
     height: $height;
     width: $width;
     background-color: $bg_color;
-    
+}
 
+@mixin bar ($disp,$width,$height,$mar,$tran,$bg) {
+    display: $disp;
+    width: $width;
+    height: $height;
+    margin: $mar;
+    transition: $tran;
+    background-color: $bg;
+}
+
+@mixin nav_menu ($wid,$heig,$bg,$top,$left,$trans,$z-index){
+    width: $wid;
+    height: $heig;
+    background-color: $bg;
+    top: $top;
+    left: $left;
+    transition: $trans;
+    z-index: $z-index;
+}
+@mixin position ($absa,$top,$left) {
+    position: $absa;
+    top: $top;
+    left: $left;
+}
+
+@mixin rotate_text($pos,$top,$right) {
+    position: $pos;
+    top: $top;
+    right: $right;
+}
+
+@mixin div ($margin,$wid,$heig,$bg,$b-radius) {
+ 
+    margin: $margin;
+    width: $wid;
+    height: $heig;
+    background-color: $bg;
+    border-radius: $b-radius;
 }

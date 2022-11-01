@@ -57,11 +57,19 @@ p {
   padding: 0;
 }
 
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 55;
+}
 nav .nav-menu {
   padding: 30px 0;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  flex-direction: row;
 }
 nav .nav-menu .nav-item {
   position: relative;
@@ -90,12 +98,22 @@ nav .hamburger .bar {
   transition: all 0.3s ease-in-out;
   background-color: yellow;
 }
+nav .vector {
+  cursor: pointer;
+}
+
+.stiky {
+  background-color: teal;
+  color: black;
+  transition: 500ms ease-in-out;
+}
 
 @media only screen and (max-width: 768px) {
   nav {
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    flex-direction: row;
   }
   nav .navigation {
     margin: 35px 0;
@@ -115,8 +133,8 @@ nav .hamburger .bar {
   nav .nav-menu {
     position: fixed;
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
+    flex-direction: column;
     width: 50%;
     height: 100%;
     background-color: gray;
@@ -129,6 +147,48 @@ nav .hamburger .bar {
     left: 0;
   }
 }
+body.night {
+  background: rgb(41, 37, 50);
+}
+body.night p,
+body.night h1,
+body.night h1,
+body.night h2,
+body.night h3,
+body.night h4,
+body.night h5,
+body.night h6 {
+  color: white !important;
+}
+body.night a {
+  color: white;
+}
+
+header label {
+  position: absolute;
+  width: 45px;
+  height: 30px;
+  right: 20px;
+  top: 20px;
+  border: 1px solid black;
+  border-radius: 20px;
+}
+header label:before {
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 20px;
+  top: 14%;
+  left: 1%;
+  border-radius: 50%;
+  background: #000;
+  transition: 0.3s ease-in-out;
+}
+header label:active::before {
+  left: 24px;
+  background: #fff;
+}
+
 #sviper {
   overflow: hidden;
   margin-top: 100px;
@@ -168,6 +228,7 @@ h3 {
   display: flex;
   justify-content: center;
   padding-left: 33%;
+  margin-top: 100px;
 }
 @media screen and (max-width: 768px) {
   h3 {
@@ -184,6 +245,9 @@ h3 {
   }
 }
 
+main {
+  margin-top: 100px;
+}
 main #kids_img_text {
   width: 100%;
   height: 1700px;
@@ -201,12 +265,18 @@ main #kids_img_text .baby_info {
 main #kids_img_text .relative_item {
   position: relative;
 }
+main #kids_img_text .relative_item .relative_img {
+  max-width: 100%;
+}
 main #kids_img_text .relative_item .absaulte_text {
   display: flex;
   flex-direction: row;
   position: absolute;
-  top: 50px;
+  top: 66px;
   left: 20px;
+}
+main #kids_img_text .relative_item .absaulte_text .text {
+  margin-left: 20px;
 }
 main #kids_img_text .relative_item .absaulte_text .text .text2 {
   font-family: "Mali";
@@ -215,28 +285,34 @@ main #kids_img_text .relative_item .absaulte_text .text .text2 {
   line-height: 43px;
   color: #000000;
 }
-main #kids_img_text .relative_item .absaulte_text .text h2 {
+main #kids_img_text .relative_item .absaulte_text h2 {
   font-family: "Mali";
   font-size: 38px;
   font-weight: 600;
   line-height: 35px;
   color: #000000;
 }
-main #kids_img_text .relative_item .absaulte_text .text:hover {
+@media screen and (max-width: 393px) {
+  main #kids_img_text .relative_item .absaulte_text h2 {
+    font-size: 15px;
+    line-height: 20px;
+  }
+}
+main #kids_img_text .relative_item:hover {
   cursor: pointer;
 }
 @media screen and (max-width: 768px) {
-  main #kids_img_text .relative_item .absaulte_text .text .text {
+  main #kids_img_text .relative_item .text {
     padding: 20px 0;
   }
-  main #kids_img_text .relative_item .absaulte_text .text .text2 {
+  main #kids_img_text .relative_item .text2 {
     font-size: 18px;
     font-weight: 500;
     line-height: 23px;
     color: #000000;
     text-align: center;
   }
-  main #kids_img_text .relative_item .absaulte_text .text h2 {
+  main #kids_img_text .relative_item h2 {
     font-size: 24px;
     font-weight: 600;
     line-height: 40px;
@@ -244,11 +320,34 @@ main #kids_img_text .relative_item .absaulte_text .text:hover {
     text-align: center;
   }
 }
-main #kids_img_text .relative_item .absaulte_text .pos {
+main #kids_img_text .pos {
   margin-top: 70px;
   cursor: pointer;
 }
-main #kids_img_text #kids_img {
+@media screen and (max-width: 393px) {
+  main #kids_img_text .pos {
+    width: 100px;
+    height: 100px;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+}
+@media only screen and (min-width: 393px) {
+  main #kids_img_text .pos {
+    width: 100px;
+    height: 100px;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  main #kids_img_text h2 {
+    line-height: 20px;
+  }
+  main #kids_img_text .text2 {
+    line-height: 5px;
+  }
+}
+
+#kids_img {
   position: absolute;
   top: 300px;
   left: 0;
@@ -256,86 +355,104 @@ main #kids_img_text #kids_img {
   gap: 20px;
   display: flex;
 }
-main #kids_img_text #kids_img .img_item img {
+#kids_img .img_item img {
   display: block;
   position: absolute;
   top: 550px;
   left: 50px;
 }
-main #kids_img_text #kids_img .img_item_1 {
+@media (max-width: 393px) {
+  #kids_img .img_item img {
+    width: 120px;
+    height: 350px;
+    -o-object-fit: contain;
+       object-fit: contain;
+    border-radius: 50px;
+  }
+}
+#kids_img .img_item_1 {
   position: absolute;
   top: 415px;
   left: 290px;
 }
-main #kids_img_text #kids_img .img_item_1 img {
+#kids_img .img_item_1 img {
   display: block;
   margin-top: 20px;
 }
 @media screen and (max-width: 768px) {
-  main #kids_img_text #kids_img .img_item_1 .img_none {
+  #kids_img .img_item_1 .img_none {
     display: none;
   }
 }
-main #kids_img_text #kids_img .img_item_2 {
+#kids_img .img_item_2 {
   position: absolute;
+  top: 190px;
   left: 520px;
-  top: 192px;
 }
-main #kids_img_text #kids_img .img_item_2 img {
+#kids_img .img_item_2 img {
   display: block;
 }
-main #kids_img_text #kids_img .img_item_3 {
+@media screen and (max-width: 393px) {
+  #kids_img .img_item_2 img {
+    width: 100px;
+    height: 250px;
+    -o-object-fit: contain;
+       object-fit: contain;
+    border-radius: 50px;
+  }
+}
+#kids_img .img_item_3 {
   position: absolute;
   right: 516px;
   top: 113px;
 }
-main #kids_img_text #kids_img .img_item_3 img {
+#kids_img .img_item_3 img {
   display: block;
   margin-top: 20px;
 }
 @media screen and (max-width: 768px) {
-  main #kids_img_text #kids_img .img_item_3 {
+  #kids_img .img_item_3 {
     display: none;
   }
 }
-main #kids_img_text #kids_img .img_item_4 {
+#kids_img .img_item_4 {
   position: absolute;
   right: 270px;
   top: -90px;
 }
-main #kids_img_text #kids_img .img_item_4 img {
+#kids_img .img_item_4 img {
   display: block;
   margin-top: 20px;
 }
 @media screen and (max-width: 768px) {
-  main #kids_img_text #kids_img .img_item_4 {
+  #kids_img .img_item_4 {
     display: none;
   }
 }
-main #kids_img_text #kids_img .img_item_5 {
+#kids_img .img_item_5 {
   position: absolute;
   right: 15px;
   top: 63px;
 }
-main #kids_img_text #kids_img .img_item_5 img {
+#kids_img .img_item_5 img {
   display: block;
   margin-top: 20px;
 }
 @media screen and (max-width: 768px) {
-  main #kids_img_text #kids_img .img_item_5 {
+  #kids_img .img_item_5 {
     display: none;
   }
 }
+
 @media screen and (max-width: 768px) {
-  main #kids_img_text #kids_img_text {
+  #kids_img_text {
     position: relative;
   }
-  main #kids_img_text #kids_img_text .baby_info {
+  #kids_img_text .baby_info {
     position: absolute;
     top: -434px;
   }
 }
-
 #rotate_text {
   display: flex;
 }
@@ -417,7 +534,7 @@ main #kids_img_text #kids_img .img_item_5 img {
   margin: 7px 4px;
   width: 15px;
   height: 15px;
-  background-color: yellow;
+  background-color: blue;
   border-radius: 10px;
 }
 #rotate_text .relative .position_text3 .class p {
@@ -459,7 +576,7 @@ main #kids_img_text #kids_img .img_item_5 img {
   margin: 7px 4px;
   width: 15px;
   height: 15px;
-  background-color: rgb(198, 21, 175);
+  background-color: rgb(100, 209, 100);
   border-radius: 10px;
 }
 #rotate_text .relative .position_text5 .class p {
@@ -480,7 +597,7 @@ main #kids_img_text #kids_img .img_item_5 img {
   margin: 7px 4px;
   width: 15px;
   height: 15px;
-  background-color: orange;
+  background-color: rgb(0, 53, 128);
   border-radius: 10px;
 }
 #rotate_text .relative .position_text7 .class p {
@@ -501,7 +618,7 @@ main #kids_img_text #kids_img .img_item_5 img {
   margin: 7px 4px;
   width: 15px;
   height: 15px;
-  background-color: #fa0163;
+  background-color: rgb(58, 0, 128);
   border-radius: 10px;
 }
 #rotate_text .relative .position_text8 .class p {
@@ -522,7 +639,7 @@ main #kids_img_text #kids_img .img_item_5 img {
   margin: 7px 4px;
   width: 15px;
   height: 15px;
-  background-color: #0acfbe;
+  background-color: rgb(125, 148, 125);
   border-radius: 10px;
 }
 #rotate_text .relative .position_text9 .class p {
@@ -543,7 +660,7 @@ main #kids_img_text #kids_img .img_item_5 img {
   margin: 7px 4px;
   width: 15px;
   height: 15px;
-  background-color: #e4c1a5;
+  background-color: rgb(128, 128, 0);
   border-radius: 10px;
 }
 #rotate_text .relative .position_text10 .class p {
@@ -583,11 +700,11 @@ main #kids_img_text #kids_img .img_item_5 img {
   padding: 8px 0;
 }
 #kinder_garden button {
-  height: 56px;
-  width: 180px;
   background-color: #F3EA00;
-  border-radius: 17px;
   float: right;
+  width: 180px;
+  height: 56px;
+  border-radius: 17px;
   border: none;
 }
 @media screen and (max-width: 768px) {
@@ -624,12 +741,12 @@ main #kids_img_text #kids_img .img_item_5 img {
   color: #FFFFFF;
 }
 #work_list .work_img .work_text button {
-  height: 56px;
-  width: 180px;
   background-color: #F3EA00;
+  margin: 20px 0;
+  width: 180px;
+  height: 56px;
   border-radius: 17px;
   border: none;
-  margin: 20px 0;
 }
 #work_list #employee .isciler img {
   width: 100%;
@@ -1167,6 +1284,11 @@ main section #img_div img {
 
 #bagca_footer {
   margin: 0;
+}
+
+#cv_item {
+  margin: 100px 50px;
+  border: none;
 }
 
 main #lg_3 {
@@ -2285,6 +2407,12 @@ main .img_box .relative .overlay img {
   }
   #img_div img {
     width: 100%;
+  }
+}
+@media screen and (max-width: 393px) {
+  .absaulte_text #res_img {
+    width: 100px;
+    height: 100px;
   }
 }
 @media screen and (max-width: 768px) {
