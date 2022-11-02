@@ -68,50 +68,23 @@ try {
   console.log("Javascript version updated...");
 }
 
-
-
-
-
-const toastBtn=document.getElementById("js_tag")
-toastBtn.addEventListener("click",()=>{
-  Toastify({
-    text: "Sorgunuz Ugurla Qebul Olundu!!!",
-    duration: 3000,
-    destination: "",
-    newWindow: true,
-    close: true,
-    gravity: "top", // `top` or `bottom`
-    position: "right", // `left`, `center` or `right`
-    stopOnFocus: true, // Prevents dismissing of toast on hover
-    style: {
-      background: "linear-gradient(to right, #00b09b, #96c93d)",
-    },
-    onClick: function(){} // Callback after click
-  }).showToast();
-  
-})
-
-const payment=document.getElementById("odenis")
-payment.addEventListener("click", ()=>{
-  // Toastify({
-  //   text: "Sorgunuz Ugurla Qebul Olundu",
-  //   duration: 3000,
-  //   destination: "",
-  //   newWindow: true,
-  //   close: true,
-  //   gravity: "top", // `top` or `bottom`
-  //   position: "right", // `left`, `center` or `right`
-  //   stopOnFocus: true, // Prevents dismissing of toast on hover
-  //   style: {
-  //     background: "linear-gradient(to right, #00b09b, #96c93d)",
-  //   },
-  //   onClick: function(){} // Callback after click
-  // }).showToast();
-
-  console.log("pokk");
-})
-
-
+// const toastBtn = document.getElementById("js_tag");
+// toastBtn.addEventListener("click", () => {
+//   Toastify({
+//     text: "Sorgunuz Ugurla Qebul Olundu!!!",
+//     duration: 3000,
+//     destination: "",
+//     newWindow: true,
+//     close: true,
+//     gravity: "top", // `top` or `bottom`
+//     position: "right", // `left`, `center` or `right`
+//     stopOnFocus: true, // Prevents dismissing of toast on hover
+//     style: {
+//       background: "linear-gradient(to right, #00b09b, #96c93d)",
+//     },
+//     onClick: function () {}, // Callback after click
+//   }).showToast();
+// });
 
 AOS.init({
   delay: 1000, // values from 0 to 3000, with step 50ms
