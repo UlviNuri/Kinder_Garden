@@ -32,6 +32,11 @@ main {
             .img_3 {
                 @include Img(100%, 200px, null);
             }
+            #img_3{
+                @media (max-width:400px) {
+                    display: none;
+                }
+            }
         }
         .bagca_content {
             @include Parag(17px, 500, 20.72px, $black_color);
@@ -42,6 +47,9 @@ main {
         }
     }
     #skewbox {
+        @media (max-width:400px) {
+            display: none;
+        }
         position: relative;
         margin-top: 250px;
         .skew {
@@ -90,6 +98,9 @@ main {
 }
 #bagca_footer {
     margin-top: 600px;
+    @media (max-width:400px) {
+        margin: 0;
+    }
 }
 
 //110

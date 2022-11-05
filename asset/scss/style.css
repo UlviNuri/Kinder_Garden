@@ -57,6 +57,35 @@ p {
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+#proqres {
+  position: fixed;
+  bottom: 20px;
+  right: 10px;
+  height: 70px;
+  width: 70px;
+  display: none;
+  place-items: center;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  z-index: 555;
+}
+#proqres #progress_item {
+  display: block;
+  height: calc(100% - 15px);
+  width: calc(100% - 15px);
+  background: white;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 35px;
+  color: #001a2e;
+}
+
 nav {
   position: fixed;
   top: 0;
@@ -66,8 +95,9 @@ nav {
 }
 nav .nav-menu {
   padding: 30px 0;
+  width: 90%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   flex-direction: row;
 }
@@ -105,13 +135,13 @@ nav .vector {
 .stiky {
   background-color: teal;
   color: black;
-  transition: 500ms ease-in-out;
+  transition: 1s ease-in-out;
 }
 
 @media only screen and (max-width: 768px) {
   nav {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     flex-direction: row;
   }
@@ -147,48 +177,6 @@ nav .vector {
     left: 0;
   }
 }
-body.night {
-  background: rgb(41, 37, 50);
-}
-body.night p,
-body.night h1,
-body.night h1,
-body.night h2,
-body.night h3,
-body.night h4,
-body.night h5,
-body.night h6 {
-  color: white !important;
-}
-body.night a {
-  color: white;
-}
-
-header label {
-  position: absolute;
-  width: 45px;
-  height: 30px;
-  right: 20px;
-  top: 20px;
-  border: 1px solid black;
-  border-radius: 20px;
-}
-header label:before {
-  position: absolute;
-  content: "";
-  width: 20px;
-  height: 20px;
-  top: 14%;
-  left: 1%;
-  border-radius: 50%;
-  background: #000;
-  transition: 0.3s ease-in-out;
-}
-header label:active::before {
-  left: 24px;
-  background: #fff;
-}
-
 #sviper {
   overflow: hidden;
   margin-top: 100px;
@@ -220,7 +208,7 @@ header label:active::before {
   margin-top: 20px;
 }
 
-h3 {
+#indec_content {
   font-size: 40px;
   font-weight: 600;
   line-height: 48px;
@@ -231,7 +219,7 @@ h3 {
   margin-top: 100px;
 }
 @media screen and (max-width: 768px) {
-  h3 {
+  #indec_content {
     display: none;
   }
 }
@@ -262,6 +250,12 @@ main #kids_img_text .baby_info {
   position: absolute;
   top: 290px;
 }
+@media (max-width: 400px) {
+  main #kids_img_text .baby_info {
+    position: absolute;
+    top: 30px;
+  }
+}
 main #kids_img_text .relative_item {
   position: relative;
 }
@@ -285,6 +279,14 @@ main #kids_img_text .relative_item .absaulte_text .text .text2 {
   line-height: 43px;
   color: #000000;
 }
+@media (max-width: 400px) {
+  main #kids_img_text .relative_item .absaulte_text .text .text2 {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 23px;
+    color: #000000;
+  }
+}
 main #kids_img_text .relative_item .absaulte_text h2 {
   font-family: "Mali";
   font-size: 38px;
@@ -292,10 +294,12 @@ main #kids_img_text .relative_item .absaulte_text h2 {
   line-height: 35px;
   color: #000000;
 }
-@media screen and (max-width: 393px) {
+@media (max-width: 400px) {
   main #kids_img_text .relative_item .absaulte_text h2 {
-    font-size: 15px;
-    line-height: 20px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 0px;
+    color: #000000;
   }
 }
 main #kids_img_text .relative_item:hover {
@@ -346,6 +350,11 @@ main #kids_img_text .pos {
     line-height: 5px;
   }
 }
+@media screen and (max-width: 393px) {
+  main #kids_img_text #kids_img_text {
+    height: 0px !important;
+  }
+}
 
 #kids_img {
   position: absolute;
@@ -361,13 +370,15 @@ main #kids_img_text .pos {
   top: 550px;
   left: 50px;
 }
-@media (max-width: 393px) {
+@media (max-width: 400px) {
   #kids_img .img_item img {
+    position: absolute;
+    top: 250px;
+    left: 5px;
     width: 120px;
-    height: 350px;
+    height: 150px;
     -o-object-fit: contain;
        object-fit: contain;
-    border-radius: 50px;
   }
 }
 #kids_img .img_item_1 {
@@ -378,6 +389,21 @@ main #kids_img_text .pos {
 #kids_img .img_item_1 img {
   display: block;
   margin-top: 20px;
+}
+@media (max-width: 400px) {
+  #kids_img .img_item_1 img {
+    width: 120px;
+    height: 150px;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+}
+@media (max-width: 400px) {
+  #kids_img .img_item_1 {
+    position: absolute;
+    top: 250px;
+    left: 120px;
+  }
 }
 @media screen and (max-width: 768px) {
   #kids_img .img_item_1 .img_none {
@@ -392,13 +418,22 @@ main #kids_img_text .pos {
 #kids_img .img_item_2 img {
   display: block;
 }
-@media screen and (max-width: 393px) {
+@media screen and (max-width: 400px) {
   #kids_img .img_item_2 img {
-    width: 100px;
-    height: 250px;
+    width: 120px;
+    height: 150px;
     -o-object-fit: contain;
        object-fit: contain;
-    border-radius: 50px;
+  }
+}
+@media screen and (max-width: 400px) {
+  #kids_img .img_item_2 {
+    position: absolute;
+    top: 280px;
+    left: 250px;
+  }
+  #kids_img .img_item_2 #img_none {
+    display: none;
   }
 }
 #kids_img .img_item_3 {
@@ -409,6 +444,14 @@ main #kids_img_text .pos {
 #kids_img .img_item_3 img {
   display: block;
   margin-top: 20px;
+}
+@media screen and (max-width: 400px) {
+  #kids_img .img_item_3 img {
+    width: 120px;
+    height: 150px;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
 }
 @media screen and (max-width: 768px) {
   #kids_img .img_item_3 {
@@ -444,15 +487,6 @@ main #kids_img_text .pos {
   }
 }
 
-@media screen and (max-width: 768px) {
-  #kids_img_text {
-    position: relative;
-  }
-  #kids_img_text .baby_info {
-    position: absolute;
-    top: -434px;
-  }
-}
 #rotate_text {
   display: flex;
 }
@@ -482,8 +516,8 @@ main #kids_img_text .pos {
 }
 #rotate_text .relative .position_text1 {
   position: absolute;
-  top: 25px;
-  right: 10px;
+  top: 50px;
+  right: -6px;
 }
 #rotate_text .relative .position_text1 .class {
   display: flex;
@@ -503,7 +537,7 @@ main #kids_img_text .pos {
 }
 #rotate_text .relative .position_text2 {
   position: absolute;
-  top: 70px;
+  top: 110px;
   right: 200px;
 }
 #rotate_text .relative .position_text2 .class {
@@ -524,8 +558,8 @@ main #kids_img_text .pos {
 }
 #rotate_text .relative .position_text3 {
   position: absolute;
-  top: 115px;
-  right: 220px;
+  top: 150px;
+  right: 223px;
 }
 #rotate_text .relative .position_text3 .class {
   display: flex;
@@ -545,8 +579,8 @@ main #kids_img_text .pos {
 }
 #rotate_text .relative .position_text4 {
   position: absolute;
-  top: 155px;
-  right: 120px;
+  top: 190px;
+  right: 140px;
 }
 #rotate_text .relative .position_text4 .class {
   display: flex;
@@ -566,8 +600,8 @@ main #kids_img_text .pos {
 }
 #rotate_text .relative .position_text5 {
   position: absolute;
-  top: 195px;
-  right: 120px;
+  top: 235px;
+  right: 145px;
 }
 #rotate_text .relative .position_text5 .class {
   display: flex;
@@ -587,8 +621,8 @@ main #kids_img_text .pos {
 }
 #rotate_text .relative .position_text7 {
   position: absolute;
-  top: 240px;
-  right: -75px;
+  top: 280px;
+  right: -44px;
 }
 #rotate_text .relative .position_text7 .class {
   display: flex;
@@ -608,8 +642,8 @@ main #kids_img_text .pos {
 }
 #rotate_text .relative .position_text8 {
   position: absolute;
-  top: 290px;
-  right: -240px;
+  top: 330px;
+  right: -195px;
 }
 #rotate_text .relative .position_text8 .class {
   display: flex;
@@ -629,8 +663,8 @@ main #kids_img_text .pos {
 }
 #rotate_text .relative .position_text9 {
   position: absolute;
-  top: 330px;
-  right: -220px;
+  top: 380px;
+  right: -158px;
 }
 #rotate_text .relative .position_text9 .class {
   display: flex;
@@ -650,8 +684,8 @@ main #kids_img_text .pos {
 }
 #rotate_text .relative .position_text10 {
   position: absolute;
-  top: 375px;
-  right: -270px;
+  top: 430px;
+  right: -185px;
 }
 #rotate_text .relative .position_text10 .class {
   display: flex;
@@ -748,19 +782,20 @@ main #kids_img_text .pos {
   border-radius: 17px;
   border: none;
 }
-#work_list #employee .isciler img {
+
+#employee .isciler img {
   width: 100%;
   height: 326px;
   -o-object-fit: contain;
      object-fit: contain;
 }
-#work_list #employee .isciler .isci_info {
+#employee .isciler .isci_info {
   width: 100%;
   height: 50px;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 15.87%, rgba(105, 112, 115, 0.02) 230.16%);
   border-radius: 0px 0px 3.33333px 3.33333px;
 }
-#work_list #employee .isciler .isci_info p {
+#employee .isciler .isci_info p {
   text-align: center;
   font-size: 17px;
   font-weight: 500;
@@ -768,7 +803,7 @@ main #kids_img_text .pos {
   color: #000000;
   padding: 4px 0;
 }
-#work_list #employee .logoped_title {
+#employee .logoped_title {
   font-size: 40px;
   font-weight: 600;
   line-height: 48px;
@@ -1006,6 +1041,11 @@ main .container_div .contact form input {
 main .container_div .contact form input:nth-child(3) {
   height: 150px;
 }
+@media (max-width: 400px) {
+  main .container_div .contact form input {
+    width: 340px;
+  }
+}
 main .container_div .contact form textarea {
   margin-left: 5%;
   margin-top: 24px;
@@ -1024,6 +1064,9 @@ main .container_div button {
   font-weight: 500;
   border-radius: 17px;
   border: transparent;
+}
+main .container_div .contact_img {
+  max-width: 100%;
 }
 
 footer #bagca_footer {
@@ -1132,23 +1175,27 @@ main #vakansiyalar .text button {
   border-radius: 50px;
   border: 1px solid transparent;
 }
-
-#teacher_content {
+main #teacher_content {
   display: flex;
 }
-#teacher_content img {
+@media (max-width: 400px) {
+  main #teacher_content {
+    display: block;
+  }
+}
+main #teacher_content img {
   height: 314px;
   width: 263px;
   border-radius: 4px;
 }
-#teacher_content h2 {
+main #teacher_content h2 {
   padding: 12px 20px;
   font-size: 30px;
   font-weight: 500;
   line-height: 37px;
   color: #000000;
 }
-#teacher_content .btn_info {
+main #teacher_content .btn_info {
   background-color: #F3EA00;
   padding: 0 20px;
   line-height: 20px;
@@ -1159,7 +1206,7 @@ main #vakansiyalar .text button {
   border-radius: 50px;
   border: none;
 }
-#teacher_content button {
+main #teacher_content button {
   background-color: transparent;
   line-height: 20px;
   margin-left: 20px;
@@ -1243,43 +1290,18 @@ main #kinder_garden_mobil {
     color: black;
   }
 }
-main #bagca_img {
-  margin-top: 100px;
-}
-main #bagca_img .bagca_item img {
-  width: 100%;
-  height: 400px;
-  -o-object-fit: contain;
-     object-fit: contain;
-  border: 8px;
-  cursor: pointer;
-}
-@media screen and (max-width: 768px) {
-  main #bagca_img .bagca_item img {
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
-}
-main #bagca_img .bagca_item .text_title {
-  margin: 14px 0;
-  font-size: 21px;
-  font-weight: 600;
-  line-height: 20px;
-  color: #000000;
-  text-align: center;
-}
-main #bagca_img .bagca_item p {
-  font-size: 15px;
-  font-weight: 400;
-  line-height: 20px;
-  color: #000000;
-  text-align: center;
-}
 main section #img_div img {
   cursor: pointer;
   width: 100%;
   height: 300px;
   border-radius: 8px;
+}
+
+.garden_item {
+  cursor: pointer;
+}
+.garden_item h6 {
+  line-height: 50px;
 }
 
 #bagca_footer {
@@ -1323,6 +1345,11 @@ main .id form {
 main .id form .form_name {
   display: flex;
   gap: 25px;
+}
+@media (max-width: 400px) {
+  main .id form .form_name {
+    display: block;
+  }
 }
 main .id form .form_name input {
   display: block;
@@ -1376,6 +1403,11 @@ main .id form .school input {
   border: 1.25px solid rgba(217, 217, 217, 0.6980392157);
   border-radius: 4px;
 }
+@media (max-width: 400px) {
+  main .id form .school input {
+    width: 100%;
+  }
+}
 main .id form .work {
   display: flex;
   flex-direction: column;
@@ -1384,6 +1416,11 @@ main .id form .work {
 main .id form .work textarea {
   width: 40%;
   border-radius: 4px;
+}
+@media (max-width: 400px) {
+  main .id form .work textarea {
+    width: 100%;
+  }
 }
 main #cv_btn {
   float: right;
@@ -1611,19 +1648,22 @@ main button {
   margin-top: 100px;
 }
 
-section .isciler img {
+#logoped_mr {
+  margin-top: 100px;
+}
+#logoped_mr .isciler img {
   width: 100%;
   height: 326px;
   -o-object-fit: contain;
      object-fit: contain;
 }
-section .isciler .isci_info {
+#logoped_mr .isciler .isci_info {
   width: 100%;
   height: 50px;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 15.87%, rgba(105, 112, 115, 0.02) 230.16%);
   border-radius: 0px 0px 3.33333px 3.33333px;
 }
-section .isciler .isci_info p {
+#logoped_mr .isciler .isci_info p {
   text-align: center;
   font-size: 17px;
   font-weight: 500;
@@ -1631,14 +1671,14 @@ section .isciler .isci_info p {
   color: #000000;
   padding: 4px 0;
 }
-section #logoped_info li {
+#logoped_mr #logoped_info li {
   list-style-type: circle;
   font-size: 18px;
   font-weight: 500;
   line-height: 22px;
   color: #000000;
 }
-section #logoped_info li::marker {
+#logoped_mr #logoped_info li::marker {
   color: white;
 }
 
@@ -1659,6 +1699,13 @@ section #logoped_info li::marker {
   margin-top: 100px;
 }
 
+#employee {
+  margin-top: 100px;
+}
+
+#daye_info {
+  margin-top: 100px;
+}
 #daye_info .text1 {
   font-size: 17px;
   font-weight: 400;
@@ -1726,6 +1773,11 @@ main section .img_item .img_3 {
   width: 100%;
   height: 200px;
 }
+@media (max-width: 400px) {
+  main section .img_item #img_3 {
+    display: none;
+  }
+}
 main section .bagca_content {
   font-size: 17px;
   font-weight: 500;
@@ -1741,6 +1793,11 @@ main section .bagca_content {
 main #skewbox {
   position: relative;
   margin-top: 250px;
+}
+@media (max-width: 400px) {
+  main #skewbox {
+    display: none;
+  }
 }
 main #skewbox .skew {
   position: absolute;
@@ -1801,6 +1858,11 @@ main #skewbox .imgbox {
 
 #bagca_footer {
   margin-top: 600px;
+}
+@media (max-width: 400px) {
+  #bagca_footer {
+    margin: 0;
+  }
 }
 
 main img {
@@ -1952,6 +2014,11 @@ main .imgbox {
 #geyim_magaza {
   margin-top: 500px;
 }
+@media (max-width: 400px) {
+  #geyim_magaza {
+    margin-top: 0;
+  }
+}
 
 main #magaza_box {
   display: flex;
@@ -1988,6 +2055,11 @@ main #magaza_box .img_item .right_img {
   height: auto;
   -o-object-fit: contain;
      object-fit: contain;
+}
+@media (max-width: 400px) {
+  main #magaza_box .img_item .right_img {
+    display: none;
+  }
 }
 main #img_box .img_item {
   padding: 0 20px;
@@ -2137,6 +2209,11 @@ main #img_box .img_item .img_box4 {
 #eylence_footer {
   margin-top: 510px;
 }
+@media (max-width: 400px) {
+  #eylence_footer {
+    margin-top: 0;
+  }
+}
 
 main .rec_237 {
   width: 100%;
@@ -2151,6 +2228,11 @@ main .text_item h2 {
   color: #000000;
   padding: 14px 35px;
   cursor: pointer;
+}
+@media (max-width: 400px) {
+  main .text_item h2 {
+    font-size: 20px;
+  }
 }
 main .text_item p {
   font-size: 20px;
@@ -2183,6 +2265,14 @@ main .img_box .relative img {
     height: 700px;
   }
 }
+@media (max-width: 400px) {
+  main .img_box .relative img {
+    width: 400px;
+    height: 400px;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+}
 main .img_box .relative .overlay {
   position: absolute;
   top: 27%;
@@ -2192,6 +2282,12 @@ main .img_box .relative .overlay img {
   width: 250px;
   height: 300px;
 }
+@media (max-width: 400px) {
+  main .img_box .relative .overlay img {
+    width: 160px;
+    height: 230px;
+  }
+}
 @media screen and (max-width: 768px) {
   main .img_box .relative .overlay {
     position: absolute;
@@ -2199,15 +2295,27 @@ main .img_box .relative .overlay img {
     left: 34%;
   }
 }
+@media (max-width: 400px) {
+  main .img_box .relative .overlay {
+    position: absolute;
+    top: 20%;
+    left: 30%;
+  }
+}
 
 #work_main {
   position: relative;
-  margin-top: 50px;
-  height: 800px;
+  margin-top: 100px;
   margin-left: 11%;
   width: 80%;
-  height: 2500px;
+  height: auto;
   background-color: white;
+}
+@media (max-width: 400px) {
+  #work_main {
+    margin-left: 5%;
+    width: 90%;
+  }
 }
 #work_main #work_info .work_melumat {
   margin-top: 50px;
@@ -2221,12 +2329,16 @@ main .img_box .relative .overlay img {
 }
 #work_main #work_info .work_melumat .work_content {
   width: 320px;
-  height: 470px;
   border: 4.25px solid #656565;
-  margin: 20px;
+  margin: 20px 0;
   border-radius: 4px;
 }
-#work_main #work_info .work_melumat .work_content h3 {
+@media (max-width: 400) {
+  #work_main #work_info .work_melumat .work_content {
+    width: 270px;
+  }
+}
+#work_main #work_info .work_melumat .work_content .work_h3 {
   font-size: 17px;
   font-weight: 600;
   line-height: 20px;
@@ -2241,6 +2353,13 @@ main .img_box .relative .overlay img {
 }
 #work_main #work_info .work_melumat .work_requirements {
   padding: 10px 0;
+}
+#work_main #work_info .work_melumat .work_requirements .work_h3 {
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 20px;
+  color: #000000;
+  padding: 10px;
 }
 #work_main #work_info .work_melumat .work_requirements p {
   font-size: 13px;
@@ -2290,22 +2409,22 @@ main .img_box .relative .overlay img {
   right: -100px;
 }
 
-#work_info {
+#work_detaile {
   width: 80%;
   background-color: white;
   margin-left: 10%;
 }
-#work_info section h2 {
+#work_detaile section h2 {
   padding: 60px 50px;
   font-size: 35px;
   font-weight: 600;
   line-height: 42px;
   color: #000000;
 }
-#work_info section .left_item {
+#work_detaile section .left_item {
   padding: 20px;
 }
-#work_info section .left_item p {
+#work_detaile section .left_item p {
   font-size: 20px;
   font-weight: 500;
   line-height: 24px;
@@ -2313,33 +2432,33 @@ main .img_box .relative .overlay img {
   border-bottom: 1px solid rgba(0, 0, 0, 0.368627451);
   padding: 20px 0;
 }
-#work_info section .left_item p span {
+#work_detaile section .left_item p span {
   font-size: 20px;
   font-weight: 500;
   line-height: 24px;
   color: #000000;
   padding: 4px 0;
 }
-#work_info section .right_text div {
+#work_detaile section .right_text div {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
 }
-#work_info section .right_text div p {
+#work_detaile section .right_text div p {
   font-size: 17px;
   font-weight: 500;
   line-height: 35px;
   color: #000000;
 }
-#work_info section .right_text div span {
+#work_detaile section .right_text div span {
   font-size: 17px;
   font-weight: 700;
   line-height: 35px;
   color: #000000;
   margin-top: 30px;
 }
-#work_info .work_footer h3 {
+#work_detaile .work_footer h3 {
   font-size: 20px;
   font-weight: 700;
   line-height: 20px;
@@ -2348,10 +2467,10 @@ main .img_box .relative .overlay img {
   display: flex;
   justify-content: start;
 }
-#work_info .work_footer ul {
+#work_detaile .work_footer ul {
   margin: 30px;
 }
-#work_info .work_footer ul li {
+#work_detaile .work_footer ul li {
   list-style: circle;
   padding: 8px 0;
   font-size: 16px;
@@ -2359,13 +2478,13 @@ main .img_box .relative .overlay img {
   line-height: 30px;
   color: #000000;
 }
-#work_info .work_footer p {
+#work_detaile .work_footer p {
   font-size: 25px;
   font-weight: 500;
   line-height: 30px;
   color: #000000;
 }
-#work_info .work_footer p span {
+#work_detaile .work_footer p span {
   font-size: 17px;
   font-weight: 500;
   line-height: 30px;
@@ -2381,6 +2500,12 @@ main .img_box .relative .overlay img {
   }
   main #kinder_garden {
     display: none;
+  }
+  #employee img {
+    width: 100%;
+    height: 320px;
+    -o-object-fit: contain;
+       object-fit: contain;
   }
   #response_class {
     display: flex;
@@ -2407,12 +2532,6 @@ main .img_box .relative .overlay img {
   }
   #img_div img {
     width: 100%;
-  }
-}
-@media screen and (max-width: 393px) {
-  .absaulte_text #res_img {
-    width: 100px;
-    height: 100px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -2517,6 +2636,9 @@ main .img_box .relative .overlay img {
     flex-direction: column;
   }
 }
+#employee_xadime {
+  margin-top: 100px;
+}
 #employee_xadime .text {
   display: flex;
   justify-content: start;
@@ -2537,6 +2659,11 @@ main .img_box .relative .overlay img {
 #employee_xadime .isciler {
   display: flex;
 }
+@media (max-width: 400px) {
+  #employee_xadime .isciler {
+    display: block;
+  }
+}
 #employee_xadime .isciler .xadime_info {
   width: 100%;
 }
@@ -2545,13 +2672,14 @@ main .img_box .relative .overlay img {
   font-weight: 600;
   line-height: 30px;
   color: #000000;
+  padding: 0 20px;
 }
 #employee_xadime .isciler .xadime_info span {
   font-size: 30px;
   font-weight: 500;
-  line-height: 30px;
+  line-height: 60px;
   color: #000000;
-  padding-top: 20px;
+  padding: 0 20px;
 }
 #employee_xadime .isciler .xadime_btn {
   display: flex;
@@ -2566,6 +2694,7 @@ main .img_box .relative .overlay img {
   border-radius: 50px;
   border: none;
   background-color: #F3EA00;
+  margin-left: 10px;
 }
 #employee_xadime .isciler .xadime_btn button:nth-child(2) {
   margin-left: 20px;

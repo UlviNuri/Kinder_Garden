@@ -1,4 +1,4 @@
-    // home
+// home
 @media screen and (max-width: 768px) {
     main {
         #kids_img_text {
@@ -8,16 +8,22 @@
             margin-bottom: 150px;
         }
 
-        #kinder_garden{
+        #kinder_garden {
             display: none;
         }
-
     }
-    #response_class{
+
+  #employee{
+    img{
+        width: 100%;
+        height: 320px;
+        object-fit: contain;
+    }
+  }
+    #response_class {
         display: flex;
         justify-content: flex-end;
-        
-      }
+    }
     #kinder_garden {
         .bagca_info {
             p {
@@ -35,27 +41,17 @@
     }
     .registration {
         padding: 0 12px;
-    }   
-    #sviper{
+    }
+    #sviper {
         display: block;
     }
-    #img_div{
-        img{
+    #img_div {
+        img {
             width: 100%;
         }
     }
 }
-@media screen and (max-width: 393px){
-.absaulte_text{
-    #res_img{
-        width: 100px;
-        height: 100px;
-    }
 
-}
-
-
-}
 
 // bagcalar
 
@@ -66,14 +62,13 @@
         }
     }
 
-    #kinder_garden_info{
+    #kinder_garden_info {
         display: none;
     }
 
-    #kinder_garden_mobil{
+    #kinder_garden_mobil {
         display: block;
     }
-
 }
 @media screen and (max-width: 768px) {
     #img_div {
@@ -109,12 +104,12 @@
             margin-left: 0;
         }
     }
-    select{
+    select {
         margin-left: 0 !important;
     }
 }
 
-// eylence content 
+// eylence content
 
 // daye_info
 
@@ -124,50 +119,47 @@
     }
 }
 
-// geyim magazalari 
+// geyim magazalari
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px) {
     main {
-        #img_item_2{
-            img{
+        #img_item_2 {
+            img {
                 object-fit: cover;
             }
         }
-        #img_item_3{
-            img{
+        #img_item_3 {
+            img {
                 object-fit: cover;
             }
         }
-        #img_item_4{
-            img{
+        #img_item_4 {
+            img {
                 object-fit: cover;
             }
         }
-        #img_item_6{
-            img{
+        #img_item_6 {
+            img {
                 object-fit: cover;
             }
         }
     }
 }
-
 
 // magaza
 
 @media screen and (max-width: 768px) {
-  #img_box{
-    .img_box{
-        display: none;
+    #img_box {
+        .img_box {
+            display: none;
+        }
     }
-  }
-  .btn{
-   button{
-    display: none;
-   }
-  }
+    .btn {
+        button {
+            display: none;
+        }
+    }
 }
-
-
 
 // payment
 
@@ -177,7 +169,6 @@
             display: none;
         }
     }
-  
 }
 
 // work
@@ -211,18 +202,17 @@
     }
 }
 
+// xadime
 
-
- // xadime 
-
- @media screen and (max-width: 768px){
-    #employee{
+@media screen and (max-width: 768px) {
+    #employee {
         .text {
-            @include Flex(start,start,column);
+            @include Flex(start, start, column);
         }
- }}
+    }
+}
 
- // modal 
+// modal
 
 //  @media screen and (max-width: 768px){
 //   #modal{
@@ -235,5 +225,5 @@
 
 //         }
 //     }
-//   }  
+//   }
 //  }

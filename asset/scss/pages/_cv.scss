@@ -1,7 +1,6 @@
-#cv_item{
-    margin:100px 50px;
-     border: none;
-
+#cv_item {
+    margin: 100px 50px;
+    border: none;
 }
 
 main {
@@ -27,11 +26,13 @@ main {
         background-color: white;
 
         form {
-            padding: 30px  20px;
+            padding: 30px 20px;
             .form_name {
                 display: flex;
                 gap: 25px;
-
+                @media (max-width: 400px) {
+                    display: block;
+                }
                 input {
                     display: block;
                     border: 1.25px solid #d9d9d9b2;
@@ -79,6 +80,9 @@ main {
                     width: 400px;
                     border: 1.25px solid #d9d9d9b2;
                     border-radius: 4px;
+                    @media (max-width: 400px) {
+                        width: 100%;
+                    }
                 }
             }
 
@@ -88,8 +92,10 @@ main {
                 padding: 20px 0;
                 textarea {
                     width: 40%;
-
                     border-radius: 4px;
+                    @media (max-width: 400px) {
+                        width: 100%;
+                    }
                 }
             }
         }
@@ -103,7 +109,6 @@ main {
         @include btn(20px, 180px, 56px, 20px, 500, 17px, transparent);
     }
 }
-
 
 #cv_footer {
     margin-top: 200px;

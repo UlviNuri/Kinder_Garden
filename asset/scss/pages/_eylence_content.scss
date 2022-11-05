@@ -10,6 +10,9 @@ main {
             @include Parag(27px, 500, 20px, $black-color);
             padding: 14px 35px;
             cursor: pointer;
+            @media (max-width:400px) {
+                font-size: 20px;
+            }
         }
 
         p {
@@ -38,6 +41,9 @@ main {
                     height: 700px;
 
                 }
+                @media (max-width:400px){
+                    @include Img(400px,400px,contain);
+                }
             }
             .overlay{
                 position: absolute;
@@ -47,11 +53,21 @@ main {
                 img{
                     width: 250px;
                     height: 300px;
+                    @media (max-width:400px) {
+                        width: 160px;
+                        height: 230px;
+                    }
                 }
                 @media screen and (max-width: 768px){
                     position: absolute;
                     top: 29%;
                     left: 34%;
+                }
+                @media (max-width:400px) 
+                {
+                    position: absolute;
+                    top: 20%;
+                    left: 30%;
                 }
             }
         }

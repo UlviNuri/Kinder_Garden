@@ -28,9 +28,15 @@ main {
                     &:nth-child(3) {
                         height: 150px;
                     }
+                    @media (max-width:400px){
+                        width: 340px;
+                    }
                 }
                 textarea {
                     @include textarea(5%,24px,5px,4px,17px,500);
+                    @media (max-width:400px){
+                        
+                    }
                 }
             }
         }
@@ -39,6 +45,9 @@ main {
             float: right;
             background-color: $btn_color;
             @include btn(20px, 180px, 56px, 20px, 500, 17px, transparent);
+        }
+        .contact_img{
+            max-width: 100%;
         }
     }
 }

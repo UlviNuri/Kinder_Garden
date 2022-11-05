@@ -23,6 +23,9 @@ main {
 
             .right_img {
                 @include Img(100%, auto, contain);
+                @media (max-width:400px){
+                    display: none;
+                }
             }
         }
     }

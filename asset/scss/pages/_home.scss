@@ -1,12 +1,44 @@
+html {
+  scroll-behavior: smooth;
+}
+#proqres {
+  // background-color: #03cc65;
+  position: fixed;
+  bottom: 20px;
+  right: 10px;
+  height: 70px;
+  width: 70px;
+  display: none;
+  place-items: center;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+  cursor: pointer;
+  z-index: 555;
+  #progress_item {
+    display: block;
+    height: calc(100% - 15px);
+    width: calc(100% - 15px);
+    background: #ffff;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 35px;
+    color: #001a2e;
+  }
+}
+
 nav {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 55;
+  // @include Flex(space-evenly,center,row);
   .nav-menu {
     padding: 30px 0;
-    @include Flex(space-evenly, center, row);
+    width: 90%;
+    @include Flex(space-between, center, row);
     .nav-item {
       position: relative;
       .nav-link {
@@ -27,18 +59,19 @@ nav {
       @include bar(block, 25px, 3px, 5px auto, all 0.3s ease-in-out, yellow);
     }
   }
-  .vector{
+  .vector {
     cursor: pointer;
   }
 }
 .stiky {
   background-color: teal;
   color: black;
-  transition: 500ms ease-in-out;
+  // transition: 500ms ease-in-out;
+  transition: 1s ease-in-out;
 }
 @media only screen and (max-width: 768px) {
   nav {
-    @include Flex(center, center, row);
+    @include Flex(space-around, center, row);
     .navigation {
       margin: 35px 0;
     }
@@ -65,49 +98,6 @@ nav {
   }
 }
 
-body.night {
-  background: rgb(41, 37, 50);
-  p,
-  h1,
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    color: white !important;
-  }
-  a {
-    color: white;
-  }
-}
-
-header {
-  label {
-    position: absolute;
-    width: 45px;
-    height: 30px;
-    right: 20px;
-    top: 20px;
-    border: 1px solid black;
-    border-radius: 20px;
-  }
-  label:before {
-    position: absolute;
-    content: "";
-    width: 20px;
-    height: 20px;
-    top: 14%;
-    left: 1%;
-    border-radius: 50%;
-    background: #000;
-    transition: 0.3s ease-in-out;
-  }
-  label:active::before {
-    left: 24px;
-    background: #fff;
-  }
-}
 #sviper {
   overflow: hidden;
   margin-top: 100px;
@@ -148,7 +138,7 @@ header {
     margin-top: 20px;
   }
 }
-h3 {
+#indec_content {
   @include Parag(40px, 600, 48px, $white_color);
   display: flex;
   justify-content: center;
@@ -171,11 +161,16 @@ main {
     width: 100%;
     height: 1700px;
     position: relative;
+    
     .baby_info {
       @include Parag(30px, 600, 30px, $black-color);
       padding: 0 50px;
       position: absolute;
       top: 290px;
+      @media (max-width: 400px) {
+        position: absolute;
+        top: 30px;
+      }
     }
     .relative_item {
       position: relative;
@@ -193,150 +188,175 @@ main {
           .text2 {
             font-family: "Mali";
             @include Parag(33px, 400, 43px, $black-color);
-      
-            }
-          }
-          h2 {
-            font-family: "Mali";
-            @include Parag(38px, 600, 35px, $black-color);
-            @media screen and (max-width: 393px) {
-              font-size: 15px;
-              line-height: 20px;
-            }
-          }}
-
-          &:hover {
-            cursor: pointer;
-          }
-          @media screen and (max-width: 768px) {
-            .text {
-              padding: 20px 0;
-            }
-            .text2 {
-              @include Parag(18px, 500, 23px, $black-color);
-              text-align: center;
-            }
-            h2 {
-              @include Parag(24px, 600, 40px, $black-color);
-              text-align: center;
+            @media (max-width: 400px) {
+              @include Parag(14px, 400, 23px, $black-color);
             }
           }
         }
-
-        .pos {
-          margin-top: 70px;
-          cursor: pointer;
-          @media screen and (max-width: 393px) {
-            width: 100px;
-            height: 100px;
-            object-fit: contain;
+        h2 {
+          font-family: "Mali";
+          @include Parag(38px, 600, 35px, $black-color);
+          @media (max-width: 400px) {
+            @include Parag(14px, 400, 0px, $black-color);
           }
         }
-        @media only screen and (min-width: 393px) {
-          .pos {
-            width: 100px;
-            height: 100px;
-            object-fit: contain;
-          }
-          h2 {
-            line-height: 20px;
-          }
-          .text2 {
-            line-height: 5px;
-          }
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+      @media screen and (max-width: 768px) {
+        .text {
+          padding: 20px 0;
+        }
+        .text2 {
+          @include Parag(18px, 500, 23px, $black-color);
+          text-align: center;
+        }
+        h2 {
+          @include Parag(24px, 600, 40px, $black-color);
+          text-align: center;
         }
       }
     }
 
-    #kids_img {
-      @include position(absolute, 300px, 0);
-      width: 100%;
-      gap: 20px;
-      display: flex;
-      .img_item {
-        img {
-          display: block;
-          @include position(absolute, 550px, 50px);
-          @media (max-width: 393px) {
-            width: 120px;
-            height: 350px;
-            object-fit: contain;
-            border-radius: 50px;
+    .pos {
+      margin-top: 70px;
+      cursor: pointer;
+      @media screen and (max-width: 393px) {
+        width: 100px;
+        height: 100px;
+        object-fit: contain;
+      }
+    }
+    @media only screen and (min-width: 393px) {
+      .pos {
+        width: 100px;
+        height: 100px;
+        object-fit: contain;
+      }
+      h2 {
+        line-height: 20px;
+      }
+      .text2 {
+        line-height: 5px;
+      }
+    }
+    @media screen and (max-width: 393px) {
+      
+          #kids_img_text {
+              height: 0px !important;
           }
-        }
+         
+      
+  }
+  }
+}
+
+#kids_img {
+  @include position(absolute, 300px, 0);
+  width: 100%;
+  gap: 20px;
+  display: flex;
+  .img_item {
+    img {
+      display: block;
+      @include position(absolute, 550px, 50px);
+      @media (max-width: 400px) {
+        @include position(absolute, 250px, 5px);
+        @include Img(120px, 150px, contain);
       }
-      .img_item_1 {
-        @include position(absolute, 415px, 290px);
-        img {
-          display: block;
-          margin-top: 20px;
-          
-        }
-        @media screen and (max-width: 768px) {
-          .img_none {
-            display: none;
-          }
-        }
+    }
+  }
+  .img_item_1 {
+    @include position(absolute, 415px, 290px);
+    img {
+      display: block;
+      margin-top: 20px;
+      @media (max-width: 400px) {
+        @include Img(120px, 150px, contain);
       }
-      .img_item_2 {
-        @include position(absolute, 190px, 520px);
-        img {
-          display: block;
-          @media screen and (max-width: 393px) {
-            width: 100px;
-            height: 250px;
-            object-fit: contain;
-            border-radius: 50px;
-          }
-        }
+    }
+    @media (max-width: 400px) {
+      @include position(absolute, 250px, 120px);
+    }
+    @media screen and (max-width: 768px) {
+      .img_none {
+        display: none;
       }
-      .img_item_3 {
-        position: absolute;
-        right: 516px;
-        top: 113px;
-        img {
-          display: block;
-          margin-top: 20px;
-        }
-        @media screen and (max-width: 768px) {
-          display: none;
-        }
+    }
+  }
+  .img_item_2 {
+    @include position(absolute, 190px, 520px);
+    img {
+      display: block;
+      @media screen and (max-width: 400px) {
+        @include Img(120px, 150px, contain);
       }
-      .img_item_4 {
-        position: absolute;
-        right: 270px;
-        top: -90px;
-        img {
-          display: block;
-          margin-top: 20px;
-        }
-        @media screen and (max-width: 768px) {
-          display: none;
-        }
+    }
+    @media screen and (max-width: 400px) {
+      @include position(absolute, 280px, 250px);
+
+      #img_none {
+        display: none;
       }
-      .img_item_5 {
-        position: absolute;
-        right: 15px;
-        top: 63px;
-        img {
-          display: block;
-          margin-top: 20px;
-        }
-        @media screen and (max-width: 768px) {
-          display: none;
-        }
+    }
+  }
+  .img_item_3 {
+    position: absolute;
+    right: 516px;
+    top: 113px;
+    img {
+      display: block;
+      margin-top: 20px;
+      @media screen and (max-width: 400px) {
+        @include Img(120px, 150px, contain);
       }
     }
     @media screen and (max-width: 768px) {
-      #kids_img_text {
-        position: relative;
-        .baby_info {
-          position: absolute;
-          top: -434px;
-        }
-      }
+      display: none;
     }
-  
+  }
+
+  .img_item_4 {
+    position: absolute;
+    right: 270px;
+    top: -90px;
+    img {
+      display: block;
+      margin-top: 20px;
+    }
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+  .img_item_5 {
+    position: absolute;
+    right: 15px;
+    top: 63px;
+    img {
+      display: block;
+      margin-top: 20px;
+    }
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+}
+// @media screen and (max-width: 768px) {
+//   #kids_img_text {
+//     position: relative;
+//     .baby_info {
+//       position: absolute;
+//       top: -434px;
+//     }
+//   }
+// }
+// @media screen and (max-width: 768px){
+//   #kids_img_text{
+//     height: 900px;
+//   }
+// }
 
 #rotate_text {
   display: flex;
@@ -357,7 +377,7 @@ main {
     }
 
     .position_text1 {
-      @include rotate_text(absolute, 25px, 10px);
+      @include rotate_text(absolute, 50px, -6px);
       .class {
         display: flex;
         div {
@@ -369,7 +389,7 @@ main {
       }
     }
     .position_text2 {
-      @include rotate_text(absolute, 70px, 200px);
+      @include rotate_text(absolute, 110px, 200px);
       .class {
         display: flex;
         div {
@@ -381,7 +401,7 @@ main {
       }
     }
     .position_text3 {
-      @include rotate_text(absolute, 115px, 220px);
+      @include rotate_text(absolute, 150px, 223px);
       .class {
         display: flex;
         div {
@@ -393,7 +413,7 @@ main {
       }
     }
     .position_text4 {
-      @include rotate_text(absolute, 155px, 120px);
+      @include rotate_text(absolute, 190px, 140px);
       .class {
         display: flex;
         div {
@@ -405,7 +425,7 @@ main {
       }
     }
     .position_text5 {
-      @include rotate_text(absolute, 195px, 120px);
+      @include rotate_text(absolute, 235px, 145px);
       .class {
         display: flex;
         div {
@@ -417,7 +437,7 @@ main {
       }
     }
     .position_text7 {
-      @include rotate_text(absolute, 240px, -75px);
+      @include rotate_text(absolute, 280px, -44px);
       .class {
         display: flex;
         div {
@@ -429,7 +449,7 @@ main {
       }
     }
     .position_text8 {
-      @include rotate_text(absolute, 290px, -240px);
+      @include rotate_text(absolute, 330px, -195px);
       .class {
         display: flex;
         div {
@@ -441,7 +461,7 @@ main {
       }
     }
     .position_text9 {
-      @include rotate_text(absolute, 330px, -220px);
+      @include rotate_text(absolute, 380px, -158px);
       .class {
         display: flex;
         div {
@@ -453,7 +473,7 @@ main {
       }
     }
     .position_text10 {
-      @include rotate_text(absolute, 375px, -270px);
+      @include rotate_text(absolute, 430px, -185px);
       .class {
         display: flex;
         div {
@@ -530,28 +550,29 @@ main {
       }
     }
   }
-  #employee {
-    .isciler {
-      img {
-        width: 100%;
-        height: 326px;
-        object-fit: contain;
-      }
-      .isci_info {
-        width: 100%;
-        height: 50px;
-        background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 15.87%, rgba(105, 112, 115, 0.02) 230.16%);
-        border-radius: 0px 0px 3.33333px 3.33333px;
-        p {
-          text-align: center;
-          @include Parag(17px, 500, 20px, $black-color);
-          padding: 4px 0;
-        }
+}
+#employee {
+  .isciler {
+    img {
+      width: 100%;
+      height: 326px;
+      object-fit: contain;
+    }
+
+    .isci_info {
+      width: 100%;
+      height: 50px;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 15.87%, rgba(105, 112, 115, 0.02) 230.16%);
+      border-radius: 0px 0px 3.33333px 3.33333px;
+      p {
+        text-align: center;
+        @include Parag(17px, 500, 20px, $black-color);
+        padding: 4px 0;
       }
     }
-    .logoped_title {
-      @include Parag(40px, 600, 48px, $black_color);
-    }
+  }
+  .logoped_title {
+    @include Parag(40px, 600, 48px, $black_color);
   }
 }
 section {

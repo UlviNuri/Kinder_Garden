@@ -73,6 +73,9 @@
 
 #eylence_footer {
     margin-top: 510px;
+    @media (max-width:400px){
+        margin-top: 0;
+    }
 }
 
 // 104
