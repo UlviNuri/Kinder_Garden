@@ -887,6 +887,18 @@ section #img_div #btn .right_btn {
   color: #000000;
 }
 
+#loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: white;
+  height: 100%;
+  width: 100%;
+}
+
 main h1 {
   font-size: 30px;
   font-weight: 600;

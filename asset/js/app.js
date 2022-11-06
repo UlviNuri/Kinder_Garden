@@ -115,3 +115,14 @@ AOS.init({
   duration: 400, // values from 0 to 3000, with step 50ms
   easing: "ease",
 });
+
+
+// preloader
+
+var loader =document.getElementById("loader");
+window.addEventListener("load",function (){
+  loader.style.display="none";
+  this.setTimeout(function(){
+    // $('#load').delay(150).fadeout("slow");
+  },30000);
+})

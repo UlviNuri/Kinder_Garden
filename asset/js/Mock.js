@@ -95,35 +95,42 @@ GardenData.forEach((data) => {
   }
 });
 
-const InputValue=document.getElementById("data_id");
-InputValue.addEventListener("input", ()=>{
-let InputItem=document.getElementById("data_id");
-let FilterData=InputItem.value.toLowerCase();
-
-})
-
-
-
-
-
-
-
-
-
-
-// 2ci variant
-// const InputValue = document.getElementById("data_id");
-// InputValue.addEventListener("input", (e) => {
-//   e.preventDefault();
-//   let InputItem = document.getElementById("data_id");
-//   let FilterData = InputItem.value.toLowerCase()
-//   let ListItem = document.querySelectorAll("bagca_item");
-//   ListItem.forEach((data) => {
-//     let text = data.textContent;
-//     if (text.toLowerCase().includes(FilterData.toLowerCase())) {
-//       data.style.display = "";
-//     } else {
-//       data.style.display = "none";
-//     }
-//   });
-// });
+const InputValue = document.getElementById("data_id");
+InputValue.addEventListener("input", (e) => {
+  e.preventDefault();
+  let InputItem = document.getElementById("data_id");
+  let FilterData = InputItem.value.toLowerCase();
+  let ListItem = document.querySelectorAll(".bagca_item");
+  let element = document.querySelector(".garden_item");
+  element.innerHTML = ``;
+  GardenData.filter((data) => {
+    if (data.maps.toLocaleLowerCase().includes(FilterData)) {
+      let output_data = "";
+      output_data += `
+    <div class="garden_data">
+    <div class="garden_image">
+      <img src=${data.img} alt=${data.name} />
+    </div>
+    <div class="garden_items">
+      <h4>${data.name}</h4>
+      <h6>${data.maps}</h6>
+    </div>
+    </div>
+    `;
+      let new_element = document.createElement("div");
+      new_element.classList.add("col-lg-4");
+      new_element.innerHTML = output_data;
+      element.appendChild(new_element);
+    }
+  });
+  ListItem.forEach((data) => {
+    let text = data.textContent;
+    if (text.toLowerCase().includes(FilterData.toLowerCase())) {
+     
+      data.style.display = "";
+    } else {
+      data.style.display = "none";
+      console.log("none");
+    }
+  });
+});
