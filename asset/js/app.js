@@ -42,7 +42,7 @@ try {
       prevEl: ".swiper-button-prev",
     },
     autoplay: {
-      delay: 2000,
+      delay: 1000,
     },
 
     breakpoints: {
@@ -110,16 +110,20 @@ window.onscroll = CalcScrollValue;
 window.onload = CalcScrollValue;
 
 // aos
-AOS.init({
-  delay: 500, // values from 0 to 3000, with step 50ms
-  duration: 400, // values from 0 to 3000, with step 50ms
-  easing: "ease",
-});
+try{
+  AOS.init({
+    delay: 500, // values from 0 to 3000, with step 50ms
+    duration: 400, // values from 0 to 3000, with step 50ms
+    easing: "ease",
+  });
+}catch(err){
+  console.log("Javascript version updated...");
+}
 
 
 // preloader
 
-var loader =document.getElementById("loader");
+var loader = document.getElementById("loader");
 window.addEventListener("load",function (){
   loader.style.display="none";
   this.setTimeout(function(){

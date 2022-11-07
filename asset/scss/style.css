@@ -78,8 +78,8 @@ html {
   display: block;
   height: calc(100% - 15px);
   width: calc(100% - 15px);
-  background: white;
-  border-radius: 50%;
+  background-color: white;
+  border-radius: 50px;
   display: grid;
   place-items: center;
   font-size: 35px;
@@ -92,6 +92,10 @@ nav {
   left: 0;
   right: 0;
   z-index: 55;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row;
 }
 nav .nav-menu {
   padding: 30px 0;
@@ -177,38 +181,7 @@ nav .vector {
     left: 0;
   }
 }
-#sviper {
-  overflow: hidden;
-  margin-top: 100px;
-  display: none;
-}
-#sviper .swiper {
-  width: 100%;
-  height: 100%;
-}
-#sviper .swiper-pagination-bullet:active {
-  background-color: white;
-}
-#sviper .swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  /* Center slide text vertically */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#sviper .swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-#sviper #swiper_pages {
-  margin-top: 20px;
-}
-
-#indec_content {
+#index_content {
   font-size: 40px;
   font-weight: 600;
   line-height: 48px;
@@ -219,7 +192,7 @@ nav .vector {
   margin-top: 100px;
 }
 @media screen and (max-width: 768px) {
-  #indec_content {
+  #index_content {
     display: none;
   }
 }
@@ -350,13 +323,7 @@ main #kids_img_text .pos {
     line-height: 5px;
   }
 }
-@media screen and (max-width: 393px) {
-  main #kids_img_text #kids_img_text {
-    height: 0px !important;
-  }
-}
-
-#kids_img {
+main #kids_img {
   position: absolute;
   top: 300px;
   left: 0;
@@ -364,14 +331,14 @@ main #kids_img_text .pos {
   gap: 20px;
   display: flex;
 }
-#kids_img .img_item img {
+main #kids_img .img_item img {
   display: block;
   position: absolute;
   top: 550px;
   left: 50px;
 }
 @media (max-width: 400px) {
-  #kids_img .img_item img {
+  main #kids_img .img_item img {
     position: absolute;
     top: 250px;
     left: 5px;
@@ -381,17 +348,17 @@ main #kids_img_text .pos {
        object-fit: contain;
   }
 }
-#kids_img .img_item_1 {
+main #kids_img .img_item_1 {
   position: absolute;
   top: 415px;
   left: 290px;
 }
-#kids_img .img_item_1 img {
+main #kids_img .img_item_1 img {
   display: block;
   margin-top: 20px;
 }
 @media (max-width: 400px) {
-  #kids_img .img_item_1 img {
+  main #kids_img .img_item_1 img {
     width: 120px;
     height: 150px;
     -o-object-fit: contain;
@@ -399,27 +366,27 @@ main #kids_img_text .pos {
   }
 }
 @media (max-width: 400px) {
-  #kids_img .img_item_1 {
+  main #kids_img .img_item_1 {
     position: absolute;
     top: 250px;
     left: 120px;
   }
 }
 @media screen and (max-width: 768px) {
-  #kids_img .img_item_1 .img_none {
+  main #kids_img .img_item_1 .img_none {
     display: none;
   }
 }
-#kids_img .img_item_2 {
+main #kids_img .img_item_2 {
   position: absolute;
   top: 190px;
   left: 520px;
 }
-#kids_img .img_item_2 img {
+main #kids_img .img_item_2 img {
   display: block;
 }
 @media screen and (max-width: 400px) {
-  #kids_img .img_item_2 img {
+  main #kids_img .img_item_2 img {
     width: 120px;
     height: 150px;
     -o-object-fit: contain;
@@ -427,26 +394,26 @@ main #kids_img_text .pos {
   }
 }
 @media screen and (max-width: 400px) {
-  #kids_img .img_item_2 {
+  main #kids_img .img_item_2 {
     position: absolute;
     top: 280px;
     left: 250px;
   }
-  #kids_img .img_item_2 #img_none {
+  main #kids_img .img_item_2 #img_none {
     display: none;
   }
 }
-#kids_img .img_item_3 {
+main #kids_img .img_item_3 {
   position: absolute;
   right: 516px;
   top: 113px;
 }
-#kids_img .img_item_3 img {
+main #kids_img .img_item_3 img {
   display: block;
   margin-top: 20px;
 }
 @media screen and (max-width: 400px) {
-  #kids_img .img_item_3 img {
+  main #kids_img .img_item_3 img {
     width: 120px;
     height: 150px;
     -o-object-fit: contain;
@@ -454,286 +421,285 @@ main #kids_img_text .pos {
   }
 }
 @media screen and (max-width: 768px) {
-  #kids_img .img_item_3 {
+  main #kids_img .img_item_3 {
     display: none;
   }
 }
-#kids_img .img_item_4 {
+main #kids_img .img_item_4 {
   position: absolute;
   right: 270px;
   top: -90px;
 }
-#kids_img .img_item_4 img {
+main #kids_img .img_item_4 img {
   display: block;
   margin-top: 20px;
 }
 @media screen and (max-width: 768px) {
-  #kids_img .img_item_4 {
+  main #kids_img .img_item_4 {
     display: none;
   }
 }
-#kids_img .img_item_5 {
+main #kids_img .img_item_5 {
   position: absolute;
   right: 15px;
   top: 63px;
 }
-#kids_img .img_item_5 img {
+main #kids_img .img_item_5 img {
   display: block;
   margin-top: 20px;
 }
 @media screen and (max-width: 768px) {
-  #kids_img .img_item_5 {
+  main #kids_img .img_item_5 {
     display: none;
   }
 }
 
-#rotate_text {
+#dubble_main #rotate_text {
   display: flex;
 }
-#rotate_text .relative {
+#dubble_main #rotate_text .relative {
   position: relative;
 }
-#rotate_text .relative .position_text {
+#dubble_main #rotate_text .relative .position_text {
   position: absolute;
   top: -10px;
   right: -100px;
 }
-#rotate_text .relative .position_text .class {
+#dubble_main #rotate_text .relative .position_text .class {
   display: flex;
 }
-#rotate_text .relative .position_text .class div {
-  margin: 7px 4px;
+#dubble_main #rotate_text .relative .position_text .class div {
+  margin: 27px 4px;
   width: 15px;
   height: 15px;
   background-color: rgba(255, 166, 0, 0.82);
   border-radius: 10px;
 }
-#rotate_text .relative .position_text .class p {
+#dubble_main #rotate_text .relative .position_text .class p {
   font-size: 24px;
   font-weight: 500;
   line-height: 24px;
   color: #FFFFFF;
 }
-#rotate_text .relative .position_text1 {
+#dubble_main #rotate_text .relative .position_text1 {
   position: absolute;
   top: 50px;
-  right: -6px;
+  right: -26px;
 }
-#rotate_text .relative .position_text1 .class {
+#dubble_main #rotate_text .relative .position_text1 .class {
   display: flex;
 }
-#rotate_text .relative .position_text1 .class div {
-  margin: 7px 4px;
+#dubble_main #rotate_text .relative .position_text1 .class div {
+  margin: 27px 4px;
   width: 15px;
   height: 15px;
   background-color: green;
   border-radius: 10px;
 }
-#rotate_text .relative .position_text1 .class p {
+#dubble_main #rotate_text .relative .position_text1 .class p {
   font-size: 24px;
   font-weight: 500;
   line-height: 24px;
   color: #FFFFFF;
 }
-#rotate_text .relative .position_text2 {
+#dubble_main #rotate_text .relative .position_text2 {
   position: absolute;
   top: 110px;
-  right: 200px;
+  right: 187px;
 }
-#rotate_text .relative .position_text2 .class {
+#dubble_main #rotate_text .relative .position_text2 .class {
   display: flex;
 }
-#rotate_text .relative .position_text2 .class div {
-  margin: 7px 4px;
+#dubble_main #rotate_text .relative .position_text2 .class div {
+  margin: 27px 4px;
   width: 15px;
   height: 15px;
   background-color: red;
   border-radius: 10px;
 }
-#rotate_text .relative .position_text2 .class p {
+#dubble_main #rotate_text .relative .position_text2 .class p {
   font-size: 24px;
   font-weight: 500;
   line-height: 24px;
   color: #FFFFFF;
 }
-#rotate_text .relative .position_text3 {
+#dubble_main #rotate_text .relative .position_text3 {
   position: absolute;
-  top: 150px;
+  top: 168px;
   right: 223px;
 }
-#rotate_text .relative .position_text3 .class {
+#dubble_main #rotate_text .relative .position_text3 .class {
   display: flex;
 }
-#rotate_text .relative .position_text3 .class div {
-  margin: 7px 4px;
+#dubble_main #rotate_text .relative .position_text3 .class div {
+  margin: 27px 4px;
   width: 15px;
   height: 15px;
   background-color: blue;
   border-radius: 10px;
 }
-#rotate_text .relative .position_text3 .class p {
+#dubble_main #rotate_text .relative .position_text3 .class p {
   font-size: 24px;
   font-weight: 500;
   line-height: 24px;
   color: #FFFFFF;
 }
-#rotate_text .relative .position_text4 {
+#dubble_main #rotate_text .relative .position_text4 {
   position: absolute;
-  top: 190px;
+  top: 220px;
   right: 140px;
 }
-#rotate_text .relative .position_text4 .class {
+#dubble_main #rotate_text .relative .position_text4 .class {
   display: flex;
 }
-#rotate_text .relative .position_text4 .class div {
-  margin: 7px 4px;
+#dubble_main #rotate_text .relative .position_text4 .class div {
+  margin: 27px 4px;
   width: 15px;
   height: 15px;
   background-color: pink;
   border-radius: 10px;
 }
-#rotate_text .relative .position_text4 .class p {
+#dubble_main #rotate_text .relative .position_text4 .class p {
   font-size: 24px;
   font-weight: 500;
   line-height: 24px;
   color: #FFFFFF;
 }
-#rotate_text .relative .position_text5 {
+#dubble_main #rotate_text .relative .position_text5 {
   position: absolute;
-  top: 235px;
+  top: 265px;
   right: 145px;
 }
-#rotate_text .relative .position_text5 .class {
+#dubble_main #rotate_text .relative .position_text5 .class {
   display: flex;
 }
-#rotate_text .relative .position_text5 .class div {
-  margin: 7px 4px;
+#dubble_main #rotate_text .relative .position_text5 .class div {
+  margin: 27px 4px;
   width: 15px;
   height: 15px;
   background-color: rgb(100, 209, 100);
   border-radius: 10px;
 }
-#rotate_text .relative .position_text5 .class p {
+#dubble_main #rotate_text .relative .position_text5 .class p {
   font-size: 24px;
   font-weight: 500;
   line-height: 24px;
   color: #FFFFFF;
 }
-#rotate_text .relative .position_text7 {
+#dubble_main #rotate_text .relative .position_text7 {
   position: absolute;
-  top: 280px;
+  top: 320px;
   right: -44px;
 }
-#rotate_text .relative .position_text7 .class {
+#dubble_main #rotate_text .relative .position_text7 .class {
   display: flex;
 }
-#rotate_text .relative .position_text7 .class div {
-  margin: 7px 4px;
+#dubble_main #rotate_text .relative .position_text7 .class div {
+  margin: 27px 4px;
   width: 15px;
   height: 15px;
   background-color: rgb(0, 53, 128);
   border-radius: 10px;
 }
-#rotate_text .relative .position_text7 .class p {
+#dubble_main #rotate_text .relative .position_text7 .class p {
   font-size: 24px;
   font-weight: 500;
   line-height: 24px;
   color: #FFFFFF;
 }
-#rotate_text .relative .position_text8 {
+#dubble_main #rotate_text .relative .position_text8 {
   position: absolute;
-  top: 330px;
+  top: 375px;
   right: -195px;
 }
-#rotate_text .relative .position_text8 .class {
+#dubble_main #rotate_text .relative .position_text8 .class {
   display: flex;
 }
-#rotate_text .relative .position_text8 .class div {
-  margin: 7px 4px;
+#dubble_main #rotate_text .relative .position_text8 .class div {
+  margin: 27px 4px;
   width: 15px;
   height: 15px;
   background-color: rgb(58, 0, 128);
   border-radius: 10px;
 }
-#rotate_text .relative .position_text8 .class p {
+#dubble_main #rotate_text .relative .position_text8 .class p {
   font-size: 24px;
   font-weight: 500;
   line-height: 24px;
   color: #FFFFFF;
 }
-#rotate_text .relative .position_text9 {
+#dubble_main #rotate_text .relative .position_text9 {
   position: absolute;
-  top: 380px;
-  right: -158px;
+  top: 426px;
+  right: -145px;
 }
-#rotate_text .relative .position_text9 .class {
+#dubble_main #rotate_text .relative .position_text9 .class {
   display: flex;
 }
-#rotate_text .relative .position_text9 .class div {
-  margin: 7px 4px;
+#dubble_main #rotate_text .relative .position_text9 .class div {
+  margin: 27px 4px;
   width: 15px;
   height: 15px;
   background-color: rgb(125, 148, 125);
   border-radius: 10px;
 }
-#rotate_text .relative .position_text9 .class p {
+#dubble_main #rotate_text .relative .position_text9 .class p {
   font-size: 24px;
   font-weight: 500;
   line-height: 24px;
   color: #FFFFFF;
 }
-#rotate_text .relative .position_text10 {
+#dubble_main #rotate_text .relative .position_text10 {
   position: absolute;
-  top: 430px;
-  right: -185px;
+  top: 475px;
+  right: -155px;
 }
-#rotate_text .relative .position_text10 .class {
+#dubble_main #rotate_text .relative .position_text10 .class {
   display: flex;
 }
-#rotate_text .relative .position_text10 .class div {
-  margin: 7px 4px;
+#dubble_main #rotate_text .relative .position_text10 .class div {
+  margin: 27px 4px;
   width: 15px;
   height: 15px;
   background-color: rgb(128, 128, 0);
   border-radius: 10px;
 }
-#rotate_text .relative .position_text10 .class p {
+#dubble_main #rotate_text .relative .position_text10 .class p {
   font-size: 24px;
   font-weight: 500;
   line-height: 24px;
   color: #FFFFFF;
 }
-#rotate_text .relative .absoulte {
+#dubble_main #rotate_text .relative .absoulte {
   position: absolute;
   bottom: -20px;
 }
 @media screen and (max-width: 768px) {
-  #rotate_text {
+  #dubble_main #rotate_text {
     display: none;
   }
 }
-
-#kinder_garden {
+#dubble_main #kinder_garden {
   margin-top: 100px;
 }
-#kinder_garden .bagca_info img {
+#dubble_main #kinder_garden .bagca_info img {
   width: 100%;
   border-radius: 8px;
 }
-#kinder_garden .bagca_info p {
+#dubble_main #kinder_garden .bagca_info p {
   font-size: 23px;
   font-weight: 500;
   line-height: 26px;
   color: #000000;
 }
-#kinder_garden .bagca_info .bagca {
+#dubble_main #kinder_garden .bagca_info .bagca {
   font-size: 13px;
   font-weight: 500;
   line-height: 16px;
   color: #000000;
   padding: 8px 0;
 }
-#kinder_garden button {
+#dubble_main #kinder_garden button {
   background-color: #F3EA00;
   float: right;
   width: 180px;
@@ -742,39 +708,38 @@ main #kids_img_text .pos {
   border: none;
 }
 @media screen and (max-width: 768px) {
-  #kinder_garden {
+  #dubble_main #kinder_garden {
     display: none;
   }
 }
-
-#work_list {
+#dubble_main #work_list {
   padding-top: 100px;
 }
-#work_list .work_img {
+#dubble_main #work_list .work_img {
   position: relative;
 }
-#work_list .work_img #work_sekil {
+#dubble_main #work_list .work_img #work_sekil {
   width: 100%;
 }
-#work_list .work_img .work_text {
+#dubble_main #work_list .work_img .work_text {
   position: absolute;
   top: 5%;
   left: 10%;
   z-index: 5;
 }
-#work_list .work_img .work_text h2 {
+#dubble_main #work_list .work_img .work_text h2 {
   font-size: 45px;
   font-weight: 700;
   line-height: 56px;
   color: #FFFFFF;
 }
-#work_list .work_img .work_text p {
+#dubble_main #work_list .work_img .work_text p {
   font-size: 45px;
   font-weight: 500;
   line-height: 56px;
   color: #FFFFFF;
 }
-#work_list .work_img .work_text button {
+#dubble_main #work_list .work_img .work_text button {
   background-color: #F3EA00;
   margin: 20px 0;
   width: 180px;
@@ -782,20 +747,19 @@ main #kids_img_text .pos {
   border-radius: 17px;
   border: none;
 }
-
-#employee .isciler img {
+#dubble_main #employee .isciler img {
   width: 100%;
   height: 326px;
   -o-object-fit: contain;
      object-fit: contain;
 }
-#employee .isciler .isci_info {
+#dubble_main #employee .isciler .isci_info {
   width: 100%;
   height: 50px;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 15.87%, rgba(105, 112, 115, 0.02) 230.16%);
   border-radius: 0px 0px 3.33333px 3.33333px;
 }
-#employee .isciler .isci_info p {
+#dubble_main #employee .isciler .isci_info p {
   text-align: center;
   font-size: 17px;
   font-weight: 500;
@@ -803,27 +767,26 @@ main #kids_img_text .pos {
   color: #000000;
   padding: 4px 0;
 }
-#employee .logoped_title {
+#dubble_main #employee .logoped_title {
   font-size: 40px;
   font-weight: 600;
   line-height: 48px;
   color: #000000;
 }
-
-section #img_div {
+#dubble_main section #img_div {
   margin-top: 100px;
 }
-section #img_div img {
+#dubble_main section #img_div img {
   cursor: pointer;
   width: 100%;
   height: 300px;
   border-radius: 8px;
 }
-section #img_div .img1 {
+#dubble_main section #img_div .img1 {
   width: 100%;
   height: 350px;
 }
-section #img_div #btn .right_btn {
+#dubble_main section #img_div #btn .right_btn {
   width: 180px;
   height: 50px;
   background-color: #F3EA00;
@@ -836,9 +799,40 @@ section #img_div #btn .right_btn {
   color: #000000;
 }
 @media screen and (max-width: 768px) {
-  section #img_div #btn .right_btn {
+  #dubble_main section #img_div #btn .right_btn {
     margin: 20px 0;
   }
+}
+
+#sviper {
+  overflow: hidden;
+  margin-top: 100px;
+  display: none;
+}
+#sviper .swiper {
+  width: 100%;
+  height: 100%;
+}
+#sviper .swiper-pagination-bullet:active {
+  background-color: white;
+}
+#sviper .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#sviper .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#sviper #swiper_pages {
+  margin-top: 20px;
 }
 
 #modal .modal-content {
@@ -846,11 +840,24 @@ section #img_div #btn .right_btn {
   height: 700px;
   margin-left: -200px;
 }
+@media (max-width: 400px) {
+  #modal .modal-content {
+    width: 580px;
+    height: 1000px;
+    margin-left: 0;
+  }
+}
 #modal .modal-body h2 {
   display: flex;
   justify-content: center;
   font-weight: 700;
   font-size: 30px;
+}
+@media (max-width: 400px) {
+  #modal .modal-body h2 {
+    display: flex;
+    justify-content: start;
+  }
 }
 #modal .modal-body .modal_form form {
   width: 100%;
@@ -1094,17 +1101,6 @@ footer .footer_link ul li {
   line-height: 18px;
   color: #000000;
   padding: 8px 12px;
-}
-footer .mobil a {
-  display: block;
-  font-size: 15px;
-  font-weight: 400;
-  line-height: 18px;
-  color: #000000;
-  padding: 8px 0;
-}
-footer .mobil p {
-  padding: 8px 0;
 }
 footer .registration {
   cursor: pointer;
@@ -1535,7 +1531,7 @@ main #cv_btn {
   padding: 0 14px;
 }
 
-main .col-lg-12 {
+main #payment_col {
   border-radius: 4px;
   width: 100%;
   height: 450px;
@@ -2507,22 +2503,37 @@ main .img_box .relative .overlay img {
   main #kids_img_text {
     height: 1300px;
   }
+}
+@media screen and (max-width: 768px) and (max-width: 400px) {
+  main #kids_img_text {
+    height: 615px;
+  }
+}
+@media screen and (max-width: 768px) {
   main .baby_info {
     margin-bottom: 150px;
   }
+}
+@media screen and (max-width: 768px) {
   main #kinder_garden {
     display: none;
   }
+}
+@media screen and (max-width: 768px) {
   #employee img {
     width: 100%;
     height: 320px;
     -o-object-fit: contain;
        object-fit: contain;
   }
+}
+@media screen and (max-width: 768px) {
   #response_class {
     display: flex;
     justify-content: flex-end;
   }
+}
+@media screen and (max-width: 768px) {
   #kinder_garden .bagca_info p {
     font-size: 17px;
     font-weight: 500;
@@ -2533,15 +2544,23 @@ main .img_box .relative .overlay img {
   #kinder_garden button {
     display: none;
   }
+}
+@media screen and (max-width: 768px) {
   .position {
     display: none;
   }
+}
+@media screen and (max-width: 768px) {
   .registration {
     padding: 0 12px;
   }
+}
+@media screen and (max-width: 768px) {
   #sviper {
     display: block;
   }
+}
+@media screen and (max-width: 768px) {
   #img_div img {
     width: 100%;
   }

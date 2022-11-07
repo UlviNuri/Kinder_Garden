@@ -68,18 +68,6 @@ footer {
             }
         }
     }
-
-    .mobil {
-        a {
-            display: block;
-            @include Parag(15px, 400, 18px, $black-color);
-            padding: 8px 0;
-        }
-        p {
-            padding: 8px 0;
-        }
-    }
-
     .registration {
         cursor: pointer;
         p {

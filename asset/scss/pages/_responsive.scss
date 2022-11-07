@@ -3,6 +3,10 @@
     main {
         #kids_img_text {
             height: 1300px;
+
+            @media (max-width:400px) {
+                height: 615px;
+            }
         }
         .baby_info {
             margin-bottom: 150px;
