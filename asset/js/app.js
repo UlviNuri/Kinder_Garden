@@ -1,4 +1,17 @@
 "use strict";
+
+// preloader
+
+var loader = document.getElementById("loader");
+if (loader) {
+  window.addEventListener("load", function () {
+    loader.style.display = "none";
+    this.setTimeout(function () {
+      // $('#load').delay(150).fadeout("slow");
+    }, 30000);
+  });
+}
+
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
 hamburger.addEventListener("click", (e) => {
@@ -110,23 +123,34 @@ window.onscroll = CalcScrollValue;
 window.onload = CalcScrollValue;
 
 // aos
-try{
+try {
   AOS.init({
     delay: 500, // values from 0 to 3000, with step 50ms
     duration: 400, // values from 0 to 3000, with step 50ms
     easing: "ease",
   });
-}catch(err){
+} catch (err) {
   console.log("Javascript version updated...");
 }
 
 
-// preloader
-
-var loader = document.getElementById("loader");
-window.addEventListener("load",function (){
-  loader.style.display="none";
-  this.setTimeout(function(){
-    // $('#load').delay(150).fadeout("slow");
-  },30000);
-})
+const toggle = document.getElementById("toggleDark");
+const body = document.querySelector("body");
+toggle.addEventListener("click", function (e) {
+  e.preventDefault();
+  this.classList.toggle("bi-moon");
+  if (this.classList.toggle("bi-brightness-high-fill")) {
+    body.style.background = "white";
+    body.style.color = "black";
+    body.style.transition = "2s";
+  } else {
+    body.style.background = "black";
+    var element='p,h2,span,h1,h3,h6,a,h4'
+   const p_tag= body.querySelectorAll(element)
+   for (let index = 0; index < p_tag.length; index++) {
+    p_tag[index].classList.add('dark_active')
+    
+   }
+    body.style.transition = "2s";
+  }
+});

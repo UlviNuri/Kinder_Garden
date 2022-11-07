@@ -733,11 +733,23 @@ main #kids_img .img_item_5 img {
   line-height: 56px;
   color: #FFFFFF;
 }
+@media (max-width: 400px) {
+  #dubble_main #work_list .work_img .work_text h2 {
+    font-size: 25px;
+    line-height: 35px;
+  }
+}
 #dubble_main #work_list .work_img .work_text p {
   font-size: 45px;
   font-weight: 500;
   line-height: 56px;
   color: #FFFFFF;
+}
+@media (max-width: 400px) {
+  #dubble_main #work_list .work_img .work_text p {
+    font-size: 25px;
+    line-height: 35px;
+  }
 }
 #dubble_main #work_list .work_img .work_text button {
   background-color: #F3EA00;
@@ -746,6 +758,11 @@ main #kids_img .img_item_5 img {
   height: 56px;
   border-radius: 17px;
   border: none;
+}
+@media (max-width: 400px) {
+  #dubble_main #work_list .work_img .work_text button {
+    width: 150px;
+  }
 }
 #dubble_main #employee .isciler img {
   width: 100%;
@@ -765,7 +782,7 @@ main #kids_img .img_item_5 img {
   font-weight: 500;
   line-height: 20px;
   color: #000000;
-  padding: 4px 0;
+  margin: 4px 0;
 }
 #dubble_main #employee .logoped_title {
   font-size: 40px;
@@ -912,7 +929,7 @@ main h1 {
   line-height: 37px;
   color: #000000;
 }
-main p {
+main .about_p {
   margin-top: 24px;
   font-size: 18px;
   font-weight: 400;
@@ -920,7 +937,7 @@ main p {
   color: #000000;
 }
 @media screen and (max-width: 768px) {
-  main p {
+  main .about_p {
     line-height: 33px;
   }
 }
@@ -1054,7 +1071,7 @@ main .container_div .contact form input {
   border: 1.25px solid rgba(101, 101, 101, 0.5019607843);
   width: 480px;
   border-radius: 10px 8px;
-  padding: 4px;
+  padding: 6px 10px;
   outline: none;
 }
 main .container_div .contact form input:nth-child(3) {
@@ -1072,6 +1089,15 @@ main .container_div .contact form textarea {
   border-radius: 4px;
   font-size: 17px;
   font-weight: 500;
+  width: 76%;
+  height: 100px;
+  resize: none;
+  color: black;
+}
+@media (max-width: 500px) {
+  main .container_div .contact form textarea {
+    width: 93%;
+  }
 }
 main .container_div button {
   float: right;
@@ -1267,9 +1293,6 @@ main #kinder_garden_info .check_garden p {
   font-size: 15px;
   font-weight: 600;
 }
-main #kinder_garden_info .check_garden input {
-  margin-top: 24px;
-}
 main #kinder_garden_info #price {
   margin-top: 70px;
 }
@@ -1347,6 +1370,11 @@ main .id {
   height: auto;
   background-color: white;
 }
+@media (max-width: 768px) {
+  main .id {
+    margin-top: 10%;
+  }
+}
 main .id form {
   padding: 30px 20px;
 }
@@ -1360,7 +1388,6 @@ main .id form .form_name {
   }
 }
 main .id form .form_name input {
-  display: block;
   border: 1.25px solid rgba(217, 217, 217, 0.6980392157);
   border-radius: 4px;
 }
@@ -1368,8 +1395,7 @@ main .id form .mobile {
   padding: 20px 0;
 }
 main .id form .mobile input {
-  display: block;
-  margin-top: 12px;
+  margin: 12px 10px;
   border: 1.25px solid rgba(217, 217, 217, 0.6980392157);
   border-radius: 4px;
 }
@@ -1387,7 +1413,7 @@ main .id form .mobile input::placeholder {
 }
 main .id form .email input {
   width: 30%;
-  display: block;
+  margin: 12px 10px;
   border: 1.25px solid rgba(217, 217, 217, 0.6980392157);
   border-radius: 4px;
 }
@@ -1397,16 +1423,13 @@ main .id form .gender {
   gap: 20px;
 }
 main .id form .gender input {
-  display: block;
+  margin: 12px 10px;
   width: 150px;
   border: 1.25px solid rgba(217, 217, 217, 0.6980392157);
   border-radius: 4px;
 }
-main .id form .school {
-  display: flex;
-  flex-direction: column;
-}
 main .id form .school input {
+  margin: 12px 10px;
   width: 400px;
   border: 1.25px solid rgba(217, 217, 217, 0.6980392157);
   border-radius: 4px;
@@ -1424,6 +1447,7 @@ main .id form .work {
 main .id form .work textarea {
   width: 40%;
   border-radius: 4px;
+  resize: none;
 }
 @media (max-width: 400px) {
   main .id form .work textarea {
@@ -1584,7 +1608,8 @@ main .card img {
   gap: 20px;
   width: 60px;
   height: 50px;
-  border: none;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 main button {
   float: left;
@@ -1654,6 +1679,25 @@ main button {
 }
 #employee .col-lg-4 {
   margin-top: 100px;
+}
+#employee .isciler {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#employee .isciler .isci_info {
+  width: 100%;
+  height: 50px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 15.87%, rgba(105, 112, 115, 0.02) 230.16%);
+  border-radius: 0px 0px 3.33333px 3.33333px;
+}
+#employee .isciler .isci_info p {
+  text-align: center;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #000000;
+  margin: 4px 0;
 }
 
 #logoped_mr {
@@ -2336,6 +2380,7 @@ main .img_box .relative .overlay img {
   margin: 20px;
 }
 #work_main #work_info .work_melumat .work_content {
+  padding: 14px;
   width: 320px;
   border: 4.25px solid #656565;
   margin: 20px 0;
@@ -2346,8 +2391,8 @@ main .img_box .relative .overlay img {
     width: 270px;
   }
 }
-#work_main #work_info .work_melumat .work_content .work_h3 {
-  font-size: 17px;
+#work_main #work_info .work_melumat .work_content h3 {
+  font-size: 22px;
   font-weight: 600;
   line-height: 20px;
   color: #000000;
@@ -2603,11 +2648,6 @@ main .img_box .relative .overlay img {
   }
 }
 @media screen and (max-width: 768px) {
-  .info {
-    margin-top: 150px;
-  }
-}
-@media screen and (max-width: 768px) {
   main #img_item_2 img {
     -o-object-fit: cover;
        object-fit: cover;
@@ -2739,6 +2779,10 @@ main .img_box .relative .overlay img {
   }
 }
 
+#employee .isciler .psixolog_img {
+  width: 100%;
+}
+
 * {
   font-family: "Montserrat", sans-serif;
 }
@@ -2748,4 +2792,12 @@ body {
   width: 100%;
   height: auto;
   background-repeat: no-repeat;
+}
+
+.dark_active {
+  color: white !important;
+}
+
+input, select {
+  outline: none;
 }/*# sourceMappingURL=style.css.map */

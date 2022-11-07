@@ -95,8 +95,10 @@ GardenData.forEach((data) => {
   }
 });
 
+// [type:checkbox]
+
 const InputValue = document.getElementById("data_id");
-InputValue.addEventListener("input", (e) => {
+InputValue.addEventListener("input",  (e) => {
   e.preventDefault();
   let InputItem = document.getElementById("data_id");
   let FilterData = InputItem.value.toLowerCase();

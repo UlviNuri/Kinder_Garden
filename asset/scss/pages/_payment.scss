@@ -48,9 +48,7 @@ main {
         gap: 20px;
         img {
             gap: 20px;
-            width: 60px;
-            height: 50px;
-            border: none;
+            @include Img(60px,50px,contain);
         }
     }
 

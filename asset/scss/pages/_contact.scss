@@ -24,7 +24,7 @@ main {
                     font-size: 17px;
                     font-weight: 500;
                     box-shadow: none;
-                    @include Input(1.25px solid #65656580,480px,null,null,null,10px 8px,4px,none);
+                    @include Input(1.25px solid #65656580,480px,null,null,null,10px 8px,6px 10px,none);
                     &:nth-child(3) {
                         height: 150px;
                     }
@@ -34,7 +34,12 @@ main {
                 }
                 textarea {
                     @include textarea(5%,24px,5px,4px,17px,500);
-                    @media (max-width:400px){
+                    width: 76%;
+                    height: 100px;
+                    resize: none;
+                    color:black;
+                    @media (max-width:500px){
+                        width: 93%;
                         
                     }
                 }

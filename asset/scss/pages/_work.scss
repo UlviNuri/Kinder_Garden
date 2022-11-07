@@ -18,6 +18,7 @@
       }
 
       .work_content {
+        padding: 14px;
         width: 320px;
         border: 4.25px solid #656565;
         margin: 20px 0  ;
@@ -27,8 +28,8 @@
           width: 270px;
         }
 
-        .work_h3 {
-          @include Parag(17px, 600, 20px, $black-color);
+        h3 {
+          @include Parag(22px, 600, 20px, $black-color);
           padding: 10px;
         }
         p {

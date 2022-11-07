@@ -16,12 +16,10 @@
   <div id="proqres">
     <span id="progress_item">&#x1F815;</span>
   </div>
-  <!-- <header>
-    <label id="dark_change"></label>
-  </header> -->
-  <!-- <div id="loader">
+
+  <div id="loader">
     <img src="https://media.tenor.com/guhB4PpjrmUAAAAC/loading-loading-gif.gif" alt="" />
-  </div> -->
+  </div>
   <nav>
     <div class="container ">
       <div class="row align-items-center">
@@ -50,7 +48,10 @@
             <li data-bs-toggle="modal" data-bs-target="#exampleModal">
               <a href="http://"></a><img src="asset/images/Vector.png" alt="" />
             </li>
-
+            <li>
+              <i class="bi bi-brightness-high-fill" id="toggleDark"></i>
+            </li>
+            
           </ul>
           <div class="navigation">
             <div class="hamburger">
@@ -82,14 +83,13 @@
           </div>
         </div>
        
-        <div class="row">
-          <div class="col-lg-9">
-            <div class="row justify-content-center">
-              <div class="col-lg-4 mt-5">
+      
+            <div class="row ">
+              <div class="col-lg-3 mt-5">
                 <h2>Rayonu seçin</h2>
                 <div class="check_garden mt-3">
                   <input type="checkbox" name="" id="" />
-                  <p>Binəqədi rayonu</p>
+                  <p class="bagca_p">Binəqədi rayonu</p>
                 </div>
                 <div class="check_garden">
                   <input type="checkbox" name="" id="" />
@@ -119,24 +119,9 @@
                   <input type="checkbox" name="" id="" />
                   <p>Suraxanı rayonu</p>
                 </div>
-                <div class="check_garden">
-                  <input type="checkbox" name="" id="" />
-                  <p>Pirallahı rayonu</p>
-                </div>
-                <div class="check_garden">
-                  <input type="checkbox" name="" id="" />
-                  <p>Xətai rayonu</p>
-                </div>
-                <div class="check_garden">
-                  <input type="checkbox" name="" id="" />
-                  <p>Xəzər rayonu</p>
-                </div>
-                <div class="check_garden">
-                  <input type="checkbox" name="" id="" />
-                  <p>Yasamal rayonu</p>
-                </div>
+              
               </div>
-              <div class="col-lg-4 mt-5" >
+              <div class="col-lg-3 mt-5" >
                 <h2>Tədris ediləcək dilləri seçin</h2>
                 <div id="language">
                   <div class="check_garden mt-3">
@@ -153,6 +138,9 @@
                   </div>
                 </div>
 
+            
+              </div>
+              <div class="col-lg-3">
                 <div id="price">
                   <h2>Aylıq qiymət aralığı</h2>
                   <div class="check_garden mt-3">
@@ -169,7 +157,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-lg-4 mt-5" >
+              <div class="col-lg-3 mt-5" >
                 <h2>Digər seçimlər</h2>
                 <div class="check_garden mt-3">
                   <input type="checkbox" name="" id="" />
@@ -217,126 +205,6 @@
         <option value="">Müşahidə kamerası</option>
       </select>
     </section>
-    
-    <!-- <section id="bagca_img">
-      <div class="container mt-5">
-        <div class="row">
-          <div class="col-lg-4 mt-5">
-            <div class="bagca_item">
-              <a href="bagca_info.html"> <img src="asset/images/Rectangle 16 (8).png" alt="" /></a>
-              <p class="text_title">İndigo Special Uşaq Bağçası</p>
-              <p>Ünvan: Binəqədi ray. Məmmədəli Şərifli küç. 25</p>
-            </div>
-          </div>
-           <div class="col-lg-4 mt-5">
-            <div class="bagca_item">
-              <img src="asset/images/Rectangle 16 (9).png" alt="" />
-              <p class="text_title">İndigo Special Uşaq Bağçası</p>
-              <p>Ünvan: Nərimanov ray. Məmmədəli Şərifli küç. 25</p>
-            </div>
-          </div> 
-           <div class="col-lg-4 mt-5">
-            <div class="bagca_item">
-              <img src="asset/images/Rectangle 16 (10).png" alt="" />
-              <p class="text_title">İndigo Special Uşaq Bağçası</p>
-              <p>Ünvan: Sabunçu ray. Məmmədəli Şərifli küç. 25</p>
-            </div>
-          </div> 
-        </div>
-        <div class="row">
-          <div class="col-lg-4 mt-5">
-            <div class="bagca_item">
-              <a href="bagca_info.html"> <img src="asset/images/Rectangle 16 (8).png" alt="" /></a>
-              <p class="text_title">İndigo Special Uşaq Bağçası</p>
-              <p>Ünvan: Suraxanı ray. Məmmədəli Şərifli küç. 25</p>
-            </div>
-          </div>
-          <div class="col-lg-4 mt-5">
-            <div class="bagca_item">
-              <img src="asset/images/Rectangle 16 (9).png" alt="" />
-              <p class="text_title">İndigo Special Uşaq Bağçası</p>
-              <p>Ünvan: Yasamal ray. Məmmədəli Şərifli küç. 25</p>
-            </div>
-          </div>
-          <div class="col-lg-4 mt-5">
-            <div class="bagca_item">
-              <img src="asset/images/Rectangle 16 (10).png" alt="" />
-              <p class="text_title">İndigo Special Uşaq Bağçası</p>
-              <p>Ünvan: Pirallahı ray. Məmmədəli Şərifli küç. 25</p>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-4 mt-5">
-            <div class="bagca_item">
-              <img src="asset/images/Rectangle 16 (8).png" alt="" />
-              <p class="text_title">İndigo Special Uşaq Bağçası</p>
-              <p>Ünvan: Xətai ray. Məmmədəli Şərifli küç. 25</p>
-            </div>
-          </div>
-          <div class="col-lg-4 mt-5">
-            <div class="bagca_item">
-              <img src="asset/images/Rectangle 16 (9).png" alt="" />
-              <p class="text_title">İndigo Special Uşaq Bağçası</p>
-              <p>Ünvan: Nizami ray. Məmmədəli Şərifli küç. 25</p>
-            </div>
-          </div>
-          <div class="col-lg-4 mt-5">
-            <div class="bagca_item">
-              <img src="asset/images/Rectangle 16 (10).png" alt="" />
-              <p class="text_title">İndigo Special Uşaq Bağçası</p>
-              <p>Ünvan: Nizami ray. Məmmədəli Şərifli küç. 25</p>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-4 mt-5">
-            <div class="bagca_item">
-              <img src="asset/images/Rectangle 16 (8).png" alt="" />
-              <p class="text_title">İndigo Special Uşaq Bağçası</p>
-              <p>Ünvan: Suraxanı ray. Məmmədəli Şərifli küç. 25</p>
-            </div>
-          </div>
-          <div class="col-lg-4 mt-5">
-            <div class="bagca_item">
-              <img src="asset/images/Rectangle 16 (9).png" alt="" />
-              <p class="text_title">İndigo Special Uşaq Bağçası</p>
-              <p>Ünvan: Nizami ray. Məmmədəli Şərifli küç. 25</p>
-            </div>
-          </div>
-          <div class="col-lg-4 mt-5">
-            <div class="bagca_item">
-              <img src="asset/images/Rectangle 16 (10).png" alt="" />
-              <p class="text_title">İndigo Special Uşaq Bağçası</p>
-              <p>Ünvan: Suraxanı ray. Məmmədəli Şərifli küç. 25</p>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-4 mt-5">
-            <div class="bagca_item">
-              <img src="asset/images/Rectangle 16 (8).png" alt="" />
-              <p class="text_title">İndigo Special Uşaq Bağçası</p>
-              <p>Ünvan: Yasamal ray. Məmmədəli Şərifli küç. 25</p>
-            </div>
-          </div>
-          <div class="col-lg-4 mt-5">
-            <div class="bagca_item">
-              <img src="asset/images/Rectangle 16 (9).png" alt="" />
-              <p class="text_title">İndigo Special Uşaq Bağçası</p>
-              <p>Ünvan: Pirallahı ray. Məmmədəli Şərifli küç. 25</p>
-            </div>
-          </div>
-          <div class="col-lg-4 mt-5">
-            <div class="bagca_item">
-              <img src="asset/images/Rectangle 16 (10).png" alt="" />
-              <p class="text_title">İndigo Special Uşaq Bağçası</p>
-              <p>Ünvan: Xətai ray. Məmmədəli Şərifli küç. 25</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section> -->
 
     <section>
       <div class="container mt-5">

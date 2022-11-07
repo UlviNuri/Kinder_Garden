@@ -1,24 +1,4 @@
-// body.night {
-//     background: rgb(41, 37, 50);
-//     p,
-//     h1,
-//     h1,
-//     h2,
-//     h3,
-//     h4,
-//     h5,
-//     h6 {
-//         color: white !important;
-//     }
-//     ul,
-//     li,
-//     a,
-//     span {
-//         color: white;
-//     }
-// }
-
-main {
+    main {
     #kinder_garden_info {
         h1 {
             @include Parag(30px, 600, 36px, $black-color);
@@ -47,9 +27,6 @@ main {
             p {
                 font-size: 15px;
                 font-weight: 600;
-            }
-            input {
-                margin-top: 24px;
             }
         }
         #price {

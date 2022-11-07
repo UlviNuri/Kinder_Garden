@@ -27,6 +27,7 @@ nav {
           color: yellow;
         }
       }
+      
     }
   }
   .hamburger {
@@ -452,15 +453,26 @@ main {
   
         h2 {
           @include Parag(45px, 700, 56px, $white_color);
+          @media (max-width:400px) {
+            font-size:25px;
+            line-height: 35px;
+          }
         }
         p {
           @include Parag(45px, 500, 56px, $white_color);
+          @media (max-width:400px) {
+            font-size:25px;
+            line-height: 35px;
+          }
         }
   
         button {
           background-color: $btn_color;
           margin: 20px 0;
           @include btn(null, 180px, 56px, null, null, 17px, none);
+          @media (max-width:400px) {
+            width: 150px;
+          }
         }
       }
     }
@@ -481,7 +493,7 @@ main {
         p {
           text-align: center;
           @include Parag(17px, 500, 20px, $black-color);
-          padding: 4px 0;
+          margin: 4px 0;
         }
       }
     }

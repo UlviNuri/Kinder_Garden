@@ -1,253 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bağçamız</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
-      crossorigin="anonymous"
-    />
-    <link rel="icon" href="asset/images/bagcamiz icon.png" />
-    <link rel="stylesheet" href="asset/scss/style.css" />
-  </head>
-  <body>
-    <div id="proqres">
-      <span id="progress_item">&#x1F815;</span>
-    </div>
-    <nav>
-      <div class="container ">
-        <div class="row align-items-center">
-          <div class="col-lg-3 col-sm-2  col-6">
-            <a href="index.html"><img src="asset/images/bagcamiz logo-03 1.png" alt="" /></a>
-          </div>
-          <div class="col-lg-9 col-sm-9   col-6"  id="response_class">
-            <ul class="nav-menu">
-              <li class="nav-item"><a href="index.html" class="nav-link">Ana Səhifə</a></li>
-              <li class="nav-item">
-                <a href="haqqimizda.html" class="nav-link">Haqqımızda</a>
-              </li>
-              <li class="nav-item">
-                <a href="contact.html" class=" nav-link">Əlaqə</a>
-              </li>
-              <li class="nav-item">
-                <a href="vakansiya.html" class=" nav-link">Vakansiya</a>
-  
-              </li>
-              <li class="nav-item">
-                <a href="bagcalar.html" class=" nav-link">Bağçalarımız</a>
-              </li>
-              <li class="nav-item">
-                <a href="logoped.html" class=" nav-link">Xidmətlərimiz</a>
-              </li>
-              <li data-bs-toggle="modal" data-bs-target="#exampleModal">
-                <a href="http://"></a><img src="asset/images/Vector.png" alt="" />
-              </li>
-             
-            </ul>
-            <div class="navigation">
-              <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-              </div>
-            </div>
-          </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bağçamız</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous" />
+  <link rel="icon" href="asset/images/bagcamiz icon.png" />
+  <link rel="stylesheet" href="asset/scss/style.css" />
+</head>
+
+<body>
+  <div id="proqres">
+    <span id="progress_item">&#x1F815;</span>
+  </div>
+  <div id="loader">
+    <img src="https://media.tenor.com/guhB4PpjrmUAAAAC/loading-loading-gif.gif" alt="" />
+  </div>
+  <nav>
+    <div class="container ">
+      <div class="row align-items-center">
+        <div class="col-lg-3 col-sm-2  col-6">
+          <a href="index.html"><img src="asset/images/bagcamiz logo-03 1.png" alt="" /></a>
         </div>
-      </div>
-    </nav>
+        <div class="col-lg-9 col-sm-9   col-6" id="response_class">
+          <ul class="nav-menu">
+            <li class="nav-item"><a href="index.html" class="nav-link">Ana Səhifə</a></li>
+            <li class="nav-item">
+              <a href="haqqimizda.html" class="nav-link">Haqqımızda</a>
+            </li>
+            <li class="nav-item">
+              <a href="contact.html" class=" nav-link">Əlaqə</a>
+            </li>
+            <li class="nav-item">
+              <a href="vakansiya.html" class=" nav-link">Vakansiya</a>
 
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-4">
-          <select id="cv_item">  
-            
-            <option value="">Dayə</option>
-            <option value="">Loqoped</option>
-            <option value="">Massajist</option>
-          </select>
-        </div>
-      </div>
-    </div>
-    <main>
-      <div class="container ">
-        <div class="row">
-          <div class="col-lg-3 " id="lg_3">
-            <div class="box">
-              <p>Foto</p>
-              <p>Yüklə</p>
-            </div>
-          </div>
-        </div>
-        <div class="row justify-content-center mt-5">
-          <div class="col-lg-11 mt-5">
-            <div class="id">
-              <form>
-                <div class="form_name">
-                  <div>
-                    <label for="">Ad</label>
-                    <input type="text" name="" id="" />
-                  </div>
-
-                  <div>
-                    <label for="">Soyad</label>
-                    <input type="text" name="" id="" />
-                  </div>
-
-                  <div>
-                    <label for="">Ata adı</label>
-                    <input type="text" name="" id="" />
-                  </div>
-                </div>
-
-                <div class="mobile">
-                  <label for="">Mobile</label>
-                  <input type="tel" name="tel" id="" placeholder="+994" />
-                  <input type="tel" name="tel" id="" placeholder="+994" />
-                </div>
-                <div class="email">
-                  <label for="">Email</label>
-                  <input type="email" name="tel" id="" />
-                </div>
-
-                <div class="gender">
-                  <div>
-                    <label for="">Cins</label>
-                    <input type="text" name="" id="" />
-                  </div>
-                  <div>
-                    <label for="">Yaş</label>
-                    <input type="number" name="" id="" />
-                  </div>
-                </div>
-
-                <div class="school">
-                  <label for="">Təhsil</label>
-                  <input type="text">
-                </div>
-
-                <div class="work">
-                  <label for="">İş təcrübəsi</label>
-                  <textarea name="" id="" cols="10" rows="6" ></textarea>
-                </div>
-
-                <div class="work">
-                  <label for="">Haqqında</label>
-                  <textarea name="" id="" cols="10" rows="6" ></textarea>
-                </div>
-              </form>
+            </li>
+            <li class="nav-item">
+              <a href="bagcalar.html" class=" nav-link">Bağçalarımız</a>
+            </li>
+            <li class="nav-item">
+              <a href="logoped.html" class=" nav-link">Xidmətlərimiz</a>
+            </li>
+            <li data-bs-toggle="modal" data-bs-target="#exampleModal">
+              <a href="http://"></a><img src="asset/images/Vector.png" alt="" />
+            </li>
+            <li>
+              <i class="bi bi-brightness-high-fill" id="toggleDark"></i>
+            </li>
+          </ul>
+          <div class="navigation">
+            <div class="hamburger">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
             </div>
           </div>
         </div>
       </div>
-
-      <button id="cv_btn"><a href="payment.html">Ödəniş et</a></button>
-    </main>
-
-
-    <footer id="cv_footer">
-      <div class="container mt-5">
-        <div class="row">
-          <div class="col-lg-2">
-            <img id="bagca_foote" src="asset/images/bagcamiz logo-03 1.png" alt="" />
+    </div>
+  </nav>
+  <main>
+    <div class="container ">
+      <div class="row justify-content-center align-items-start mt-5" >
+        <div class="col-lg-3 ">
+          <div class="box">
+            <img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAclBMVEX///8AAAD7+/vg4OD19fXp6enBwcHc3NyGhoby8vK1tbUoKCi+vr4fHx+mpqbt7e2Ojo5qampQUFB/f3+enp7T09MrKysVFRVxcXEwMDA4ODitra1KSkqWlpZjY2M/Pz/Ly8sYGBhcXFx2dnZOTk4NDQ233REeAAAJ20lEQVR4nO2diXqyPBOGK5sIAqJQrYhGred/iv/fvdWQ7ZkkvN/FfQCGQTL7JE9PExMTExMTExMTExP/GYJFHLbJMuu6suuyZdKG8SLw/VA0RPOkTOv1vrjN/nIr9us6LZN55PsRzYnabnMoZjKKw6Zr/z0xF6w/5lLhfsiPPVv4fmh1wrLWke5byroMfT+6CmFzMpDui1MzciGr7AiI98Exq3yLMUibPsPyvfGctr5F4RF0axLxPlh3Y7OWcWOiW0TkTexbqF/Eqdzs6VOkY5GxWtmQ713G1RiUzqLfWpLvjW3v2w+ISur9d09eevXoloh1V+W09CZfVTuQ743a03bM7gMie9wyD/LFO2fyvbFzbjmSF6cCzmYviVP5gpVj+d5YOXTkwoMHAWezg7PIamnbBg6RO7IbjSf53mgcyLdwq0Pv2Vn34mI/W/CHg2WzMXdtJB55mdsUkNmMI1TZMnsCJr6F+8Sa8V/6luwbS1ZjPAJaEnFMAloRcSx78Avyvch8S/QAoxUwPPsW6IEzqR9e7X3Lw2FPmNuILr6l4XKhy8L5dbaH2VEJ6DNcEkMUTI3LEP6FxCyGviJ6FXIChRr4DgjFHPD0lI+smg4rVMCxOWuPgO5b7D+ml/GCpTXGagl/A1nFzPfTKwGUbSp31SWEm7mD6qo+iFKbCmjFmbGSrTN0bSLSEnZx2TRsHsZVHM5Zs7mQ9m+czKKMku4JXnt2v1cq1r/SLVCaCLig8kfztOW7VkGbkq1hUs7oadbeC7tFopIoe9DrC1iRqISXTOYZBxmJ27TVtxgkHneqsm6VUiyl7YHHBLouZ4qLMYLtWOi6pwTv9aL+4VQEqa5UT0CCv1BvRfyNav6JePJJd1/g+14rLRXAG0PfBMMORq6T0OjQ1UzSfPB302kshjalmyVP0A91rb5UCy51MUuABahGVR9iABXbs2lEWoHzGsrqG12IGQoIVymVXy2YndkYC/j0tMGWVs3YYLNLxt/oG+Dnc1RbJYQW0dLZj4B2Sq2Mgdklw4TCF2DqRM0OY2sY5RN+gbk2J5UlsI/0jFaeozO0vspnir1ERJF+gKlTlU8I06T4bCTmUClo0wqKDE94wTKA9EAht1WYWwHXK59QB5xJfx9LIlJ0m2FFWXlaEdqGZ4om7PiMPIJ0I0ZQdL+mGGsJoOg0l5krTJNdCQR8erpCzyDT5phfaJBb54CpAplfjNlbmjFBLHqT+RxYfxDNWQjYTjmIfzzCMsE0wx5z6BkKsarBflwxPJMBBqji14xZ2xvNTFKMtYCIvQ4w8TyK/1AcXoB5xDHsQ0lOEeygYSQSgjlFcXcNmM4fgz0UJ/cDsG9gDD7NbC9yjhdgYXQMfumsEHWegHp69koSW4CdREKbBerp2ZYkPkT7XEQ2Cy2rkUwHwA2DIu8Y7urWbIjgAjctiJwa+PUJ9ZgaqD4Xf0h41zOeisKnA0RWGe5QMG/X/QZvTBZF+biEM1SbxvgjiCQkaJpF3RqCpk9RcEHwHz5jR3MsCA6XtPyVggVEitZrkYQUEyTabZC/oWj6FOpSkvkDZEqHZApJZA9pJtXMo0SaKSSRTYb90ne2pumakGbcROSXorHFJ2uzYn5EdIqt6AWj8eEXRxP3NMBPWX5HGB+iMf43Jg0LYMfXN8IYH/frv9B3bYgmWGTxDd15zrqRIsnQxTviRlrCicNaR91ElAs7epOz2au60QgJx9gkXw/hRN5sdlY1/dmZclmxY0w8fn9U+RtDIivxhTjNABZFHtg2sh6lqqGemxWXh8AaMIfnlcgAxyuaywZ+IakBg3V8LttdMjBDmuwszD1L6vhkjsVf8msW/pUyCLOrnWNhZO4URZTP51SvuoTNwzlLulVt76hzWT8NTfzkE1nHC9bXNgKkfW1gi7B/5E3CZC6+J+RBzfgOSNSDSSUkO0rBDyqHKxDEMadrk7Eka3Zqhwk87/osYVlzJTAhKpUhOLy4/hyDESU7Webntku+X3vQgk0Kahl3MN+2u3N840b0R77c33k0B3PCSjEp8q3UHHsbZQMXzeV1xjFeLbJNlOaegNm1NRv4yWqZ3t2EWBzS5VBgxcyzRWqza8afaSNMckXzpGv69Jr2TSe5uTIwfsmKiRMzt0YpnlfFMO5XnCE1qo/csNHRRzqT9LtqYshgGPdEf59fq6/x1EeQtXOKOxsXMlXahkM9C60bJNI0XT6iGwVofEha6npr77qpTCuPo3EuhlYu48zsSPcOO2s8iY6y0zifZm/3iqJQvRqmdT6Nul9zsH2zzUI5v6l3Jo5q18fJ/nVosaLV0O1yUTMYuYv73mK1LaNbsFT6EylO01ZA6URx/UYlhYnqs6uLiduz/GH0p8gVzk10d1+fvOhncG6i3KFAz/jQQZpaMXGrZEk3isMF1JFsGqPzSyXv7UItgwTxOWBm35PwMBxHavQHoUI1PfZH1Ivp/o5eK08znPWimBzRZdgJMR8QGDyTHTwMyozBXQOcyT6YsXF7c+0XQ1YRik/5iQSyO3pG8DTc+y1ob8vSgHtzGHi/BffLcOnM/IVnouEdw3EmbCWe5HA8Sdy14t0V5OtP5PyFBHcFcZ0JH5e5czU7jWvFcyYYxQ9rwuswIHKteGmpcXhtZJdY8+yQ6w+V53zQ2WVuRs+tuuHZCcpMJtfwuzQavIQDaur/Mudlbezfc/4J9z73LfH93NxWqYOjbCI37c2ol+E69mcXKnV55i1tIbzhx9grirM+RAT8HJTDa6vXlmtP/FKm06vHC5tf6pJfXLC25ECQfbVRxX+jGmhzs5hiYGfuirfSxm4MSn6a6MwsLPbNUEl2sN/LnKHeL8tF5+FbfWpaAzwfymRq3EBkSDTU5XJL6byoOB3KY+5c5DGHa/zCESd14uEyDFm4JGY5WEIoVvi3Ol8Nlp9zZ1Ep31H8oB4Y41IjSAT9s47c4I8HEZXzXnrjMxV6Uce0dQfxL4mwDf/ShbqPE4SdsET44rySEIs7B2/rFVMPHxdstRb3k+5c9LXck8l6XPNL08qVe9Q2F1k7yc1P+vKpUuiqv502WRvy5YzCNtucFHqBa+tWfpClWkfWrTgdN32ZJYy1bctYkpX95ngq1BqdT+4zl7+ISttjUrnwplYXLHortzR/su1dZbtEVMNOCEix8rcB/xKnNmQsCF15nLih3o/5/cyXd4KO7myb/0fUnVsXTZE2pTkC4jl11dapT5Xho+DHbCzqZYCwQeYXT42vPg8twvJooluLY/lPiPdBxfqjjnbNjz0b+cfJIWq7zUH+ZxaHTacQgoyWaJ6Uab3eP3jZt2K/rtNSMk367xAs4rBNllnXlV2XLZM2jBejtHgTExMTExMTExMTE2b8D1JWpcJHIHUeAAAAAElFTkSuQmCC"
+              alt="">
+            <p>Foto</p>
+            <p>Yüklə</p>
           </div>
-          <div class="col-lg-2 col-sm-6 col-6">
-            <div class="footer_link">
-              <ul>
-                <li><a href="haqqimizda.html">Haqqımızda</a></li>
-                <li><a href="">Bağçalarımız</a></li>
-                <li><a href="">Xidmətlərimiz</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-lg-2 col-sm-6  col-6">
-            <div class="mobil">
-              <p>Əlaqə</p>
-              <a href="tel:+994-555-55-55">+994 50 7220088</a>
-              <a href="tel:+994-555-55-55">+994 50 7220088</a>
-            </div>
-          </div>
-          <div class="col-lg-2  col-sm-6  col-6">
-            <div class="registration">
-              <p>Qeydiyyat</p>
-              <p>Daxil olun</p>
-              <p>Hesab yaradın</p>
-            </div>
-          </div>
-          <div class="col-lg-2  col-sm-6  col-6">
-            <div class="vakansiya">
-              <p>Vakansiya</p>
-              <p>İş axtarıram</p>
-              <p>İşçi axtarıram</p>
-            </div>
-          </div>
-          <div class="col-lg-2">
-            <div class="position">
-              <form>
-                <input type="text" placeholder="Email göndər" />
-  
+        </div>
+        <div class="col-lg-7">
+          <div class="id">
+            <form>
+              <div class="form_name">
                 <div>
-                  <img src="asset/images/ox.png" alt="" />
+                  <label for="">Ad</label>
+                  <input type="text" name="" id="" />
                 </div>
-              </form>
-            </div>
+
+                <div>
+                  <label for="">Soyad</label>
+                  <input type="text" name="" id="" />
+                </div>
+
+                <div>
+                  <label for="">Ata adı</label>
+                  <input type="text" name="" id="" />
+                </div>
+              </div>
+
+              <div class="mobile">
+                <label for="">Mobile</label>
+                <input type="tel" name="tel" id="" placeholder="+994" />
+                <input type="tel" name="tel" id="" placeholder="+994" />
+              </div>
+              <div class="email">
+                <label for="">Email</label>
+                <input type="email" name="tel" id="" />
+              </div>
+
+              <div class="gender">
+                <div>
+                  <label for="">Cins</label>
+                  <input type="text" name="" id="" />
+                </div>
+                <div>
+                  <label for="">Yaş</label>
+                  <input type="number" name="" id="" />
+                </div>
+              </div>
+
+              <div class="school">
+                <label for="">Təhsil</label>
+                <input type="text">
+              </div>
+
+              <div class="work">
+                <label for="">İş təcrübəsi</label>
+                <textarea name="" id="" cols="10" rows="6"></textarea>
+              </div>
+
+              <div class="work">
+                <label for="">Haqqında</label>
+                <textarea name="" id="" cols="10" rows="6"></textarea>
+              </div>
+            </form>
           </div>
         </div>
       </div>
-  
-      <div class="social_icon">
-        <div class="container mt-5">
-          <div class="row mt-5">
-            <div class="col-lg-4 mt-5  col-6  col-sm-6">
-              <p>© 2021 Bagcam.az Bütün hüquqlar qorunur</p>
-            </div>
-            <div class="col-lg-8 mt-5   col-6 col-sm-6">
-              <a href="http://"><img src="asset/images/Vector (2).png" alt="" /></a>
-              <a href="http://"><img src="asset/images/Vector (3).png" alt="" /></a>
-            </div>
+    </div>
+    <button id="cv_btn"><a href="payment.html">Ödəniş et</a></button>
+  </main>
+
+
+  <footer id="cv_footer">
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-lg-2">
+          <img id="bagca_foote" src="asset/images/bagcamiz logo-03 1.png" alt="" />
+        </div>
+        <div class="col-lg-2 col-sm-6 col-6">
+          <div class="footer_link">
+            <ul>
+              <li><a href="haqqimizda.html">Haqqımızda</a></li>
+              <li><a href="">Bağçalarımız</a></li>
+              <li><a href="">Xidmətlərimiz</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-2 col-sm-6  col-6">
+          <div class="mobil">
+            <p>Əlaqə</p>
+            <a href="tel:+994-555-55-55">+994 50 7220088</a>
+            <a href="tel:+994-555-55-55">+994 50 7220088</a>
+          </div>
+        </div>
+        <div class="col-lg-2  col-sm-6  col-6">
+          <div class="registration">
+            <p>Qeydiyyat</p>
+            <p>Daxil olun</p>
+            <p>Hesab yaradın</p>
+          </div>
+        </div>
+        <div class="col-lg-2  col-sm-6  col-6">
+          <div class="vakansiya">
+            <p>Vakansiya</p>
+            <p>İş axtarıram</p>
+            <p>İşçi axtarıram</p>
+          </div>
+        </div>
+        <div class="col-lg-2">
+          <div class="position">
+            <form>
+              <input type="text" placeholder="Email göndər" />
+
+              <div>
+                <img src="asset/images/ox.png" alt="" />
+              </div>
+            </form>
           </div>
         </div>
       </div>
-    </footer>
-    <div id="modal">
-      <div
-        class="modal fade"
-        id="exampleModal"
-        tabindex="-1"
-        aria-labelledby="exampleModalLabel"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog">
-          <div class="modal-content">
-          
-            <div class="modal-body">
-              <div class="container justify-content: center;">
-                <div class="row justify-content: center;">
-                  <h2>Mənim hesabım</h2>
-                  <div class="col-lg-7 col-sm-12">
-                    <div class="modal_form">
-                      <form>
-                        <h3>Qeydiyyatdan keç</h3>
-                        <input type="text" placeholder="Ad" />
-                        <input type="text" placeholder="Soyad" />
-                        <input type="text" placeholder="E-mail" />
-                        <input type="text" placeholder="Şifrə" />
-                        <input type="text" placeholder="Mobile" />
-                        <input
-                          type="text"
-                          placeholder="Ş\V-FİN kodunuzu qeyd edin"
-                        />
-                      </form>
-                    </div>
+    </div>
+
+    <div class="social_icon">
+      <div class="container mt-5">
+        <div class="row mt-5">
+          <div class="col-lg-4 mt-5  col-6  col-sm-6">
+            <p>© 2021 Bagcam.az Bütün hüquqlar qorunur</p>
+          </div>
+          <div class="col-lg-8 mt-5   col-6 col-sm-6">
+            <a href="http://"><img src="asset/images/Vector (2).png" alt="" /></a>
+            <a href="http://"><img src="asset/images/Vector (3).png" alt="" /></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div id="modal">
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+
+          <div class="modal-body">
+            <div class="container justify-content: center;">
+              <div class="row justify-content: center;">
+                <h2>Mənim hesabım</h2>
+                <div class="col-lg-7 col-sm-12">
+                  <div class="modal_form">
+                    <form>
+                      <h3>Qeydiyyatdan keç</h3>
+                      <input type="text" placeholder="Ad" />
+                      <input type="text" placeholder="Soyad" />
+                      <input type="text" placeholder="E-mail" />
+                      <input type="text" placeholder="Şifrə" />
+                      <input type="text" placeholder="Mobile" />
+                      <input type="text" placeholder="Ş\V-FİN kodunuzu qeyd edin" />
+                    </form>
                   </div>
-                  <div class="col-5 mt-5">
-                    <div class="left_item mt-5">
-                      <img src="asset/images/image 53.png" alt="" />
-                      <button>Qeydiyyatdan keç</button>
-                    </div>
+                </div>
+                <div class="col-5 mt-5">
+                  <div class="left_item mt-5">
+                    <img src="asset/images/image 53.png" alt="" />
+                    <button>Qeydiyyatdan keç</button>
                   </div>
                 </div>
               </div>
@@ -256,18 +236,16 @@
         </div>
       </div>
     </div>
+  </div>
 
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
-      integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
-      integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
-      crossorigin="anonymous"
-    ></script>
-    <script src="asset/js/app.js"></script>
-  </body>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+    integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
+    integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
+    crossorigin="anonymous"></script>
+  <script src="asset/js/app.js"></script>
+</body>
+
 </html>
