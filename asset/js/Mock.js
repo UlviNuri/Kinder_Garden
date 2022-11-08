@@ -95,10 +95,22 @@ GardenData.forEach((data) => {
   }
 });
 
-// [type:checkbox]
-
+//
+// const ChecItem = document.querySelectorAll(".checbox");
+// for (const checbox of ChecItem) {
+//   checbox.addEventListener("click", () => {
+//     console.log("true");
+//     if (this.checbox == true) {
+//       ListItem.push(ListItem.value);
+      
+//     }
+//     else{
+//       console.log("false");
+//     }
+//   });
+// }
 const InputValue = document.getElementById("data_id");
-InputValue.addEventListener("input",  (e) => {
+InputValue.addEventListener("keyup", (e) => {
   e.preventDefault();
   let InputItem = document.getElementById("data_id");
   let FilterData = InputItem.value.toLowerCase();
@@ -128,7 +140,6 @@ InputValue.addEventListener("input",  (e) => {
   ListItem.forEach((data) => {
     let text = data.textContent;
     if (text.toLowerCase().includes(FilterData.toLowerCase())) {
-     
       data.style.display = "";
     } else {
       data.style.display = "none";

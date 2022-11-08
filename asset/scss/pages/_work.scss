@@ -1,4 +1,4 @@
-#work_main {
+  #work_main {
   position: relative;
   margin-top: 100px;
   margin-left: 11%;
@@ -11,6 +11,9 @@
   }
   #work_info {
     .work_melumat {
+      @media (max-width:768px) {
+        @include Flex(center,center,column);
+      }
       margin-top: 50px;
       h2 {
         @include Parag(24px, 700, 20px, $black-color);

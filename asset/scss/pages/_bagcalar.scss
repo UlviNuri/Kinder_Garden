@@ -24,7 +24,7 @@
             padding: 5px;
             gap: 4px;
             display: flex;
-            p {
+            p    {
                 font-size: 15px;
                 font-weight: 600;
             }
@@ -47,30 +47,6 @@
             }
         }
     }
-    // #bagca_img {
-    //     margin-top: 100px;
-    //     .bagca_item {
-    //         img {
-    //             @include Img(100%, 400px, contain);
-    //             border: 8px;
-    //             cursor: pointer;
-    //             @media screen and (max-width: 768px) {
-    //                 object-fit: cover;
-    //             }
-    //         }
-
-    //         .text_title {
-    //             margin: 14px 0;
-    //             @include Parag(21px, 600, 20px, $black-color);
-    //             text-align: center;
-    //         }
-
-    //         p {
-    //             @include Parag(15px, 400, 20px, $black-color);
-    //             text-align: center;
-    //         }
-    //     }
-    // }
 
     section {
         #img_div {
@@ -83,11 +59,13 @@
         }
     }
 }
-
 .garden_item{
     cursor: pointer;
     h6{
         line-height: 50px;
+    }
+    img{
+        width: 100%;
     }
 }
 #bagca_footer {

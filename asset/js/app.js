@@ -1,7 +1,5 @@
 "use strict";
-
 // preloader
-
 var loader = document.getElementById("loader");
 if (loader) {
   window.addEventListener("load", function () {
@@ -82,18 +80,18 @@ const toastBtn = document.getElementById("js_tag");
 if (toastBtn) {
   toastBtn.addEventListener("click", () => {
     Toastify({
-      text: "Sorgunuz Ugurla Qebul Olundu!!!",
+      text: "Sorgunuz Ugurla Qəbul Olundu!!!",
       duration: 3000,
       destination: "",
       newWindow: true,
       close: true,
-      gravity: "top", // `top` or `bottom`
-      position: "right", // `left`, `center` or `right`
-      stopOnFocus: true, // Prevents dismissing of toast on hover
+      gravity: "top", 
+      position: "right", 
+      stopOnFocus: true, 
       style: {
         background: "linear-gradient(to right, #00b09b, #96c93d)",
       },
-      onClick: function () {}, // Callback after click
+      onClick: function () {}, 
     }).showToast();
   });
 }
@@ -133,7 +131,6 @@ try {
   console.log("Javascript version updated...");
 }
 
-
 const toggle = document.getElementById("toggleDark");
 const body = document.querySelector("body");
 toggle.addEventListener("click", function (e) {
@@ -145,12 +142,31 @@ toggle.addEventListener("click", function (e) {
     body.style.transition = "2s";
   } else {
     body.style.background = "black";
-    var element='p,h2,span,h1,h3,h6,a,h4'
-   const p_tag= body.querySelectorAll(element)
-   for (let index = 0; index < p_tag.length; index++) {
-    p_tag[index].classList.add('dark_active')
-    
-   }
+    var element = "p,h2,span,h1,h3,h6,a,h4";
+    const p_tag = body.querySelectorAll(element);
+    for (let index = 0; index < p_tag.length; index++) {
+      p_tag[index].classList.add("dark_active");
+    }
     body.style.transition = "2s";
   }
 });
+
+// const Payment = document.getElementById("odenis");
+// if (Payment) {
+//   Payment.addEventListener("click", () => {
+//     Toastify({
+//       text: "Sorgunuz Ugurla Qebul Olundu!!!",
+//       duration: 3000,
+//       destination: "",
+//       newWindow: true,
+//       close: true,
+//       width:10,
+//       gravity: "top", 
+//       position: "left", 
+//       stopOnFocus: true, 
+//       style: {
+//         background: "linear-gradient(to right, #00b09b, #96c93d)",
+//       },
+//       onClick: function () {}, 
+//     }).showToast();
+// })}

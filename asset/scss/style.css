@@ -1334,6 +1334,9 @@ main section #img_div img {
 .garden_item h6 {
   line-height: 50px;
 }
+.garden_item img {
+  width: 100%;
+}
 
 #bagca_footer {
   margin: 0;
@@ -1626,6 +1629,11 @@ main button {
 #employee .search {
   display: flex;
   justify-content: space-between;
+}
+@media (max-width: 400px) {
+  #employee .search {
+    display: block;
+  }
 }
 #employee .search h2 {
   font-size: 30px;
@@ -1980,13 +1988,13 @@ main #img_item_4 img {
 }
 main #img_item_5 .img_item_12 {
   width: 100%;
-  height: 661px;
+  height: 400px;
   -o-object-fit: contain;
      object-fit: contain;
 }
 main #img_item_5 .img_item_13 {
   width: 100%;
-  height: 661px;
+  height: 400px;
   -o-object-fit: contain;
      object-fit: contain;
 }
@@ -2372,6 +2380,14 @@ main .img_box .relative .overlay img {
 #work_main #work_info .work_melumat {
   margin-top: 50px;
 }
+@media (max-width: 768px) {
+  #work_main #work_info .work_melumat {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
 #work_main #work_info .work_melumat h2 {
   font-size: 24px;
   font-weight: 700;
@@ -2510,6 +2526,11 @@ main .img_box .relative .overlay img {
   line-height: 35px;
   color: #000000;
   margin-top: 30px;
+}
+@media (max-width: 400px) {
+  #work_detaile section .right_text div span {
+    margin-top: 0;
+  }
 }
 #work_detaile .work_footer h3 {
   font-size: 20px;

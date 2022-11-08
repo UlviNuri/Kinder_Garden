@@ -2,6 +2,9 @@
     .search {
         display: flex;
         justify-content: space-between;
+        @media (max-width:400px) {
+            display: block;
+        }
         h2 {
             @include Parag(30px, 600, 37px, $black_color);
         }

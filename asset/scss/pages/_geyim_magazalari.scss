@@ -65,11 +65,11 @@ main {
 
     #img_item_5 {
         .img_item_12 {
-            @include Img(100%, 661px, contain);
+            @include Img(100%, 400px, contain);
         }
 
         .img_item_13 {
-            @include Img(100%, 661px, contain);
+            @include Img(100%, 400px, contain);
         }
     }
 
