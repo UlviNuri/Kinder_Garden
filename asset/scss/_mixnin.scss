@@ -163,3 +163,19 @@
     right: $rght;
     z-index: $z-index;
 }
+
+@mixin isci_info ($wid,$heig,$bg,$br)  {
+    width: $wid;
+    height: $heig;
+    background: $bg;
+    border-radius: $br;
+}
+
+@mixin  btn_second ($wid,$heig,$bg,$margin,$border,$br) {
+    width: $wid;
+    height: $heig;
+    background-color: $bg;
+    margin: $margin;
+    border: $border;
+    border-radius: $br;
+}

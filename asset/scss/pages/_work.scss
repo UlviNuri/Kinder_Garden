@@ -33,10 +33,10 @@
 
         h3 {
           @include Parag(22px, 600, 20px, $black-color);
-          padding: 10px;
+          padding: 10px 0px;
         }
         p {
-          @include Parag(14px, 600, 15px, $black-color);
+          @include Parag(14px, 600, 25px, $black-color);
         }
       }
       .work_requirements {

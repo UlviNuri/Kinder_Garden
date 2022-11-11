@@ -31,14 +31,19 @@ window.addEventListener("click", (e) => {
 
 // scrool
 
-window.addEventListener("scroll", () => {
-  var header = document.querySelector("nav");
-  if (window.scrollY >= 250) {
-    header.classList.add("stiky");
-  } else {
-    header.classList.remove("stiky");
-  }
-});
+try{
+  window.addEventListener("scroll", () => {
+    var header = document.querySelector("nav");
+    if (window.scrollY >= 250) {
+      header.classList.add("stiky");
+    } else {
+      header.classList.remove("stiky");
+    }
+  });
+}catch (error){
+  console.log("Javascript version updated...");
+}
+
 
 // sviper
 
@@ -53,7 +58,7 @@ try {
       prevEl: ".swiper-button-prev",
     },
     autoplay: {
-      delay: 1000,
+      delay: 2000,
     },
 
     breakpoints: {
@@ -71,7 +76,7 @@ try {
       },
     },
   });
-} catch (eror) {
+} catch (error) {
   console.log("Javascript version updated...");
 }
 
@@ -97,28 +102,33 @@ if (toastBtn) {
 }
 
 // scrool Top
-const CalcScrollValue = () => {
-  let scrollProgress = document.getElementById("proqres");
-  let progressValue = document.getElementById("progress_item");
-  let pos = document.documentElement.scrollTop;
-  let calcHeight =
-    document.documentElement.scrollHeight -
-    document.documentElement.clientHeight;
-  let scrollValue = Math.round(pos * 100);
-  if (pos > 100) {
-    scrollProgress.style.display = "grid";
-  } else {
-    scrollProgress.style.display = "none";
-  }
-  scrollProgress.addEventListener("click", () => {
-    document.documentElement.scrollTop = 0;
-  });
-
-  scrollProgress.style.background = ` gold
-  `;
-};
-window.onscroll = CalcScrollValue;
+try{
+  const CalcScrollValue = () => {
+    let scrollProgress = document.getElementById("proqres");
+    let progressValue = document.getElementById("progress_item");
+    let pos = document.documentElement.scrollTop;
+    let calcHeight =
+      document.documentElement.scrollHeight -
+      document.documentElement.clientHeight;
+    let scrollValue = Math.round(pos * 100);
+    if (pos > 100) {
+      scrollProgress.style.display = "grid";
+    } else {
+      scrollProgress.style.display = "none";
+    }
+    scrollProgress.addEventListener("click", () => {
+      document.documentElement.scrollTop = 0;
+    });
+  
+    scrollProgress.style.background = ` gold
+    `;
+  };
+  window.onscroll = CalcScrollValue;
 window.onload = CalcScrollValue;
+
+}catch(error){
+  console.log("Javascript version updated...");
+}
 
 // aos
 try {
@@ -133,16 +143,16 @@ try {
 
 const toggle = document.getElementById("toggleDark");
 const body = document.querySelector("body");
-toggle.addEventListener("click", function (e) {
-  e.preventDefault();
+toggle.addEventListener("click", function () {
+ 
   this.classList.toggle("bi-moon");
   if (this.classList.toggle("bi-brightness-high-fill")) {
-    body.style.background = "white";
+    body.style.backgroundImage = "linear-gradient(to top, #9795f0 0%, #fbc8d4 100%)";
     body.style.color = "black";
     body.style.transition = "2s";
   } else {
     body.style.background = "black";
-    var element = "p,h2,span,h1,h3,h6,a,h4";
+    var element = "p,h2,span,h1,h3,h6,a,h4,h5";
     const p_tag = body.querySelectorAll(element);
     for (let index = 0; index < p_tag.length; index++) {
       p_tag[index].classList.add("dark_active");
@@ -151,22 +161,3 @@ toggle.addEventListener("click", function (e) {
   }
 });
 
-// const Payment = document.getElementById("odenis");
-// if (Payment) {
-//   Payment.addEventListener("click", () => {
-//     Toastify({
-//       text: "Sorgunuz Ugurla Qebul Olundu!!!",
-//       duration: 3000,
-//       destination: "",
-//       newWindow: true,
-//       close: true,
-//       width:10,
-//       gravity: "top", 
-//       position: "left", 
-//       stopOnFocus: true, 
-//       style: {
-//         background: "linear-gradient(to right, #00b09b, #96c93d)",
-//       },
-//       onClick: function () {}, 
-//     }).showToast();
-// })}

@@ -126,7 +126,7 @@ main {
           margin-left: 20px;
           .text2 {
             font-family: "Mali";
-            @include Parag(33px, 400, 43px, $black-color);
+            @include Parag(33px, 400, 60px, black);
             @media (max-width: 400px) {
               @include Parag(14px, 400, 23px, $black-color);
             }
@@ -171,6 +171,10 @@ main {
     @media only screen and (min-width: 393px) {
       .pos {
         @include Img(100px, 100px, contain);
+        // width: 100px;
+        // height: 100px;
+        // object-fit: contain;
+
       }
       h2 {
         line-height: 20px;
@@ -282,6 +286,7 @@ main {
         @include rotate_text(absolute, -10px, -100px);
         .class {
           display: flex;
+          align-items: center;
           div {
             @include div(27px 4px, 15px, 15px, rgba(255, 166, 0, 0.82), 10px);
           }
@@ -295,6 +300,7 @@ main {
         @include rotate_text(absolute, 50px, -26px);
         .class {
           display: flex;
+          align-items: center;
           div {
             @include div(27px 4px, 15px, 15px, green, 10px);
           }
@@ -307,6 +313,7 @@ main {
         @include rotate_text(absolute, 110px, 187px);
         .class {
           display: flex;
+          align-items: center;
           div {
             @include div(27px 4px, 15px, 15px, red, 10px);
           }
@@ -319,6 +326,7 @@ main {
         @include rotate_text(absolute, 168px, 223px);
         .class {
           display: flex;
+          align-items: center;
           div {
             @include div(27px 4px, 15px, 15px, blue, 10px);
           }
@@ -331,6 +339,7 @@ main {
         @include rotate_text(absolute, 220px, 140px);
         .class {
           display: flex;
+          align-items: center;
           div {
             @include div(27px 4px, 15px, 15px, pink, 10px);
           }
@@ -343,6 +352,7 @@ main {
         @include rotate_text(absolute, 265px, 145px);
         .class {
           display: flex;
+          align-items: center;
           div {
             @include div(27px 4px, 15px, 15px, rgb(100, 209, 100), 10px);
           }
@@ -355,6 +365,7 @@ main {
         @include rotate_text(absolute, 320px, -44px);
         .class {
           display: flex;
+          align-items: center;
           div {
             @include div(27px 4px, 15px, 15px, rgb(0, 53, 128), 10px);
           }
@@ -367,6 +378,7 @@ main {
         @include rotate_text(absolute, 375px, -195px);
         .class {
           display: flex;
+          align-items: center;
           div {
             @include div(27px 4px, 15px, 15px, rgb(58, 0, 128), 10px);
           }
@@ -379,6 +391,7 @@ main {
         @include rotate_text(absolute,426px, -145px);
         .class {
           display: flex;
+          align-items: center;
           div {
             @include div(27px 4px, 15px, 15px, rgb(125, 148, 125), 10px);
           }
@@ -391,6 +404,7 @@ main {
         @include rotate_text(absolute, 475px, -155px);
         .class {
           display: flex;
+          align-items: center;
           div {
             @include div(27px 4px, 15px, 15px, rgb(128, 128, 0), 10px);
           }
@@ -480,16 +494,11 @@ main {
   #employee {
     .isciler {
       img {
-        width: 100%;
-        height: 326px;
-        object-fit: contain;
+        @include Img(100%,326px,contain);
       }
   
       .isci_info {
-        width: 100%;
-        height: 50px;
-        background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 15.87%, rgba(105, 112, 115, 0.02) 230.16%);
-        border-radius: 0px 0px 3.33333px 3.33333px;
+        @include isci_info(100%,50px,linear-gradient(180deg, rgba(255, 255, 255, 0.2) 15.87%, rgba(105, 112, 115, 0.02) 230.16%),0px 0px 3.33333px 3.33333px);
         p {
           text-align: center;
           @include Parag(17px, 500, 20px, $black-color);
@@ -499,6 +508,10 @@ main {
     }
     .logoped_title {
       @include Parag(40px, 600, 48px, $black_color);
+      @media (max-width:768px) {
+        font-size: 35px;
+        max-width: 400px;
+      }
     }
   }
   section {
@@ -511,18 +524,12 @@ main {
         border-radius: 8px;
       }
       .img1 {
-        width: 100%;
-        height: 350px;
+        @include Img(100%,350px, null);
       }
   
       #btn {
         .right_btn {
-          width: 180px;
-          height: 50px;
-          background-color: $btn_color;
-          margin: 58% 40px;
-          border: none;
-          border-radius: 17px;
+          @include btn_second(180px,50px,$btn_color,58% 40px,none,17px);
           @include Parag(20px, 500, 24px, #000000);
           @media screen and (max-width: 768px) {
             margin: 20px 0;
@@ -533,7 +540,6 @@ main {
   }
 }
 #sviper {
-  overflow: hidden;
   margin-top: 100px;
   display: none;
   .swiper {
@@ -545,6 +551,8 @@ main {
   }
 
   .swiper-slide {
+    overflow: hidden;
+    outline: 0 !important;
     text-align: center;
     font-size: 18px;
     /* Center slide text vertically */

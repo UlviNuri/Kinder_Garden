@@ -249,8 +249,8 @@ main #kids_img_text .relative_item .absaulte_text .text .text2 {
   font-family: "Mali";
   font-size: 33px;
   font-weight: 400;
-  line-height: 43px;
-  color: #000000;
+  line-height: 60px;
+  color: black;
 }
 @media (max-width: 400px) {
   main #kids_img_text .relative_item .absaulte_text .text .text2 {
@@ -467,6 +467,7 @@ main #kids_img .img_item_5 img {
 }
 #dubble_main #rotate_text .relative .position_text .class {
   display: flex;
+  align-items: center;
 }
 #dubble_main #rotate_text .relative .position_text .class div {
   margin: 27px 4px;
@@ -488,6 +489,7 @@ main #kids_img .img_item_5 img {
 }
 #dubble_main #rotate_text .relative .position_text1 .class {
   display: flex;
+  align-items: center;
 }
 #dubble_main #rotate_text .relative .position_text1 .class div {
   margin: 27px 4px;
@@ -509,6 +511,7 @@ main #kids_img .img_item_5 img {
 }
 #dubble_main #rotate_text .relative .position_text2 .class {
   display: flex;
+  align-items: center;
 }
 #dubble_main #rotate_text .relative .position_text2 .class div {
   margin: 27px 4px;
@@ -530,6 +533,7 @@ main #kids_img .img_item_5 img {
 }
 #dubble_main #rotate_text .relative .position_text3 .class {
   display: flex;
+  align-items: center;
 }
 #dubble_main #rotate_text .relative .position_text3 .class div {
   margin: 27px 4px;
@@ -551,6 +555,7 @@ main #kids_img .img_item_5 img {
 }
 #dubble_main #rotate_text .relative .position_text4 .class {
   display: flex;
+  align-items: center;
 }
 #dubble_main #rotate_text .relative .position_text4 .class div {
   margin: 27px 4px;
@@ -572,6 +577,7 @@ main #kids_img .img_item_5 img {
 }
 #dubble_main #rotate_text .relative .position_text5 .class {
   display: flex;
+  align-items: center;
 }
 #dubble_main #rotate_text .relative .position_text5 .class div {
   margin: 27px 4px;
@@ -593,6 +599,7 @@ main #kids_img .img_item_5 img {
 }
 #dubble_main #rotate_text .relative .position_text7 .class {
   display: flex;
+  align-items: center;
 }
 #dubble_main #rotate_text .relative .position_text7 .class div {
   margin: 27px 4px;
@@ -614,6 +621,7 @@ main #kids_img .img_item_5 img {
 }
 #dubble_main #rotate_text .relative .position_text8 .class {
   display: flex;
+  align-items: center;
 }
 #dubble_main #rotate_text .relative .position_text8 .class div {
   margin: 27px 4px;
@@ -635,6 +643,7 @@ main #kids_img .img_item_5 img {
 }
 #dubble_main #rotate_text .relative .position_text9 .class {
   display: flex;
+  align-items: center;
 }
 #dubble_main #rotate_text .relative .position_text9 .class div {
   margin: 27px 4px;
@@ -656,6 +665,7 @@ main #kids_img .img_item_5 img {
 }
 #dubble_main #rotate_text .relative .position_text10 .class {
   display: flex;
+  align-items: center;
 }
 #dubble_main #rotate_text .relative .position_text10 .class div {
   margin: 27px 4px;
@@ -790,6 +800,12 @@ main #kids_img .img_item_5 img {
   line-height: 48px;
   color: #000000;
 }
+@media (max-width: 768px) {
+  #dubble_main #employee .logoped_title {
+    font-size: 35px;
+    max-width: 400px;
+  }
+}
 #dubble_main section #img_div {
   margin-top: 100px;
 }
@@ -822,7 +838,6 @@ main #kids_img .img_item_5 img {
 }
 
 #sviper {
-  overflow: hidden;
   margin-top: 100px;
   display: none;
 }
@@ -834,6 +849,8 @@ main #kids_img .img_item_5 img {
   background-color: white;
 }
 #sviper .swiper-slide {
+  overflow: hidden;
+  outline: 0 !important;
   text-align: center;
   font-size: 18px;
   /* Center slide text vertically */
@@ -2412,12 +2429,12 @@ main .img_box .relative .overlay img {
   font-weight: 600;
   line-height: 20px;
   color: #000000;
-  padding: 10px;
+  padding: 10px 0px;
 }
 #work_main #work_info .work_melumat .work_content p {
   font-size: 14px;
   font-weight: 600;
-  line-height: 15px;
+  line-height: 25px;
   color: #000000;
 }
 #work_main #work_info .work_melumat .work_requirements {
@@ -2821,4 +2838,8 @@ body {
 
 input, select {
   outline: none;
+}
+
+main {
+  overflow-x: hidden;
 }/*# sourceMappingURL=style.css.map */
