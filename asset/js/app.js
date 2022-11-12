@@ -154,10 +154,21 @@ toggle.addEventListener("click", function () {
     body.style.background = "black";
     var element = "p,h2,span,h1,h3,h6,a,h4,h5";
     const p_tag = body.querySelectorAll(element);
+  if(p_tag){
     for (let index = 0; index < p_tag.length; index++) {
       p_tag[index].classList.add("dark_active");
     }
+  }
+
     body.style.transition = "2s";
   }
 });
 
+
+
+const payment =document.getElementById("odenis")
+if(payment){
+  payment.addEventListener("click",()=>{
+    alert("Ödənişiniz Uğurla Nəticələndi!!! ")
+  })
+}

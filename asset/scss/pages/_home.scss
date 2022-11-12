@@ -117,7 +117,7 @@ main {
         max-width: 100%;
       }
       .absaulte_text {
-        @include Flex(null, null, row);
+        @include Flex(null, center, row);
         position: absolute;
         top: 66px;
         left: 20px;
@@ -525,8 +525,14 @@ main {
       }
       .img1 {
         @include Img(100%,350px, null);
+     
       }
   
+      #none{
+        @media  (max-width:768px) {
+          display: none;
+        }
+      }
       #btn {
         .right_btn {
           @include btn_second(180px,50px,$btn_color,58% 40px,none,17px);

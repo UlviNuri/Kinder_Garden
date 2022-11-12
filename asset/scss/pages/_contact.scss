@@ -24,23 +24,26 @@ main {
                     font-size: 17px;
                     font-weight: 500;
                     box-shadow: none;
-                    @include Input(1.25px solid #65656580,480px,null,null,null,10px 8px,6px 10px,none);
+                    @include Input(1.25px solid #65656580, 480px, null, null, null, 10px 8px, 6px 10px, none);
                     &:nth-child(3) {
                         height: 150px;
                     }
-                    @media (max-width:400px){
+                    @media (max-width: 400px) {
                         width: 340px;
                     }
                 }
                 textarea {
-                    @include textarea(5%,24px,5px,4px,17px,500);
+                    @include textarea(5%, 24px, 5px, 4px, 17px, 500);
                     width: 76%;
                     height: 100px;
                     resize: none;
-                    color:black;
-                    @media (max-width:500px){
-                        width: 93%;
-                        
+                    color: black;
+
+                    @media (max-width: 768px) {
+                        width: 69%;
+                    }
+                    @media (max-width: 400px) {
+                        width: 92% !important;
                     }
                 }
             }
@@ -51,7 +54,7 @@ main {
             background-color: $btn_color;
             @include btn(20px, 180px, 56px, 20px, 500, 17px, transparent);
         }
-        .contact_img{
+        .contact_img {
             max-width: 100%;
         }
     }
@@ -85,7 +88,7 @@ footer {
         cursor: pointer;
         p {
             @include Parag(15px, 400, 18px, $black-color);
-            padding: 8px 0;
+            padding: 8px 10px;
         }
     }
     .position {
