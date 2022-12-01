@@ -95,20 +95,7 @@ GardenData.forEach((data) => {
   }
 });
 
-//
-// const ChecItem = document.querySelectorAll(".checbox");
-// for (const checbox of ChecItem) {
-//   checbox.addEventListener("click", () => {
-//     console.log("true");
-//     if (this.checbox == true) {
-//       ListItem.push(ListItem.value);
-      
-//     }
-//     else{
-//       console.log("false");
-//     }
-//   });
-// }
+
 const InputValue = document.getElementById("data_id");
 InputValue.addEventListener("keyup", (e) => {
   e.preventDefault();

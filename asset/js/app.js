@@ -141,34 +141,11 @@ try {
   console.log("Javascript version updated...");
 }
 
-const toggle = document.getElementById("toggleDark");
-const body = document.querySelector("body");
-toggle.addEventListener("click", function () {
- 
-  this.classList.toggle("bi-moon");
-  if (this.classList.toggle("bi-brightness-high-fill")) {
-    body.style.backgroundImage = "linear-gradient(to top, #9795f0 0%, #fbc8d4 100%)";
-    body.style.color = "black";
-    body.style.transition = "2s";
-  } else {
-    body.style.background = "black";
-    var element = "p,h2,span,h1,h3,h6,a,h4,h5";
-    const p_tag = body.querySelectorAll(element);
-  if(p_tag){
-    for (let index = 0; index < p_tag.length; index++) {
-      p_tag[index].classList.add("dark_active");
-    }
-  }
-
-    body.style.transition = "2s";
-  }
-});
-
 
 
 const payment =document.getElementById("odenis")
 if(payment){
-  payment.addEventListener("click",()=>{
+  paymentimage.png.addEventListener("click",()=>{
     alert("Ödənişiniz Uğurla Nəticələndi!!! ")
   })
 }

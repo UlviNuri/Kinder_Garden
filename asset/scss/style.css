@@ -61,6 +61,10 @@ html {
   scroll-behavior: smooth;
 }
 
+#overflow, #dubble_main {
+  overflow: hidden;
+}
+
 #proqres {
   position: fixed;
   bottom: 20px;
@@ -2865,8 +2869,4 @@ body {
 
 input, select {
   outline: none;
-}
-
-main {
-  overflow-x: hidden;
 }/*# sourceMappingURL=style.css.map */

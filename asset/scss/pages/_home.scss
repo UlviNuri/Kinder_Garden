@@ -1,6 +1,10 @@
 html {
   scroll-behavior: smooth;
 }
+
+#overflow,#dubble_main{
+  overflow: hidden;
+}
 #proqres {
   @include proqress(fixed, 20px, 10px, 70px, 70px, none, center, 50%, 0 0 10px rgba(0, 0, 0, 0.2));
   cursor: pointer;
